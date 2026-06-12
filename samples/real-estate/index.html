@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>アオバ不動産(架空デモ) | 不動産売却・購入を、安心して相談できるパートナーへ。</title>
+<meta name="description" content="【架空サンプルサイト】不動産会社向けサービスサイトのデモ。売却・購入・相続・住み替えの相談、無料査定、物件紹介まで。地域密着の不動産パートナー。">
+<meta property="og:title" content="アオバ不動産(架空デモ) | 不動産売却・購入を、安心して相談できるパートナーへ。">
+<meta property="og:description" content="ポートフォリオ掲載用の架空サンプルサイトです。">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#1F3552;--navy-2:#2C4A73;--blue:#3D6CB0;
+  --gray-bg:#F2F5F8;--ink:#1C2533;--gray:#5E6B7C;--line:#DEE5ED;
+  --accent:#D9822B;--r:14px;--sh:0 4px 16px rgba(31,53,82,.08);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{font-family:'Noto Sans JP',sans-serif;color:var(--ink);background:#fff;line-height:1.9;font-size:15.5px;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+h1,h2,h3{font-family:'Zen Kaku Gothic New',sans-serif;line-height:1.5}
+.container{max-width:1040px;margin:0 auto;padding:0 20px}
+section{padding:72px 0}
+@media(min-width:768px){section{padding:100px 0}}
+.demo-bar{position:fixed;top:0;left:0;right:0;z-index:110;background:var(--ink);color:#fff;font-size:11px;text-align:center;padding:6px 12px}
+.demo-bar a{text-decoration:underline;color:#F2C892}
+.header{position:fixed;top:28px;left:0;right:0;z-index:100;background:rgba(255,255,255,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.header-inner{max-width:1040px;margin:0 auto;padding:0 20px;height:60px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:900;font-family:'Zen Kaku Gothic New',sans-serif;font-size:17px;display:flex;align-items:center;gap:9px;color:var(--navy)}
+.logo .mk{width:28px;height:28px;border-radius:8px;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-family:'Outfit',sans-serif}
+.gnav{display:none;gap:24px;font-size:13px;font-weight:500;color:var(--gray)}
+@media(min-width:900px){.gnav{display:flex}}
+.gnav a:hover{color:var(--navy)}
+.h-cta{background:var(--accent);color:#fff;font-weight:700;font-size:13px;padding:9px 18px;border-radius:999px;box-shadow:0 3px 10px rgba(217,130,43,.3)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:700;border-radius:999px;font-size:15px;padding:15px 32px;line-height:1;transition:.2s;border:none;cursor:pointer;font-family:inherit}
+.btn-p{background:var(--accent);color:#fff;box-shadow:0 6px 16px rgba(217,130,43,.32)}
+.btn-p:hover{transform:translateY(-2px);background:#C06F1D}
+.btn-s{background:#fff;color:var(--navy);border:1.5px solid var(--navy)}
+.btn-s:hover{background:var(--navy);color:#fff}
+.hero{padding:150px 0 80px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 60%,var(--blue) 130%);color:#fff;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:48px 48px;mask-image:radial-gradient(600px 400px at 80% 20%,#000,transparent 75%);-webkit-mask-image:radial-gradient(600px 400px at 80% 20%,#000,transparent 75%)}
+.hero-grid{display:grid;gap:36px;align-items:center;position:relative;z-index:1}
+@media(min-width:880px){.hero-grid{grid-template-columns:1.1fr .9fr;gap:48px}}
+.eyebrow{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.14em;color:#C9DAF2;border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:6px 16px;margin-bottom:18px}
+.hero h1{font-size:clamp(25px,5.6vw,38px);font-weight:900;margin-bottom:16px}
+.hero h1 em{font-style:normal;color:#F2C892}
+.hero p{color:#C9D6E6;margin-bottom:26px;max-width:30em;font-size:14.5px}
+.hero-btns{display:flex;flex-wrap:wrap;gap:12px}
+.city{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:18px;display:flex;justify-content:center}
+.city svg{width:100%;max-width:360px;height:auto}
+.sec-head{text-align:center;margin-bottom:44px}
+.sec-en{font-family:'Outfit',sans-serif;font-size:11px;letter-spacing:.26em;color:var(--blue);font-weight:600;display:block;margin-bottom:8px}
+.sec-title{font-size:clamp(22px,5vw,30px);font-weight:900}
+.sec-lead{color:var(--gray);margin-top:12px;font-size:14px;max-width:36em;margin-left:auto;margin-right:auto}
+.bg-gray{background:var(--gray-bg)}
+.grid{display:grid;gap:16px}
+.g4{grid-template-columns:1fr 1fr}
+@media(min-width:820px){.g4{grid-template-columns:repeat(4,1fr);gap:18px}}
+.sv{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px 18px;box-shadow:var(--sh);text-align:center;transition:.25s}
+.sv:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(31,53,82,.14)}
+.sv .ic{width:50px;height:50px;border-radius:14px;background:var(--gray-bg);margin:0 auto 12px;display:flex;align-items:center;justify-content:center}
+.sv .ic svg{width:25px;height:25px;stroke:var(--navy);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.sv h3{font-size:15.5px;font-weight:700;margin-bottom:6px}
+.sv p{font-size:12.5px;color:var(--gray);line-height:1.75}
+.reason{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+.reason .ri{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px 20px;box-shadow:var(--sh)}
+.reason .num{flex:0 0 36px;width:36px;height:36px;border-radius:10px;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Outfit',sans-serif;font-weight:600;font-size:14px}
+.reason b{font-size:15px;display:block}
+.reason p{font-size:13px;color:var(--gray)}
+.g3{grid-template-columns:1fr}
+@media(min-width:680px){.g3{grid-template-columns:repeat(3,1fr);gap:18px}}
+.bukken{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh)}
+.bk-img{height:140px;position:relative}
+.bk-img .tag{position:absolute;top:10px;left:10px;background:var(--accent);color:#fff;font-size:10.5px;font-weight:700;padding:3px 10px;border-radius:5px}
+.bk-body{padding:16px 18px}
+.bk-body h3{font-size:14.5px;font-weight:700}
+.bk-body .price{font-family:'Outfit','Noto Sans JP',sans-serif;font-size:21px;font-weight:700;color:var(--navy);margin:4px 0}
+.bk-body .price small{font-size:11px;color:var(--gray);font-weight:500}
+.bk-spec{display:flex;flex-wrap:wrap;gap:5px}
+.bk-spec span{font-size:10.5px;font-weight:700;color:var(--navy);background:var(--gray-bg);border-radius:5px;padding:3px 8px}
+.flow{max-width:640px;margin:0 auto}
+.f-step{display:grid;grid-template-columns:44px 1fr;gap:16px;position:relative;padding-bottom:24px}
+.f-step::before{content:"";position:absolute;left:21px;top:48px;bottom:2px;width:2px;background:repeating-linear-gradient(to bottom,var(--line) 0 6px,transparent 6px 12px)}
+.f-step:last-child{padding-bottom:0}
+.f-step:last-child::before{display:none}
+.f-num{width:44px;height:44px;border-radius:12px;background:#fff;border:1.5px solid var(--line);display:flex;align-items:center;justify-content:center;font-family:'Outfit',sans-serif;font-weight:600;color:var(--navy);position:relative;z-index:1}
+.f-step:last-child .f-num{background:var(--accent);border:none;color:#fff}
+.f-body b{font-size:15px}
+.f-body p{font-size:12.5px;color:var(--gray)}
+.faq{max-width:680px;margin:0 auto;display:flex;flex-direction:column;gap:10px}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:var(--sh)}
+.faq summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:12px;padding:16px 18px;font-weight:700;font-size:14px}
+.faq summary::-webkit-details-marker{display:none}
+.faq .q{flex:0 0 26px;height:26px;border-radius:8px;background:var(--gray-bg);color:var(--navy);font-family:'Outfit',sans-serif;font-weight:600;font-size:12px;display:flex;align-items:center;justify-content:center}
+.faq-a{padding:0 18px 16px 56px;font-size:13px;color:var(--gray)}
+.cta{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;text-align:center}
+.cta h2{font-size:clamp(22px,5vw,30px);font-weight:900;margin-bottom:14px}
+.cta p{color:#C9D6E6;font-size:14px;max-width:32em;margin:0 auto 28px}
+.cta-btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.cta .btn-s{background:transparent;color:#fff;border-color:rgba(255,255,255,.5)}
+footer{background:var(--ink);color:#9AA7B8;padding:36px 0 90px;font-size:12px;text-align:center}
+@media(min-width:768px){footer{padding:36px 0}}
+footer .fx{color:#F2C892;font-size:11.5px;display:block;margin:10px auto 4px;max-width:34em;line-height:1.8}
+footer a{color:#fff;text-decoration:underline}
+.m-cta{position:fixed;left:0;right:0;bottom:0;z-index:99;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-top:1px solid var(--line);display:flex;gap:10px}
+.m-cta .btn{flex:1;padding:13px 8px;font-size:13.5px}
+@media(min-width:768px){.m-cta{display:none}}
+.reveal{opacity:0;transform:translateY(16px);transition:.6s ease}
+.reveal.is-in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+
+<div class="demo-bar">※このページはポートフォリオ用の架空サンプルサイトです ｜ <a href="../../index.html">制作者ポートフォリオへ戻る</a></div>
+
+<header class="header">
+  <div class="header-inner">
+    <a class="logo" href="#"><span class="mk">A</span>アオバ不動産</a>
+    <nav class="gnav"><a href="#service">サービス</a><a href="#reason">選ばれる理由</a><a href="#bukken">物件紹介</a><a href="#flow">売却の流れ</a><a href="#faq">FAQ</a></nav>
+    <a class="h-cta" href="#contact">無料査定</a>
+  </div>
+</header>
+
+<main>
+<div class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">売買仲介・相続・住み替え ｜ 地域専門(デモ)</span>
+      <h1>不動産売却・購入を、<br><em>安心して相談できる</em><br>パートナーへ。</h1>
+      <p>「いくらで売れる？」「住み替えの段取りは？」——大切な資産のことだから、囲い込みをしない誠実な仲介で、納得の取引をお手伝いします。</p>
+      <div class="hero-btns">
+        <a class="btn btn-p" href="#contact">無料査定する</a>
+        <a class="btn btn-s" href="#bukken" style="background:transparent;color:#fff;border-color:rgba(255,255,255,.5)">物件を見る</a>
+      </div>
+    </div>
+    <div class="city reveal" aria-hidden="true">
+      <svg viewBox="0 0 360 220">
+        <rect x="20" y="80" width="70" height="120" fill="#3D6CB0" opacity=".9"/>
+        <rect x="100" y="40" width="80" height="160" fill="#5B86C4"/>
+        <rect x="190" y="100" width="60" height="100" fill="#3D6CB0" opacity=".8"/>
+        <rect x="260" y="60" width="75" height="140" fill="#6F95CC"/>
+        <g fill="#DCE8F7" opacity=".85">
+          <rect x="30" y="92" width="12" height="12"/><rect x="50" y="92" width="12" height="12"/><rect x="70" y="92" width="12" height="12"/>
+          <rect x="30" y="116" width="12" height="12"/><rect x="50" y="116" width="12" height="12"/><rect x="70" y="116" width="12" height="12"/>
+          <rect x="112" y="56" width="13" height="13"/><rect x="134" y="56" width="13" height="13"/><rect x="156" y="56" width="13" height="13"/>
+          <rect x="112" y="84" width="13" height="13"/><rect x="134" y="84" width="13" height="13"/><rect x="156" y="84" width="13" height="13"/>
+          <rect x="200" y="112" width="11" height="11"/><rect x="220" y="112" width="11" height="11"/>
+          <rect x="272" y="74" width="12" height="12"/><rect x="292" y="74" width="12" height="12"/><rect x="312" y="74" width="12" height="12"/>
+        </g>
+        <rect x="0" y="200" width="360" height="20" fill="#16263D"/>
+        <circle cx="320" cy="30" r="14" fill="#F2C892"/>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<section id="service">
+  <div class="container">
+    <div class="sec-head reveal"><span class="sec-en">SERVICE</span><h2 class="sec-title">悩みに合わせた4つのサービス</h2></div>
+    <div class="grid g4">
+      <div class="sv reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg></div><h3>売却</h3><p>無料査定から販売戦略・お引渡しまで。高く・早く・確実に。</p></div>
+      <div class="sv reveal"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div><h3>購入</h3><p>未公開情報も含め、暮らしに合う物件探しをサポートします。</p></div>
+      <div class="sv reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3v18M5 8h14M7 21h10"/><path d="M5 8l-2 5h6l-2-5M19 8l-2 5h6l-2-5" transform="translate(0 0)"/></svg></div><h3>相続</h3><p>税理士・司法書士と連携し、相続不動産の整理をワンストップで。</p></div>
+      <div class="sv reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 12h12M12 6l6 6-6 6"/><path d="M20 5v14"/></svg></div><h3>住み替え</h3><p>売却と購入のタイミング調整まで、住み替え全体を設計します。</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="reason" class="bg-gray">
+  <div class="container">
+    <div class="sec-head reveal"><span class="sec-en">REASON</span><h2 class="sec-title">アオバ不動産が選ばれる理由</h2></div>
+    <div class="reason">
+      <div class="ri reveal"><span class="num">01</span><div><b>囲い込みをしない、誠実な売却活動</b><p>レインズ登録・販売状況はすべて開示。売主様の利益を最優先に動きます。</p></div></div>
+      <div class="ri reveal"><span class="num">02</span><div><b>地域相場に強い、エリア専門スタッフ</b><p>地域の取引データと街の空気感まで踏まえた、根拠のある査定をお出しします。</p></div></div>
+      <div class="ri reveal"><span class="num">03</span><div><b>税・法律の専門家とワンストップ連携</b><p>相続・住宅ローン・登記まで、各専門家と連携してまとめてご相談いただけます。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="bukken">
+  <div class="container">
+    <div class="sec-head reveal"><span class="sec-en">PICK UP</span><h2 class="sec-title">物件紹介</h2><p class="sec-lead">※デモ用の架空物件です。</p></div>
+    <div class="grid g3">
+      <div class="bukken reveal"><div class="bk-img" style="background:linear-gradient(135deg,#3D6CB0,#7FA3D4)"><span class="tag">中古マンション</span></div><div class="bk-body"><h3>デモシティ中央 3LDK</h3><p class="price">3,480<small>万円</small></p><div class="bk-spec"><span>駅徒歩5分</span><span>72.4㎡</span><span>南向き</span><span>2015年築</span></div></div></div>
+      <div class="bukken reveal"><div class="bk-img" style="background:linear-gradient(135deg,#2C4A73,#5B86C4)"><span class="tag">新築戸建</span></div><div class="bk-body"><h3>サンプル町2丁目 4LDK</h3><p class="price">4,280<small>万円</small></p><div class="bk-spec"><span>駐車2台</span><span>105.7㎡</span><span>角地</span><span>長期優良</span></div></div></div>
+      <div class="bukken reveal"><div class="bk-img" style="background:linear-gradient(135deg,#5B86C4,#9DBCE5)"><span class="tag">売地</span></div><div class="bk-body"><h3>デモ台1丁目 売地</h3><p class="price">1,980<small>万円</small></p><div class="bk-spec"><span>52坪</span><span>建築条件なし</span><span>整形地</span></div></div></div>
+    </div>
+    <div style="text-align:center;margin-top:32px" class="reveal"><a class="btn btn-s" href="#contact">非公開物件について問い合わせる</a></div>
+  </div>
+</section>
+
+<section id="flow" class="bg-gray">
+  <div class="container">
+    <div class="sec-head reveal"><span class="sec-en">FLOW</span><h2 class="sec-title">売却の流れ</h2></div>
+    <div class="flow">
+      <div class="f-step reveal"><span class="f-num">01</span><div class="f-body"><b>無料査定のお申し込み</b><p>机上査定・訪問査定からお選びいただけます。最短当日に概算をご回答。</p></div></div>
+      <div class="f-step reveal"><span class="f-num">02</span><div class="f-body"><b>査定結果・販売戦略のご提案</b><p>近隣の成約事例をもとに、根拠と戦略をセットでご説明します。</p></div></div>
+      <div class="f-step reveal"><span class="f-num">03</span><div class="f-body"><b>媒介契約・販売活動</b><p>写真撮影・ポータル掲載・購入希望者へのご案内まで対応します。</p></div></div>
+      <div class="f-step reveal"><span class="f-num">04</span><div class="f-body"><b>ご契約・お引渡し</b><p>条件交渉から契約・決済・引渡しまで、最後まで伴走します。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <div class="sec-head reveal"><span class="sec-en">FAQ</span><h2 class="sec-title">よくある質問</h2></div>
+    <div class="faq">
+      <details class="reveal"><summary><span class="q">Q</span>査定だけでも依頼できますか？</summary><div class="faq-a">はい、査定のみのご依頼も歓迎です。査定後に売却を強くお勧めするような営業は行いません。</div></details>
+      <details class="reveal"><summary><span class="q">Q</span>住みながらの売却は可能ですか？</summary><div class="faq-a">可能です。内覧スケジュールの調整など、住みながらでも負担の少ない売却の進め方をご提案します。</div></details>
+      <details class="reveal"><summary><span class="q">Q</span>相続した実家が遠方にあります。対応できますか？</summary><div class="faq-a">対応可能です。現地調査・残置物の整理・各種手続きまで、提携専門家とともにサポートします。</div></details>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="cta">
+  <div class="container reveal">
+    <span class="sec-en" style="color:#9DBCE5">CONTACT</span>
+    <h2>まずは無料査定・無料相談から</h2>
+    <p>「売るかどうか迷っている」段階でのご相談も歓迎です。秘密厳守で、押し売りは一切いたしません。</p>
+    <div class="cta-btns">
+      <a class="btn btn-p" href="#">無料査定を申し込む</a>
+      <a class="btn btn-s" href="#">電話で相談する</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <b style="color:#fff">アオバ不動産(架空)</b>
+    <span class="fx">このページはポートフォリオ掲載用の架空サンプル制作です。実在の企業・店舗・団体とは関係ありません。</span>
+    制作: <a href="../../index.html">AI Web Growth Studio</a>
+  </div>
+</footer>
+
+<div class="m-cta">
+  <a class="btn btn-s" href="#bukken">物件を見る</a>
+  <a class="btn btn-p" href="#contact">無料査定する</a>
+</div>
+
+<script>
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-in');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
