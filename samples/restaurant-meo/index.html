@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>洋食堂ひだまり(架空デモ) | 地元で愛される、こだわりの一皿。| デモ駅徒歩2分の洋食店</title>
+<meta name="description" content="【架空サンプルサイト】飲食店向けMEO対策ページのデモ。人気メニュー・店内の雰囲気・口コミ・営業時間・アクセス・Googleマップ導線を掲載。ご予約はこちら。">
+<meta property="og:title" content="洋食堂ひだまり(架空デモ) | 地元で愛される、こだわりの一皿。">
+<meta property="og:description" content="ポートフォリオ掲載用の架空サンプルサイトです。">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --brick:#A8431F;--brick-d:#8A3416;--orange:#E0883E;--cream:#FBF4E9;--cream-2:#F3E6D2;
+  --ink:#3A2B22;--gray:#7A6A5C;--line:#EBDFCC;--map:#1A73E8;--r:14px;--sh:0 4px 16px rgba(168,67,31,.1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{font-family:'Noto Sans JP',sans-serif;color:var(--ink);background:#fff;line-height:1.9;font-size:15.5px;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+h1,h2,h3{font-family:'Zen Kaku Gothic New',sans-serif;line-height:1.5}
+.container{max-width:1000px;margin:0 auto;padding:0 20px}
+section{padding:72px 0}
+@media(min-width:768px){section{padding:96px 0}}
+.demo-bar{position:fixed;top:0;left:0;right:0;z-index:110;background:var(--ink);color:#fff;font-size:11px;text-align:center;padding:6px 12px}
+.demo-bar a{text-decoration:underline;color:#F2C892}
+.header{position:fixed;top:28px;left:0;right:0;z-index:100;background:rgba(255,255,255,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.header-inner{max-width:1000px;margin:0 auto;padding:0 20px;height:58px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:900;font-family:'Zen Kaku Gothic New',sans-serif;font-size:17px;display:flex;align-items:center;gap:9px;color:var(--brick)}
+.logo .mk{width:28px;height:28px;border-radius:50%;background:var(--brick);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px}
+.h-cta{background:var(--brick);color:#fff;font-weight:700;font-size:13px;padding:9px 18px;border-radius:999px;box-shadow:0 3px 10px rgba(168,67,31,.3)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:700;border-radius:999px;font-size:15px;padding:15px 30px;line-height:1;transition:.2s;border:none;cursor:pointer;font-family:inherit}
+.btn-p{background:var(--brick);color:#fff;box-shadow:0 6px 16px rgba(168,67,31,.3)}
+.btn-p:hover{transform:translateY(-2px);background:var(--brick-d)}
+.btn-map{background:var(--map);color:#fff;box-shadow:0 6px 16px rgba(26,115,232,.3)}
+.btn-map:hover{transform:translateY(-2px)}
+.btn-map::before{content:"";width:16px;height:16px;background:#fff;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 22s-7-5.8-7-12a7 7 0 0114 0c0 6.2-7 12-7 12z'/%3E%3Ccircle cx='12' cy='10' r='2.6' fill='black'/%3E%3C/svg%3E") center/contain no-repeat;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 22s-7-5.8-7-12a7 7 0 0114 0c0 6.2-7 12-7 12z'/%3E%3C/svg%3E") center/contain no-repeat}
+.btn-s{background:#fff;color:var(--brick);border:1.5px solid var(--brick)}
+.btn-s:hover{background:var(--brick);color:#fff}
+.hero{padding:142px 0 72px;background:linear-gradient(160deg,var(--cream) 0%,#fff 60%,var(--cream-2) 110%);position:relative;overflow:hidden;text-align:center}
+.hero::before{content:"";position:absolute;width:340px;height:340px;border-radius:50%;left:-150px;top:-60px;background:radial-gradient(circle,rgba(224,136,62,.18),transparent 70%)}
+.hero::after{content:"";position:absolute;width:320px;height:320px;border-radius:50%;right:-140px;bottom:-120px;background:radial-gradient(circle,rgba(168,67,31,.12),transparent 70%)}
+.hero-inner{position:relative;z-index:1;max-width:640px;margin:0 auto;padding:0 20px}
+.eyebrow{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.14em;color:var(--brick);background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 16px;margin-bottom:18px}
+.hero h1{font-size:clamp(26px,6.4vw,40px);font-weight:900;margin-bottom:16px}
+.hero h1 em{font-style:normal;color:var(--brick)}
+.hero p{color:var(--gray);font-size:14.5px;margin-bottom:26px}
+.hero-btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.hero-info{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:24px}
+.hi{background:#fff;border:1px solid var(--line);border-radius:10px;padding:7px 13px;font-size:11.5px;font-weight:700;color:var(--gray)}
+.hi b{color:var(--brick)}
+.sec-head{text-align:center;margin-bottom:42px}
+.sec-en{font-family:'Outfit',sans-serif;font-size:11px;letter-spacing:.28em;color:var(--orange);font-weight:600;display:block;margin-bottom:8px}
+.sec-title{font-size:clamp(21px,5vw,29px);font-weight:900}
+.sec-lead{color:var(--gray);margin-top:12px;font-size:13.5px}
+.bg-cream{background:var(--cream)}
+.grid{display:grid;gap:16px}
+.g3{grid-template-columns:1fr}
+@media(min-width:680px){.g3{grid-template-columns:repeat(3,1fr);gap:18px}}
+.dish{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh)}
+.dish-img{height:140px;position:relative;display:flex;align-items:center;justify-content:center}
+.dish-img .plate{width:96px;height:96px;border-radius:50%;background:#fff;box-shadow:inset 0 0 0 10px rgba(255,255,255,.7),0 6px 16px rgba(58,43,34,.18);display:flex;align-items:center;justify-content:center;font-size:38px}
+.dish-img .tag{position:absolute;top:10px;left:10px;background:var(--brick);color:#fff;font-size:10.5px;font-weight:700;padding:3px 10px;border-radius:5px}
+.dish-body{padding:16px 18px}
+.dish-body h3{font-size:15px;font-weight:700}
+.dish-body p{font-size:12.5px;color:var(--gray);margin:4px 0 8px}
+.dish-body .price{font-family:'Outfit','Noto Sans JP',sans-serif;font-size:19px;font-weight:600;color:var(--brick)}
+.dish-body .price small{font-size:11px;color:var(--gray);font-weight:500}
+.kodawari{display:grid;gap:14px;max-width:760px;margin:0 auto}
+@media(min-width:680px){.kodawari{grid-template-columns:repeat(3,1fr)}}
+.kd{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px 18px;box-shadow:var(--sh);text-align:center}
+.kd .ic{font-size:30px;display:block;margin-bottom:8px}
+.kd h3{font-size:14.5px;font-weight:700;margin-bottom:5px}
+.kd p{font-size:12.5px;color:var(--gray);line-height:1.75}
+.tennai{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;max-width:760px;margin:0 auto}
+@media(min-width:680px){.tennai{grid-template-columns:repeat(4,1fr);gap:14px}}
+.tn{height:110px;border-radius:12px;position:relative;overflow:hidden;box-shadow:var(--sh)}
+.tn span{position:absolute;left:10px;bottom:8px;color:#fff;font-size:11px;font-weight:700;text-shadow:0 1px 4px rgba(0,0,0,.4)}
+.review{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:20px;box-shadow:var(--sh)}
+.review .rv-h{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.review .av{width:36px;height:36px;border-radius:50%;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px}
+.review b{font-size:12.5px;display:block;line-height:1.3}
+.review .stars{color:#F2B01E;font-size:12px;letter-spacing:2px}
+.review p{font-size:12.5px;color:var(--gray)}
+.review small{display:block;margin-top:8px;font-size:10.5px;color:#B5A795}
+.g-badge{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:26px;font-size:13px;font-weight:700;color:var(--gray)}
+.g-badge .score{font-family:'Outfit',sans-serif;font-size:22px;color:var(--ink)}
+.g-badge .stars{color:#F2B01E;letter-spacing:2px}
+.access{max-width:720px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--sh);overflow:hidden}
+.map{height:190px;background:linear-gradient(135deg,#E8F0E4,#F2EFE4);position:relative}
+.map .road{position:absolute;background:#fff;box-shadow:0 0 0 1px #E0DACB}
+.map .r1{left:0;right:0;top:52%;height:18px}
+.map .r2{left:30%;top:0;bottom:0;width:16px}
+.map .pin{position:absolute;left:46%;top:30%;width:30px;height:30px;border-radius:50% 50% 50% 0;background:#E0563C;rotate:-45deg;box-shadow:0 4px 10px rgba(0,0,0,.25)}
+.map .pin::after{content:"";position:absolute;inset:8px;border-radius:50%;background:#fff}
+.map .lbl{position:absolute;left:52%;top:22%;background:#fff;border-radius:8px;padding:4px 10px;font-size:11px;font-weight:700;box-shadow:0 2px 8px rgba(0,0,0,.12)}
+.access dl{padding:20px 22px;display:grid;grid-template-columns:92px 1fr;gap:10px 14px;font-size:13px}
+.access dt{font-weight:700;color:var(--brick)}
+.access dd{color:var(--gray)}
+.access .map-cta{padding:0 22px 22px;display:flex;flex-wrap:wrap;gap:10px}
+.access .map-cta .btn{font-size:13.5px;padding:13px 22px;flex:1;min-width:180px}
+.cta{background:linear-gradient(135deg,var(--brick) 0%,var(--brick-d) 100%);color:#fff;text-align:center}
+.cta h2{font-size:clamp(21px,5vw,29px);font-weight:900;margin-bottom:14px}
+.cta p{color:#F4D8C8;font-size:14px;max-width:30em;margin:0 auto 26px}
+.cta-btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.cta small{color:#F4D8C8;font-size:11px;margin-top:12px;display:block}
+footer{background:var(--ink);color:#B5A795;padding:36px 0 90px;font-size:12px;text-align:center}
+@media(min-width:768px){footer{padding:36px 0}}
+footer .fx{color:#F2C892;font-size:11.5px;display:block;margin:10px auto 4px;max-width:34em;line-height:1.8}
+footer a{color:#fff;text-decoration:underline}
+.m-cta{position:fixed;left:0;right:0;bottom:0;z-index:99;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-top:1px solid var(--line);display:flex;gap:10px}
+.m-cta .btn{flex:1;padding:13px 8px;font-size:13px}
+@media(min-width:768px){.m-cta{display:none}}
+.reveal{opacity:0;transform:translateY(16px);transition:.6s ease}
+.reveal.is-in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+
+<div class="demo-bar">※このページはポートフォリオ用の架空サンプルサイトです ｜ <a href="../../index.html">制作者ポートフォリオへ戻る</a></div>
+
+<header class="header">
+  <div class="header-inner">
+    <a class="logo" href="#"><span class="mk">陽</span>洋食堂ひだまり</a>
+    <a class="h-cta" href="#contact">予約する</a>
+  </div>
+</header>
+
+<main>
+<div class="hero">
+  <div class="hero-inner">
+    <span class="eyebrow">デモ駅 徒歩2分 ｜ 昔ながらの洋食店(架空)</span>
+    <h1>地元で愛される、<br><em>こだわりの一皿。</em></h1>
+    <p>じっくり3日煮込むデミグラスソースと、毎朝市場で仕入れる食材。創業からずっと、この街の「いつもの味」であり続けたい洋食店です。</p>
+    <div class="hero-btns">
+      <a class="btn btn-map" href="#access">Googleマップで見る</a>
+      <a class="btn btn-p" href="#contact">予約する</a>
+    </div>
+    <div class="hero-info">
+      <span class="hi">営業 <b>11:00-21:30</b></span>
+      <span class="hi">定休 <b>水曜</b></span>
+      <span class="hi">Google口コミ <b>4.6 ★</b>(デモ)</span>
+    </div>
+  </div>
+</div>
+
+<section id="menu">
+  <div class="container">
+    <div class="sec-head reveal"><span class="sec-en">MENU</span><h2 class="sec-title">人気メニュー</h2><p class="sec-lead">※価格・内容はデモ用の架空設定です。</p></div>
+    <div class="grid g3">
+      <div class="dish reveal"><div class="dish-img" style="background:linear-gradient(135deg,#E0883E,#F2B879)"><span class="tag">不動の一番人気</span><span class="plate">🍛</span></div><div class="dish-body"><h3>3日煮込みデミのオムライス</h3><p>とろとろ卵と、コク深い自家製デミグラスの看板メニュー。</p><span class="price">¥1,180<small>(サラダ付き)</small></span></div></div>
+      <div class="dish reveal"><div class="dish-img" style="background:linear-gradient(135deg,#A8431F,#D4794F)"><span class="tag">夜の定番</span><span class="plate">🥩</span></div><div class="dish-body"><h3>黒毛和牛の煮込みハンバーグ</h3><p>肉汁あふれる粗挽きハンバーグを、赤ワインでじっくりと。</p><span class="price">¥1,580<small>(ライス or パン付き)</small></span></div></div>
+      <div class="dish reveal"><div class="dish-img" style="background:linear-gradient(135deg,#C9A227,#E8C766)"><span class="tag">ランチ限定</span><span class="plate">🍤</span></div><div class="dish-body"><h3>大海老フライ定食</h3><p>サクサク衣の大ぶり海老フライ。自家製タルタルでどうぞ。</p><span class="price">¥1,280<small>(平日ランチ)</small></span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="kodawari" class="bg-cream">
+  <div class="container">
+    <div class="sec-head reveal"><span class="sec-en">OUR PRIDE</span><h2 class="sec-title">ひだまりのこだわり</h2></div>
+    <div class="kodawari">
+      <div class="kd reveal"><span class="ic">🍅</span><h3>毎朝の市場仕入れ</h3><p>野菜も肉も、店主が毎朝市場で目利き。旬の食材で日替わりも。</p></div>
+      <div class="kd reveal"><span class="ic">🍲</span><h3>3日かけるデミソース</h3><p>創業から継ぎ足すソースは、香味野菜と牛すじを3日煮込みます。</p></div>
+      <div class="kd reveal"><span class="ic">🏠</span><h3>家族で来られる店</h3><p>お子様メニュー・座敷席あり。三世代でのご来店も大歓迎です。</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="tennai">
+  <div class="container">
+    <div class="sec-head reveal"><span class="sec-en">INSIDE</span><h2 class="sec-title">店内の雰囲気</h2></div>
+    <div class="tennai reveal">
+      <div class="tn" style="background:linear-gradient(135deg,#B5824E,#D9B284)"><span>木の温もりのテーブル席</span></div>
+      <div class="tn" style="background:linear-gradient(135deg,#8A6A45,#B5926A)"><span>カウンター席</span></div>
+      <div class="tn" style="background:linear-gradient(135deg,#A8431F,#D4794F)"><span>キッチンの様子</span></div>
+      <div class="tn" style="background:linear-gradient(135deg,#6B7C52,#9CB07A)"><span>お座敷(最大8名)</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="review" class="bg-cream">
+  <div class="container">
+    <div class="sec-head reveal"><span class="sec-en">REVIEW</span><h2 class="sec-title">Googleの口コミ</h2><p class="sec-lead">※デモ用の架空の口コミです。</p></div>
+    <div class="grid g3">
+      <div class="review reveal"><div class="rv-h"><span class="av" style="background:#E0883E">K</span><div><b>近所の常連さん</b><span class="stars">★★★★★</span></div></div><p>「オムライスは間違いなく街一番。デミソースの深みがすごい。家族で月2は通っています。」</p><small>Google マップの口コミ(デモ)</small></div>
+      <div class="review reveal"><div class="rv-h"><span class="av" style="background:#A8431F">M</span><div><b>ランチ利用</b><span class="stars">★★★★★</span></div></div><p>「平日ランチの海老フライがコスパ最高。店員さんの感じも良くて、一人でも入りやすいお店です。」</p><small>Google マップの口コミ(デモ)</small></div>
+      <div class="review reveal"><div class="rv-h"><span class="av" style="background:#C9A227">T</span><div><b>子連れで来店</b><span class="stars">★★★★☆</span></div></div><p>「座敷があるので子連れでも安心。お子様プレートのおまけに子どもが大喜びでした。」</p><small>Google マップの口コミ(デモ)</small></div>
+    </div>
+    <div class="g-badge reveal"><span class="score">4.6</span><span class="stars">★★★★★</span><span>口コミ 128件(デモ表示)</span></div>
+  </div>
+</section>
+
+<section id="access">
+  <div class="container">
+    <div class="sec-head reveal"><span class="sec-en">ACCESS</span><h2 class="sec-title">アクセス・店舗情報</h2></div>
+    <div class="access reveal">
+      <div class="map" aria-hidden="true">
+        <span class="road r1"></span><span class="road r2"></span>
+        <span class="pin"></span><span class="lbl">洋食堂ひだまり</span>
+      </div>
+      <dl>
+        <dt>店名</dt><dd>洋食堂ひだまり ※架空</dd>
+        <dt>住所</dt><dd>東京都サンプル区デモ町3-4-5 ひだまりビル1F(架空)</dd>
+        <dt>営業時間</dt><dd>11:00〜15:00 / 17:00〜21:30(L.O. 21:00)</dd>
+        <dt>定休日</dt><dd>水曜日(祝日の場合は翌日)</dd>
+        <dt>アクセス</dt><dd>デモ駅 南口より徒歩2分 / 提携駐車場あり</dd>
+        <dt>電話</dt><dd>00-0000-0000(架空)</dd>
+      </dl>
+      <div class="map-cta">
+        <a class="btn btn-map" href="#">Googleマップで経路を見る</a>
+        <a class="btn btn-s" href="#">電話をかける</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="cta">
+  <div class="container reveal">
+    <span class="sec-en" style="color:#F2C892">RESERVE</span>
+    <h2>今夜の席、空いています。</h2>
+    <p>ご予約はお電話またはGoogleマップから。お席のご希望(座敷・カウンター)もお気軽にどうぞ。</p>
+    <div class="cta-btns">
+      <a class="btn btn-p" href="#" style="background:#fff;color:var(--brick)">電話で予約する</a>
+      <a class="btn btn-map" href="#">Googleマップで見る</a>
+    </div>
+    <small>※架空デモのため、リンクは動作しません。</small>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <b style="color:#fff">洋食堂ひだまり(架空)</b>
+    <span class="fx">このページはポートフォリオ掲載用の架空サンプル制作です。実在の企業・店舗・団体とは関係ありません。</span>
+    制作: <a href="../../index.html">AI Web Growth Studio</a>
+  </div>
+</footer>
+
+<div class="m-cta">
+  <a class="btn btn-map" href="#access">マップで見る</a>
+  <a class="btn btn-p" href="#contact">予約する</a>
+</div>
+
+<script>
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-in');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
