@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salon Lumo(架空デモ) | あなたらしい美しさを、もっと自然に。| 美容サロンLP</title>
+<meta name="description" content="【架空サンプルサイト】美容サロン向けLPのデモ。肌悩み・髪型の相談からLINEで簡単予約。Before/After・お客様の声・スタッフ紹介を掲載。">
+<meta property="og:title" content="Salon Lumo(架空デモ) | あなたらしい美しさを、もっと自然に。">
+<meta property="og:description" content="ポートフォリオ掲載用の架空サンプルサイトです。">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pink:#D98BA3;--pink-d:#B96B85;--pink-l:#FBEFF3;
+  --beige:#F7F1EA;--ink:#4A3F42;--gray:#8A7B80;--line:#EFE3E8;
+  --line-green:#06C755;--r:16px;--sh:0 4px 16px rgba(217,139,163,.12);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{font-family:'Noto Sans JP',sans-serif;color:var(--ink);background:#fff;line-height:1.9;font-size:15.5px;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+h1,h2,h3{font-family:'Zen Kaku Gothic New',sans-serif;line-height:1.55}
+.container{max-width:1000px;margin:0 auto;padding:0 20px}
+section{padding:72px 0}
+@media(min-width:768px){section{padding:96px 0}}
+.demo-bar{position:fixed;top:0;left:0;right:0;z-index:110;background:#4A3F42;color:#fff;font-size:11px;text-align:center;padding:6px 12px}
+.demo-bar a{text-decoration:underline;color:#F6CDD9}
+.header{position:fixed;top:28px;left:0;right:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.header-inner{max-width:1000px;margin:0 auto;padding:0 20px;height:58px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:'Outfit','Zen Kaku Gothic New',sans-serif;font-weight:600;font-size:17px;letter-spacing:.12em;color:var(--pink-d)}
+.logo small{font-size:10px;color:var(--gray);letter-spacing:.2em;display:block;line-height:1;font-family:'Noto Sans JP'}
+.h-cta{background:var(--line-green);color:#fff;font-weight:700;font-size:13px;padding:9px 18px;border-radius:999px;box-shadow:0 3px 10px rgba(6,199,85,.3)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:700;border-radius:999px;font-size:15px;padding:16px 32px;line-height:1;transition:.2s;border:none;cursor:pointer;font-family:inherit}
+.btn-line{background:var(--line-green);color:#fff;box-shadow:0 6px 16px rgba(6,199,85,.32)}
+.btn-line:hover{transform:translateY(-2px)}
+.btn-line::before{content:"";width:18px;height:18px;background:#fff;border-radius:5px;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2C6.5 2 2 5.7 2 10.2c0 4 3.5 7.4 8.3 8.1.3.1.8.2.9.5.1.3 0 .7 0 1l-.1.9c0 .3-.2 1 .9.6 1.1-.5 6-3.5 8.2-6 1.5-1.7 2.2-3.4 2.2-5.1C22.4 5.7 17.5 2 12 2z'/%3E%3C/svg%3E") center/contain no-repeat;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2C6.5 2 2 5.7 2 10.2c0 4 3.5 7.4 8.3 8.1.3.1.8.2.9.5.1.3 0 .7 0 1l-.1.9c0 .3-.2 1 .9.6 1.1-.5 6-3.5 8.2-6 1.5-1.7 2.2-3.4 2.2-5.1C22.4 5.7 17.5 2 12 2z'/%3E%3C/svg%3E") center/contain no-repeat}
+.btn-s{background:#fff;color:var(--pink-d);border:1.5px solid var(--pink)}
+.btn-s:hover{background:var(--pink);color:#fff}
+.hero{padding:140px 0 70px;background:linear-gradient(160deg,var(--pink-l) 0%,#fff 65%,var(--beige) 100%);position:relative;overflow:hidden;text-align:center}
+.hero::before,.hero::after{content:"";position:absolute;border-radius:50%}
+.hero::before{width:300px;height:300px;left:-120px;top:30px;background:radial-gradient(circle,rgba(217,139,163,.18),transparent 70%)}
+.hero::after{width:340px;height:340px;right:-140px;bottom:-80px;background:radial-gradient(circle,rgba(217,139,163,.14),transparent 70%)}
+.hero-inner{position:relative;z-index:1;max-width:620px;margin:0 auto;padding:0 20px}
+.eyebrow{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.16em;color:var(--pink-d);background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 16px;margin-bottom:18px}
+.hero h1{font-size:clamp(26px,6.4vw,40px);font-weight:900;margin-bottom:16px}
+.hero h1 em{font-style:normal;color:var(--pink-d)}
+.hero p{color:var(--gray);font-size:14.5px;margin-bottom:26px}
+.hero-btns{display:flex;flex-direction:column;gap:10px;align-items:center}
+.hero-btns small{font-size:11px;color:var(--gray)}
+.sec-head{text-align:center;margin-bottom:42px}
+.sec-en{font-family:'Outfit',sans-serif;font-size:11px;letter-spacing:.3em;color:var(--pink);font-weight:600;display:block;margin-bottom:8px}
+.sec-title{font-size:clamp(21px,5vw,29px);font-weight:900}
+.sec-lead{color:var(--gray);margin-top:12px;font-size:13.5px}
+.bg-pink{background:var(--pink-l)}
+.bg-beige{background:var(--beige)}
+.grid{display:grid;gap:14px}
+.g3{grid-template-columns:1fr}
+@media(min-width:680px){.g3{grid-template-columns:repeat(3,1fr);gap:18px}}
+.nayami{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px 20px;box-shadow:var(--sh);text-align:center}
+.nayami .ic{width:52px;height:52px;border-radius:50%;background:var(--pink-l);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:22px}
+.nayami h3{font-size:15px;font-weight:700;margin-bottom:6px}
+.nayami p{font-size:12.5px;color:var(--gray);line-height:1.75}
+.nayami-msg{text-align:center;margin-top:30px;font-size:15px;font-weight:700}
+.nayami-msg em{font-style:normal;color:var(--pink-d);background:linear-gradient(transparent 70%,rgba(217,139,163,.25) 70%)}
+.menu-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:22px;box-shadow:var(--sh);display:flex;flex-direction:column;gap:6px}
+.menu-card .tag{align-self:flex-start;font-size:10.5px;font-weight:700;color:var(--pink-d);background:var(--pink-l);border-radius:6px;padding:3px 10px}
+.menu-card h3{font-size:15.5px;font-weight:700}
+.menu-card p{font-size:12.5px;color:var(--gray);flex:1}
+.menu-card .price{font-family:'Outfit','Noto Sans JP',sans-serif;font-size:21px;font-weight:600;color:var(--pink-d)}
+.menu-card .price small{font-size:11px;color:var(--gray);font-weight:500}
+.ba{display:grid;gap:18px;max-width:760px;margin:0 auto}
+@media(min-width:680px){.ba{grid-template-columns:1fr 1fr}}
+.ba-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--sh);overflow:hidden}
+.ba-vis{display:grid;grid-template-columns:1fr 1fr;height:120px;position:relative}
+.ba-vis::after{content:"→";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:34px;height:34px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--pink-d);box-shadow:0 2px 8px rgba(74,63,66,.15)}
+.ba-vis span{display:flex;align-items:flex-end;padding:10px;font-size:10.5px;font-weight:700;color:#fff;letter-spacing:.08em}
+.ba-body{padding:16px 18px}
+.ba-body b{font-size:14px}
+.ba-body p{font-size:12.5px;color:var(--gray);margin-top:4px}
+.voice{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:20px;box-shadow:var(--sh)}
+.voice .stars{color:#F2B01E;font-size:13px;letter-spacing:2px}
+.voice b{font-size:13px;display:block;margin:6px 0 4px}
+.voice p{font-size:12.5px;color:var(--gray)}
+.staff{display:grid;gap:18px;max-width:760px;margin:0 auto}
+@media(min-width:680px){.staff{grid-template-columns:1fr 1fr}}
+.staff-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px;box-shadow:var(--sh);display:flex;gap:16px;align-items:center}
+.staff-card .av{flex:0 0 72px;width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--pink),var(--pink-l));display:flex;align-items:center;justify-content:center}
+.staff-card .av svg{width:34px;height:34px;stroke:#fff;fill:none;stroke-width:1.6;stroke-linecap:round}
+.staff-card b{font-size:15px;display:block}
+.staff-card small{font-size:11px;color:var(--pink-d);font-weight:700;display:block;margin-bottom:5px}
+.staff-card p{font-size:12px;color:var(--gray);line-height:1.7}
+.access{max-width:680px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--sh);overflow:hidden}
+.map{height:170px;background:linear-gradient(135deg,#EFE6EA,#F7F1EA);position:relative}
+.map::after{content:"";position:absolute;left:50%;top:50%;transform:translate(-50%,-60%);width:26px;height:26px;border-radius:50% 50% 50% 0;background:var(--pink-d);rotate:-45deg}
+.access dl{padding:20px 22px;display:grid;grid-template-columns:88px 1fr;gap:10px 14px;font-size:13px}
+.access dt{font-weight:700;color:var(--pink-d)}
+.access dd{color:var(--gray)}
+.cta{background:linear-gradient(135deg,var(--pink) 0%,var(--pink-d) 100%);color:#fff;text-align:center}
+.cta h2{font-size:clamp(21px,5vw,29px);font-weight:900;margin-bottom:14px}
+.cta p{color:#FBE3EA;font-size:14px;max-width:30em;margin:0 auto 26px}
+.cta-btns{display:flex;flex-direction:column;gap:10px;align-items:center}
+.cta small{color:#FBE3EA;font-size:11px;margin-top:10px;display:block}
+footer{background:#4A3F42;color:#C7B8BD;padding:36px 0 90px;font-size:12px;text-align:center}
+@media(min-width:768px){footer{padding:36px 0}}
+footer .fx{color:#F6CDD9;font-size:11.5px;display:block;margin:10px auto 4px;max-width:34em;line-height:1.8}
+footer a{color:#fff;text-decoration:underline}
+.m-cta{position:fixed;left:0;right:0;bottom:0;z-index:99;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-top:1px solid var(--line)}
+.m-cta .btn{width:100%;padding:14px;font-size:14.5px}
+@media(min-width:768px){.m-cta{display:none}}
+.reveal{opacity:0;transform:translateY(16px);transition:.6s ease}
+.reveal.is-in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+
+<div class="demo-bar">※このページはポートフォリオ用の架空サンプルサイトです ｜ <a href="../../index.html">制作者ポートフォリオへ戻る</a></div>
+
+<header class="header">
+  <div class="header-inner">
+    <a class="logo" href="#">SALON LUMO<small>トータルビューティーサロン(架空)</small></a>
+    <a class="h-cta" href="#contact">LINEで予約</a>
+  </div>
+</header>
+
+<main>
+<div class="hero">
+  <div class="hero-inner">
+    <span class="eyebrow">完全予約制 ｜ 駅徒歩3分 ｜ 当日予約OK(デモ)</span>
+    <h1>あなたらしい美しさを、<br><em>もっと自然に。</em></h1>
+    <p>肌も、髪も、メイクも。「なりたい」より「似合う」を一緒に見つける、おとなのためのトータルビューティーサロンです。</p>
+    <div class="hero-btns">
+      <a class="btn btn-line" href="#contact">LINEで予約する</a>
+      <small>友だち追加→メニュー選択で、30秒で予約完了</small>
+      <a class="btn btn-s" href="#menu">メニューを見る</a>
+    </div>
+  </div>
+</div>
+
+<section id="nayami">
+  <div class="container">
+    <div class="sec-head reveal"><span class="sec-en">CONCERN</span><h2 class="sec-title">こんなお悩み、ありませんか？</h2></div>
+    <div class="grid g3">
+      <div class="nayami reveal"><span class="ic">🌸</span><h3>肌の調子が安定しない</h3><p>乾燥・くすみ・大人ニキビ…。年齢とともに変わる肌に、何が合うのか分からない。</p></div>
+      <div class="nayami reveal"><span class="ic">💇‍♀️</span><h3>似合う髪型が分からない</h3><p>いつも同じスタイルの繰り返し。「似合う」を誰かに見つけてほしい。</p></div>
+      <div class="nayami reveal"><span class="ic">⏰</span><h3>忙しくて通いにくい</h3><p>仕事や育児で、自分の時間は後回し。短時間で効果を実感したい。</p></div>
+    </div>
+    <p class="nayami-msg reveal">そのお悩み、<em>Lumoの「似合わせカウンセリング」</em>にお任せください。</p>
+  </div>
+</section>
+
+<section id="menu" class="bg-pink">
+  <div class="container">
+    <div class="sec-head reveal"><span class="sec-en">MENU</span><h2 class="sec-title">人気メニュー</h2><p class="sec-lead">※価格はデモ用の架空設定です。</p></div>
+    <div class="grid g3">
+      <div class="menu-card reveal"><span class="tag">人気No.1</span><h3>似合わせカット＋艶カラー</h3><p>骨格・肌色診断をもとに、扱いやすく褪色もきれいなスタイルへ。</p><span class="price">¥9,800<small>(初回 ¥7,800)</small></span></div>
+      <div class="menu-card reveal"><span class="tag">肌悩みに</span><h3>毛穴ケアフェイシャル 60分</h3><p>うるおいを守りながら毛穴・くすみにアプローチ。翌朝の化粧ノリが変わります。</p><span class="price">¥8,500<small>(初回 ¥6,500)</small></span></div>
+      <div class="menu-card reveal"><span class="tag">ご褒美に</span><h3>トータルビューティーコース</h3><p>カット＋フェイシャル＋ポイントメイクレッスンの欲ばりコース。</p><span class="price">¥16,000<small>(120分)</small></span></div>
+    </div>
+  </div>
+</section>
+
+<section id="ba">
+  <div class="container">
+    <div class="sec-head reveal"><span class="sec-en">BEFORE / AFTER</span><h2 class="sec-title">変化を、実感。</h2><p class="sec-lead">※デモ用のイメージ表現です。</p></div>
+    <div class="ba">
+      <div class="ba-card reveal">
+        <div class="ba-vis"><span style="background:linear-gradient(135deg,#B9A8AE,#D4C6CB)">BEFORE</span><span style="background:linear-gradient(135deg,#D98BA3,#EBB7C6)">AFTER</span></div>
+        <div class="ba-body"><b>広がりやすい髪 → まとまる艶髪</b><p>髪質に合わせたカットと内部補修トリートメントで、朝のセットが3分に。</p></div>
+      </div>
+      <div class="ba-card reveal">
+        <div class="ba-vis"><span style="background:linear-gradient(135deg,#C2B3A6,#D9CCC0)">BEFORE</span><span style="background:linear-gradient(135deg,#E8A8BC,#F6D2DD)">AFTER</span></div>
+        <div class="ba-body"><b>くすみ肌 → 透明感のある素肌</b><p>毛穴ケアフェイシャル3回コースで、ファンデーションがワントーン明るく。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="voice" class="bg-beige">
+  <div class="container">
+    <div class="sec-head reveal"><span class="sec-en">VOICE</span><h2 class="sec-title">お客様の声</h2><p class="sec-lead">※デモ用の架空のコメントです。</p></div>
+    <div class="grid g3">
+      <div class="voice reveal"><span class="stars">★★★★★</span><b>30代・会社員</b><p>「『似合う』をちゃんと説明しながら提案してくれるので安心。毎朝のスタイリングが本当に楽になりました。」</p></div>
+      <div class="voice reveal"><span class="stars">★★★★★</span><b>40代・主婦</b><p>「フェイシャル3回目で肌のトーンが変わったのを実感。子連れ相談にも快く対応してくれて助かります。」</p></div>
+      <div class="voice reveal"><span class="stars">★★★★☆</span><b>20代・看護師</b><p>「LINEで夜中でも予約できるのが便利。仕事帰りの遅い時間でも丁寧に対応してもらえました。」</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="staff">
+  <div class="container">
+    <div class="sec-head reveal"><span class="sec-en">STAFF</span><h2 class="sec-title">スタッフ紹介</h2></div>
+    <div class="staff">
+      <div class="staff-card reveal">
+        <span class="av"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.2" r="3.6"/><path d="M5 20c.8-3.8 3.6-5.8 7-5.8s6.2 2 7 5.8"/></svg></span>
+        <div><b>佐倉 みお(架空)</b><small>オーナースタイリスト / 美容歴12年</small><p>骨格・パーソナルカラー診断が得意。「再現できるスタイル」を大切にしています。</p></div>
+      </div>
+      <div class="staff-card reveal">
+        <span class="av"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.2" r="3.6"/><path d="M5 20c.8-3.8 3.6-5.8 7-5.8s6.2 2 7 5.8"/></svg></span>
+        <div><b>水原 ことね(架空)</b><small>エステティシャン / フェイシャル担当</small><p>敏感肌に寄り添うケアが好評。肌質に合わせて毎回メニューを微調整します。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="access" class="bg-pink">
+  <div class="container">
+    <div class="sec-head reveal"><span class="sec-en">ACCESS</span><h2 class="sec-title">アクセス</h2></div>
+    <div class="access reveal">
+      <div class="map" aria-hidden="true"></div>
+      <dl>
+        <dt>店名</dt><dd>Salon Lumo(サロン ルーモ)※架空</dd>
+        <dt>住所</dt><dd>東京都サンプル区デモ町1-2-3 ルーモビル2F(架空)</dd>
+        <dt>営業時間</dt><dd>10:00〜20:00(最終受付19:00)/ 火曜定休</dd>
+        <dt>アクセス</dt><dd>デモ駅 東口より徒歩3分</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="cta">
+  <div class="container reveal">
+    <span class="sec-en" style="color:#FBD9E3">RESERVE</span>
+    <h2>ご予約は、LINEで30秒。</h2>
+    <p>「相談だけ」も大歓迎。あなたの「似合う」を、一緒に見つけましょう。初回限定クーポンもLINEでお届け中です。</p>
+    <div class="cta-btns">
+      <a class="btn btn-line" href="#" style="background:#fff;color:var(--line-green)">LINEで予約する</a>
+      <a class="btn btn-s" href="#" style="background:transparent;color:#fff;border-color:rgba(255,255,255,.55)">電話で予約する</a>
+    </div>
+    <small>※当日予約もLINEからどうぞ(架空デモのためリンクは動作しません)</small>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <b style="color:#fff">Salon Lumo(架空)</b>
+    <span class="fx">このページはポートフォリオ掲載用の架空サンプル制作です。実在の企業・店舗・団体とは関係ありません。</span>
+    制作: <a href="../../index.html">AI Web Growth Studio</a>
+  </div>
+</footer>
+
+<div class="m-cta"><a class="btn btn-line" href="#contact">LINEで予約する</a></div>
+
+<script>
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-in');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
