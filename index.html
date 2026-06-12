@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Web Growth Studio | 30秒AIサイト診断・HP/LP改善・SEO/MEO | AIが分析し、人が改善する。</title>
-<meta name="description" content="URLを入力するだけで、HP・LP・GoogleマップをAIが30秒で診断。AI×人のWeb集客コンサルティングで、問い合わせ・予約・採用の成果につなげます。診断・相談は無料。">
-<meta property="og:title" content="AIが分析し、人が改善する。| AI Web Growth Studio">
-<meta property="og:description" content="30秒AIサイト診断で、あなたのHP・LP・Googleマップの改善ポイントが分かります。診断・相談は無料。">
+<title>AI Web Growth Studio | AI×広告×Webマーケティング改善 | 30秒AI診断・広告運用・LP/SEO/MEO</title>
+<meta name="description" content="AIが分析し、広告・Web・LPを改善。30秒AI診断とAI広告診断で課題を可視化し、広告運用・LP改善・SEO・MEO・GA4/GTM計測までワンストップで問い合わせを増やす仕組みを設計します。診断・相談は無料。">
+<meta property="og:title" content="AIが分析し、広告・Web・LPを改善。| AI Web Growth Studio">
+<meta property="og:description" content="AI Marketing Score・AI広告診断で改善ポイントを可視化。広告・LP・SEO・MEO・Web改善まで一貫対応。診断・相談は無料。">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ja_JP">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -363,6 +363,63 @@ section{padding:80px 0}
 .f8-body b .tag{font-size:9.5px;font-family:'Outfit',sans-serif;letter-spacing:.08em;background:var(--sky);color:var(--blue);border-radius:5px;padding:2px 7px;margin-left:8px;vertical-align:2px}
 .f8-body p{font-size:12.5px;color:var(--gray)}
 
+
+/* ========== case study ========== */
+.cs-grid{display:grid;gap:16px}
+@media(min-width:760px){.cs-grid{grid-template-columns:1fr 1fr;gap:20px}}
+.cs{background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:26px 24px;display:flex;flex-direction:column;gap:13px;transition:.25s}
+.cs:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover)}
+.cs-no{font-family:'Outfit',sans-serif;font-size:11px;letter-spacing:.18em;font-weight:600;color:var(--blue)}
+.cs h3{font-size:16.5px;font-weight:900;margin-top:-6px}
+.cs-tags{display:flex;flex-wrap:wrap;gap:5px}
+.cs-tags span{font-size:10.5px;font-weight:700;color:var(--blue);background:var(--sky);border-radius:5px;padding:3px 9px}
+.cs-kpi{background:var(--sky);border-radius:12px;padding:12px 16px}
+.cs-kpi small{font-size:11px;font-weight:700;color:var(--gray);display:block;margin-bottom:3px}
+.cs-kpi .row{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap;font-family:'Outfit','Noto Sans JP',sans-serif}
+.cs-kpi .from{font-size:15px;color:var(--gray-light);text-decoration:line-through;font-weight:500}
+.cs-kpi .arr{color:var(--accent);font-weight:700;font-size:14px}
+.cs-kpi .to{font-size:24px;font-weight:700;color:var(--navy)}
+.cs-kpi .to em{font-style:normal;font-size:12.5px;font-weight:700}
+.cs-kpi .delta{font-size:11px;font-weight:700;color:#fff;background:var(--good);border-radius:999px;padding:3px 10px;margin-left:auto}
+.cs p.cs-sum{font-size:12.5px;color:var(--gray);line-height:1.7;margin-top:auto}
+.cs-note{margin-top:22px;text-align:center;font-size:12px;color:var(--gray-light)}
+
+/* ========== ad diag KPI ========== */
+.kpi3{display:grid;grid-template-columns:1fr;gap:10px}
+@media(min-width:640px){.kpi3{grid-template-columns:repeat(3,1fr)}}
+.kpi{background:var(--sky);border-radius:14px;padding:15px 14px;text-align:center}
+.kpi small{font-size:11px;font-weight:700;color:var(--gray);display:block;margin-bottom:5px}
+.kpi .row{display:flex;align-items:baseline;justify-content:center;gap:7px;flex-wrap:wrap;font-family:'Outfit','Noto Sans JP',sans-serif}
+.kpi .from{font-size:13px;color:var(--gray-light);text-decoration:line-through;font-weight:500}
+.kpi b{font-size:23px;font-weight:700;color:var(--navy)}
+.kpi b em{font-style:normal;font-size:12px}
+.kpi.is-up b{color:var(--good)}
+
+/* ========== marketing services ========== */
+.ms-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(min-width:760px){.ms-grid{grid-template-columns:repeat(4,1fr);gap:12px}}
+.ms{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 15px;box-shadow:var(--shadow);transition:.2s}
+.ms:hover{transform:translateY(-2px);border-color:var(--sky-deep)}
+.ms b{font-size:13px;display:block}
+.ms p{font-size:11px;color:var(--gray);line-height:1.6;margin-top:2px}
+
+/* ========== team ========== */
+.team-grid{display:grid;gap:18px}
+@media(min-width:820px){.team-grid{grid-template-columns:1fr 1fr;gap:22px}}
+.member{background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);padding:30px 26px;display:flex;flex-direction:column;gap:14px;transition:.25s}
+.member:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover)}
+.member-head{display:flex;gap:16px;align-items:center}
+.member-av{flex:0 0 64px;width:64px;height:64px;border-radius:18px;display:flex;align-items:center;justify-content:center}
+.member-av svg{width:30px;height:30px;stroke:#fff;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.member-head h3{font-size:19px;font-weight:900}
+.member-head h3 small{font-family:'Outfit','Noto Sans JP',sans-serif;font-size:11px;color:var(--gray-light);font-weight:500;margin-left:8px;letter-spacing:.04em}
+.member-role{font-size:12px;font-weight:700;color:var(--blue);display:block;margin-top:2px}
+.member > p{font-size:13.5px;color:var(--gray)}
+.member-chips{display:flex;flex-wrap:wrap;gap:6px}
+.member-chips span{font-size:11px;font-weight:700;color:var(--navy);background:var(--sky);border-radius:6px;padding:4px 10px}
+.member-result{font-size:11.5px;color:var(--gray);background:var(--sky);border-radius:10px;padding:10px 13px;line-height:1.8;margin-top:auto}
+.member-result b{color:var(--navy)}
+
 /* ---------- profile ---------- */
 .profile-card{display:grid;gap:30px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);padding:34px 26px}
 @media(min-width:820px){.profile-card{grid-template-columns:1fr 260px;padding:50px 56px;gap:48px}}
@@ -598,8 +655,9 @@ body.modal-open{overflow:hidden}
     <a class="logo" href="#top"><span class="mark">AI</span>AI WEB GROWTH STUDIO</a>
     <nav class="gnav" aria-label="グローバルナビゲーション">
       <a href="#shindan">30秒AI診断</a>
-      <a href="#ai">AIでできること</a>
-      <a href="#works">制作事例</a>
+      <a href="#ad">広告診断</a>
+      <a href="#results">実績</a>
+      <a href="#team">TEAM</a>
       <a href="#price">料金</a>
       <a href="#faq">FAQ</a>
     </nav>
@@ -613,22 +671,22 @@ body.modal-open{overflow:hidden}
 <div class="hero">
   <div class="container hero-grid">
     <div>
-      <span class="hero-eyebrow">AI Web Growth Platform</span>
-      <h1><span class="grad">AIが分析し、</span><br>人が改善する。</h1>
-      <p class="hero-sub">URLを入力するだけで、HP・LP・Googleマップの課題をAIが30秒で診断。その結果をもとに、人の手で「問い合わせが増えるWeb」へ改善まで伴走します。</p>
+      <span class="hero-eyebrow">AI Marketing Growth Platform</span>
+      <h1><span class="grad">AIが分析し、</span><br>広告・Web・LPを改善。</h1>
+      <p class="hero-sub">問い合わせを増やす仕組みを、診断から設計します。AI診断で課題を可視化し、広告・LP・SEO・MEO・Web改善まで、AI×専門チームが一貫対応します。</p>
       <div class="hero-btns">
         <a class="btn btn-blue" href="#shindan">30秒AI診断を試す</a>
         <a class="btn btn-secondary" href="#contact">無料で相談する</a>
       </div>
       <div class="hero-badges">
         <span class="hb"><span class="num">30</span>秒でAI診断</span>
-        <span class="hb"><span class="num">9</span>項目スコア化</span>
-        <span class="hb">SEO・MEO対応</span>
+        <span class="hb"><span class="num">11</span>項目スコア化</span>
+        <span class="hb">広告・SEO・MEO対応</span>
         <span class="hb">改善・運用まで</span>
       </div>
     </div>
     <div class="hero-visual reveal" aria-hidden="true">
-      <div class="hv-head">AI WEB SCORE — LIVE PREVIEW</div>
+      <div class="hv-head">AI MARKETING SCORE — LIVE PREVIEW</div>
       <div class="hv-grid">
         <div class="ring">
           <svg width="120" height="120" viewBox="0 0 120 120">
@@ -640,9 +698,9 @@ body.modal-open{overflow:hidden}
         </div>
         <div class="hv-bars">
           <div class="hv-bar"><span>SEO</span><span class="track"><span class="fill" data-w="90"></span></span><span class="val">90</span></div>
-          <div class="hv-bar"><span>UI</span><span class="track"><span class="fill" data-w="85"></span></span><span class="val">85</span></div>
-          <div class="hv-bar"><span>スマホ</span><span class="track"><span class="fill" data-w="92"></span></span><span class="val">92</span></div>
-          <div class="hv-bar"><span>CTA</span><span class="track"><span class="fill" data-w="65"></span></span><span class="val">65</span></div>
+          <div class="hv-bar"><span>広告</span><span class="track"><span class="fill" data-w="62"></span></span><span class="val">62</span></div>
+          <div class="hv-bar"><span>LP</span><span class="track"><span class="fill" data-w="70"></span></span><span class="val">70</span></div>
+          <div class="hv-bar"><span>CVR</span><span class="track"><span class="fill" data-w="58"></span></span><span class="val">58</span></div>
           <div class="hv-bar"><span>MEO</span><span class="track"><span class="fill" data-w="55"></span></span><span class="val">55</span></div>
         </div>
       </div>
@@ -654,10 +712,10 @@ body.modal-open{overflow:hidden}
 <!-- ===== 信頼バー ===== -->
 <div class="trust-bar">
   <div class="trust-inner">
-    <div class="trust-item"><span class="tic"></span>AI診断 × 人の改善</div>
-    <div class="trust-item"><span class="tic"></span>問い合わせ導線設計</div>
+    <div class="trust-item"><span class="tic"></span>AIが分析し、人が改善する</div>
+    <div class="trust-item"><span class="tic"></span>広告・LP・Webを一貫改善</div>
     <div class="trust-item"><span class="tic"></span>SEO・MEO対応</div>
-    <div class="trust-item"><span class="tic"></span>公開後のAI運用まで</div>
+    <div class="trust-item"><span class="tic"></span>GA4・GTM計測まで対応</div>
   </div>
 </div>
 
@@ -665,14 +723,14 @@ body.modal-open{overflow:hidden}
 <section id="shindan">
   <div class="container">
     <div class="sec-head center reveal">
-      <span class="sec-eyebrow">AI Web Score</span>
-      <h2 class="sec-title">30秒AIサイト診断</h2>
-      <p class="sec-lead">URLを入力するだけで、現在のHPやLP、Googleマップの状態をAIが分析。9項目のスコアと改善提案をその場で表示します。</p>
+      <span class="sec-eyebrow">AI Marketing Score</span>
+      <h2 class="sec-title">30秒AI診断 — AI Marketing Score</h2>
+      <p class="sec-lead">URLを入力するだけで、Web・SEO・MEO・広告・LP・CVR・計測環境まで11項目をAIが総合評価。スコアと改善提案をその場で表示します。</p>
     </div>
 
     <div class="ai-app reveal">
       <div class="ai-app-head">
-        <span class="en">AI WEB SCORE — FREE</span>
+        <span class="en">AI MARKETING SCORE — FREE</span>
         <h3>あなたのサイト、何点ですか？</h3>
         <p>診断は無料・登録不要。結果はそのままお使いいただけます。</p>
       </div>
@@ -731,7 +789,7 @@ body.modal-open{overflow:hidden}
               <div class="label"><b id="res-total">0</b><small>/ 100</small></div>
             </div>
             <div class="res-meta">
-              <span>AI Web Score — 総合</span>
+              <span>AI Marketing Score — 総合</span>
               <b id="res-url"></b>
               <div class="chips"><span id="res-industry"></span><span id="res-goal"></span></div>
               <div class="res-comment" id="res-comment"></div>
@@ -769,33 +827,227 @@ body.modal-open{overflow:hidden}
   </div>
 </section>
 
+<!-- ===== AI広告診断 ===== -->
+<section id="ad" class="bg-sky">
+  <div class="container">
+    <div class="sec-head center reveal">
+      <span class="sec-eyebrow">AI Ads Diagnosis</span>
+      <h2 class="sec-title">AI広告診断・改善シミュレーター</h2>
+      <p class="sec-lead">媒体・広告費・CPAを入れるだけで、AIが改善余地を試算。想定CPA改善・想定CV増加・改善優先順位をその場で表示します。</p>
+    </div>
+    <div class="ai-app reveal">
+      <div class="ai-app-head">
+        <span class="en">AI ADS DIAGNOSIS — FREE</span>
+        <h3>その広告費、あと何件CVが取れるか。</h3>
+        <p>診断は無料・登録不要。改善シミュレーション付きです。</p>
+      </div>
+      <div class="ai-app-body">
+
+        <div class="ai-form" id="ad-form">
+          <div class="field-row">
+            <div class="field">
+              <label for="ad-media">広告媒体</label>
+              <select id="ad-media">
+                <option>Google広告</option>
+                <option>Yahoo!広告</option>
+                <option>Meta広告(Instagram/Facebook)</option>
+                <option>LINE広告</option>
+                <option>X広告</option>
+                <option>複数媒体</option>
+                <option>これから出稿</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="ad-industry">業種</label>
+              <select id="ad-industry">
+                <option>工務店・建築</option>
+                <option>美容サロン</option>
+                <option>不動産</option>
+                <option>飲食店</option>
+                <option>士業</option>
+                <option>EC・通販</option>
+                <option>BtoB</option>
+                <option>その他</option>
+              </select>
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="ad-budget">月間広告費(万円)</label>
+              <input type="number" id="ad-budget" placeholder="50" min="1">
+            </div>
+            <div class="field">
+              <label for="ad-cpa">現在のCPA(円)</label>
+              <input type="number" id="ad-cpa" placeholder="40000" min="100">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="ad-cv">月間CV数(件)</label>
+              <input type="number" id="ad-cv" placeholder="12" min="0">
+            </div>
+            <div class="field">
+              <label for="ad-goal">目標</label>
+              <select id="ad-goal">
+                <option>CPAを下げたい</option>
+                <option>CV数を増やしたい</option>
+                <option>ROASを改善したい</option>
+                <option>これから広告を始めたい</option>
+              </select>
+            </div>
+          </div>
+          <button class="btn btn-blue" id="btn-ad" type="button">AIで広告診断する</button>
+          <p class="ai-disclaimer">※本ツールはデモ版の簡易試算です。実際の改善率は、無料の広告アカウント診断にて実データをもとに算出します。改善を保証するものではありません。</p>
+        </div>
+
+        <div class="ai-progress" id="ad-progress" aria-live="polite">
+          <div class="radar" aria-hidden="true"></div>
+          <div class="ai-step" id="ad-step">分析中…</div>
+          <div class="pbar"><div class="pfill" id="ad-pfill"></div></div>
+          <small id="ad-target"></small>
+        </div>
+
+        <div class="ai-result" id="ad-result" aria-live="polite">
+          <div class="res-block">
+            <h4>改善シミュレーション</h4>
+            <div class="kpi3">
+              <div class="kpi"><small>想定CPA</small><div class="row"><span class="from" id="ad-cpa-from"></span><b id="ad-cpa-to"></b></div></div>
+              <div class="kpi is-up"><small>想定CV数 / 月</small><div class="row"><span class="from" id="ad-cv-from"></span><b id="ad-cv-to"></b></div></div>
+              <div class="kpi is-up"><small>想定改善率</small><div class="row"><b id="ad-rate"></b></div></div>
+            </div>
+            <div class="res-comment" id="ad-comment" style="margin-top:12px"></div>
+          </div>
+          <div class="res-block">
+            <h4>AI改善提案(優先度順)</h4>
+            <div class="prop-list" id="ad-props"></div>
+          </div>
+          <div class="res-report">
+            <div class="pdf" aria-hidden="true"></div>
+            <div>
+              <b>広告アカウント無料診断</b>
+              <small>実際のアカウント・計測データを拝見し、具体的な改善手順をレポートでお渡しします(無料・秘密厳守)。</small>
+            </div>
+          </div>
+          <div class="res-actions">
+            <a class="btn btn-line" href="#contact">LINEで相談する</a>
+            <a class="btn btn-primary" href="#contact">無料で広告診断を依頼する</a>
+          </div>
+          <div class="res-retry"><button type="button" id="btn-ad-retry">条件を変えて試算し直す</button></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 実績 ===== -->
+<section id="results">
+  <div class="container">
+    <div class="sec-head center reveal">
+      <span class="sec-eyebrow">Results</span>
+      <h2 class="sec-title">実績 — 数字で語るCase Study</h2>
+      <p class="sec-lead">当チームメンバーが担当した、広告改善・LP改善・計測改善の実績です。</p>
+    </div>
+    <div class="cs-grid">
+      <article class="cs reveal">
+        <span class="cs-no">CASE 01</span>
+        <h3>士業 — CPAを60%改善し、ROAS 283%へ</h3>
+        <div class="cs-tags"><span>広告改善</span><span>LP改善</span><span>計測改善</span></div>
+        <div class="cs-kpi"><small>CPA(顧客獲得単価)</small><div class="row"><span class="from">52,000円</span><span class="arr">→</span><span class="to">20,495<em>円</em></span><span class="delta">▲60.6%</span></div></div>
+        <div class="cs-kpi"><small>ROAS(広告費用対効果)</small><div class="row"><span class="to">283<em>%</em></span></div></div>
+        <p class="cs-sum">配信構造の再設計・LPの訴求改善・計測環境の整備を同時に実施し、同予算で獲得効率を大幅に改善。</p>
+      </article>
+      <article class="cs reveal">
+        <span class="cs-no">CASE 02</span>
+        <h3>住宅 — 広告費を36%削減しながら、成約1.5倍以上</h3>
+        <div class="cs-tags"><span>広告改善</span><span>費用最適化</span></div>
+        <div class="cs-kpi"><small>年間広告費</small><div class="row"><span class="from">5,000万円</span><span class="arr">→</span><span class="to">3,200<em>万円</em></span><span class="delta">▲36%</span></div></div>
+        <div class="cs-kpi"><small>成約数</small><div class="row"><span class="from">23棟</span><span class="arr">→</span><span class="to">36<em>棟</em></span><span class="delta">+13棟</span></div></div>
+        <p class="cs-sum">ムダな配信を削りながら勝ち筋へ予算を集中。「広告費を増やさず成約を増やす」を実現した代表事例。</p>
+      </article>
+      <article class="cs reveal">
+        <span class="cs-no">CASE 03</span>
+        <h3>住宅 — 広告費1,900万円で成約25棟</h3>
+        <div class="cs-tags"><span>広告運用</span><span>費用対効果最大化</span></div>
+        <div class="cs-kpi"><small>年間広告費</small><div class="row"><span class="to">1,900<em>万円</em></span></div></div>
+        <div class="cs-kpi"><small>成約数</small><div class="row"><span class="to">25<em>棟</em></span><span class="delta">1棟あたり76万円</span></div></div>
+        <p class="cs-sum">限られた予算でも、媒体配分とクリエイティブ検証の高速化で費用対効果を最大化。</p>
+      </article>
+      <article class="cs reveal">
+        <span class="cs-no">CASE 04</span>
+        <h3>BtoB営業 — 開始1ヶ月で300万円の受注</h3>
+        <div class="cs-tags"><span>広告改善</span><span>営業導線設計</span></div>
+        <div class="cs-kpi"><small>受注金額</small><div class="row"><span class="to">300<em>万円</em></span><span class="delta">開始1ヶ月</span></div></div>
+        <p class="cs-sum">広告→LP→商談までの導線を一気通貫で設計し、立ち上げ初月から受注に直結。</p>
+      </article>
+    </div>
+    <p class="cs-note">※成果は一例です。商材・予算・期間・市場環境により変動し、同等の成果を保証するものではありません。</p>
+    <div class="sec-cta reveal">
+      <p class="note">あなたの広告・サイトにも、同じ改善余地があるか。まずAIに聞いてみてください。</p>
+      <a class="btn btn-blue" href="#ad">AI広告診断を試す</a>
+      <a class="btn btn-primary" href="#contact">無料で相談する</a>
+    </div>
+  </div>
+</section>
+
 <!-- ===== AIでできること ===== -->
 <section id="ai" class="bg-sky">
   <div class="container">
     <div class="sec-head reveal">
       <span class="sec-eyebrow">AI Solutions</span>
-      <h2 class="sec-title">AIでできること</h2>
-      <p class="sec-lead">診断から改善・運用まで、AIを活用して「勘」ではなくデータで集客課題に向き合います。分析はAI、最終判断と改善は人。両方の強みを組み合わせます。</p>
+      <h2 class="sec-title">AI対応領域</h2>
+      <p class="sec-lead">Web・SEO・MEO・広告・LPの診断から改善・運用まで、AIを活用して「勘」ではなくデータで集客課題に向き合います。分析はAI、最終判断と改善は人。両方の強みを組み合わせます。</p>
     </div>
     <div class="grid grid-ai">
-      <div class="ai-card reveal"><div class="ai-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l2.5 2.5"/></svg></div><h3>AIサイト診断</h3><p>UI・UX・CTA・速度など9項目をスコア化し、課題を見える化。</p></div>
+      <div class="ai-card reveal"><div class="ai-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l2.5 2.5"/></svg></div><h3>AI Web診断</h3><p>Web・CVR・CTA・速度など11項目をスコア化し、課題を見える化。</p></div>
       <div class="ai-card reveal"><div class="ai-ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div><h3>AI SEO診断</h3><p>キーワード・見出し構造・内部リンクをAIが解析し改善案を提示。</p></div>
       <div class="ai-card reveal"><div class="ai-ic"><svg viewBox="0 0 24 24"><path d="M12 21s-7-5.5-7-11a7 7 0 0114 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div><h3>AI MEO診断</h3><p>Googleビジネスプロフィールの充足度・口コミ状況を分析。</p></div>
       <div class="ai-card reveal"><div class="ai-ic"><svg viewBox="0 0 24 24"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg></div><h3>AI LP診断</h3><p>構成・コピー・CTA配置を分析し、CVR改善のヒントを抽出。</p></div>
       <div class="ai-card reveal"><div class="ai-ic"><svg viewBox="0 0 24 24"><path d="M8 3v18M16 3v18M3 8h18M3 16h18"/></svg></div><h3>AI競合分析</h3><p>競合サイトとの比較で、勝てるポイント・負けている点を特定。</p></div>
-      <div class="ai-card reveal"><div class="ai-ic"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></div><h3>AI集客分析</h3><p>流入経路と行動データから、伸びしろの大きい施策を提案。</p></div>
-      <div class="ai-card reveal"><div class="ai-ic"><svg viewBox="0 0 24 24"><path d="M14.5 4l5.5 5.5L9.5 20H4v-5.5L14.5 4z"/></svg></div><h3>AI改善提案</h3><p>キャッチコピー・FAQ・口コミ返信文の生成まで、改善をAIが支援。</p></div>
-      <div class="ai-card reveal"><div class="ai-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M19 12a7 7 0 01-.4 2.3l2 1.6-2 3.4-2.4-.9a7 7 0 01-2 1.2L13.8 22h-3.6l-.4-2.4a7 7 0 01-2-1.2l-2.4.9-2-3.4 2-1.6A7 7 0 015 12c0-.8.1-1.6.4-2.3l-2-1.6 2-3.4 2.4.9a7 7 0 012-1.2L10.2 2h3.6l.4 2.4a7 7 0 012 1.2l2.4-.9 2 3.4-2 1.6c.3.7.4 1.5.4 2.3z"/></svg></div><h3>AI運用サポート</h3><p>公開後もAIが定期診断。変化を検知し、月次で改善を回します。</p></div>
+      <div class="ai-card reveal"><div class="ai-ic"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></div><h3>AI広告診断</h3><p>媒体・CPA・配信構造を分析し、想定改善率まで提示。</p></div>
+      <div class="ai-card reveal"><div class="ai-ic"><svg viewBox="0 0 24 24"><path d="M14.5 4l5.5 5.5L9.5 20H4v-5.5L14.5 4z"/></svg></div><h3>AI改善提案</h3><p>コピー・FAQ・クリエイティブ案の生成まで、改善をAIが支援。</p></div>
+      <div class="ai-card reveal"><div class="ai-ic"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div><h3>AIレポート</h3><p>診断・運用結果を月次レポートに自動整理してお届け。</p></div>
+      <div class="ai-card reveal"><div class="ai-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M19 12a7 7 0 01-.4 2.3l2 1.6-2 3.4-2.4-.9a7 7 0 01-2 1.2L13.8 22h-3.6l-.4-2.4a7 7 0 01-2-1.2l-2.4.9-2-3.4 2-1.6A7 7 0 015 12c0-.8.1-1.6.4-2.3l-2-1.6 2-3.4 2.4.9a7 7 0 012-1.2L10.2 2h3.6l.4 2.4a7 7 0 012 1.2l2.4-.9 2 3.4-2 1.6c.3.7.4 1.5.4 2.3z"/></svg></div><h3>AI運用</h3><p>公開後もAIが定期診断。変化を検知し、月次で改善を回します。</p></div>
     </div>
     <div class="sec-cta reveal">
-      <p class="note">ブログ提案・口コミ返信・広告改善・SNS投稿などのAI機能も順次拡張中です。</p>
+      <p class="note">ブログ提案・口コミ返信・SNS投稿・広告クリエイティブ生成などのAI機能も順次拡張中です。</p>
       <a class="btn btn-blue" href="#shindan">まずは30秒AI診断を試す</a>
     </div>
   </div>
 </section>
 
+<!-- ===== 広告・マーケ対応領域 ===== -->
+<section id="adservice">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-eyebrow">Marketing Services</span>
+      <h2 class="sec-title">広告・マーケティング対応領域</h2>
+      <p class="sec-lead">主要5媒体の広告運用から、計測環境の構築、LP・CVR改善まで。「出稿して終わり」にしない運用改善をワンストップで提供します。</p>
+    </div>
+    <div class="ms-grid">
+      <div class="ms reveal"><b>Google広告</b><p>検索・P-MAX・ディスプレイの設計と運用改善</p></div>
+      <div class="ms reveal"><b>Yahoo!広告</b><p>検索・ディスプレイ広告の運用最適化</p></div>
+      <div class="ms reveal"><b>Meta広告</b><p>Instagram/Facebookの配信・クリエイティブ検証</p></div>
+      <div class="ms reveal"><b>LINE広告</b><p>友だち獲得・来店促進の配信設計</p></div>
+      <div class="ms reveal"><b>X広告</b><p>認知拡大・指名検索を増やす配信</p></div>
+      <div class="ms reveal"><b>GA4</b><p>計測設計・レポート構築・行動分析</p></div>
+      <div class="ms reveal"><b>GTM</b><p>タグ整備・コンバージョン計測の構築</p></div>
+      <div class="ms reveal"><b>電話計測</b><p>電話CVも含めた正確な効果測定</p></div>
+      <div class="ms reveal"><b>広告クリエイティブ</b><p>バナー・動画・テキストの制作と検証</p></div>
+      <div class="ms reveal"><b>ヒートマップ分析</b><p>離脱ポイントを可視化しLPを改善</p></div>
+      <div class="ms reveal"><b>LP改善</b><p>広告と整合した訴求・構成へ改善</p></div>
+      <div class="ms reveal"><b>CVR改善</b><p>フォーム・CTA最適化で転換率を向上</p></div>
+      <div class="ms reveal"><b>競合分析</b><p>競合の出稿・LP・SEOを分析し勝ち筋を特定</p></div>
+    </div>
+    <div class="sec-cta reveal">
+      <a class="btn btn-blue" href="#ad">AI広告診断を試す</a>
+      <a class="btn btn-ghost" href="#contact">広告の相談をする(無料)</a>
+    </div>
+  </div>
+</section>
+
 <!-- ===== AIレポートサンプル ===== -->
-<section id="report">
+<section id="report" class="bg-sky">
   <div class="container">
     <div class="sec-head center reveal">
       <span class="sec-eyebrow">Sample Report</span>
@@ -835,7 +1087,7 @@ body.modal-open{overflow:hidden}
 </section>
 
 <!-- ===== AI競合分析 ===== -->
-<section id="vs" class="bg-sky">
+<section id="vs">
   <div class="container">
     <div class="sec-head center reveal">
       <span class="sec-eyebrow">AI Competitor Analysis</span>
@@ -867,7 +1119,7 @@ body.modal-open{overflow:hidden}
 </section>
 
 <!-- ===== AI導線改善 ===== -->
-<section id="douse">
+<section id="douse" class="bg-sky">
   <div class="container">
     <div class="sec-head center reveal">
       <span class="sec-eyebrow">AI UX Suggestions</span>
@@ -895,7 +1147,7 @@ body.modal-open{overflow:hidden}
 </section>
 
 <!-- ===== AI運用 ===== -->
-<section id="ops" class="bg-sky">
+<section id="ops">
   <div class="container">
     <div class="sec-head center reveal">
       <span class="sec-eyebrow">AI Operations</span>
@@ -922,20 +1174,20 @@ body.modal-open{overflow:hidden}
 </section>
 
 <!-- ===== AI営業導線 ===== -->
-<section id="funnel">
+<section id="funnel" class="bg-sky">
   <div class="container">
     <div class="sec-head center reveal">
       <span class="sec-eyebrow">Growth Process</span>
       <h2 class="sec-title">診断から運用まで、成果に向かう流れ</h2>
-      <p class="sec-lead">「まず診断、それから改善」。押し売りではなく、データで納得してから進められます。</p>
+      <p class="sec-lead">AI診断 → 改善 → 広告改善 → LP改善 → 運用。押し売りではなく、データで納得してから進められます。</p>
     </div>
     <div class="funnel8">
       <div class="f8-step is-ai reveal"><span class="f8-num">01</span><div class="f8-body"><b>AI診断<span class="tag">AI</span></b><p>30秒のAI診断で現状をスコア化。まずは無料・登録不要で。</p></div></div>
       <div class="f8-step is-ai reveal"><span class="f8-num">02</span><div class="f8-body"><b>診断結果<span class="tag">AI</span></b><p>9項目のスコアと改善ポイントをその場で確認できます。</p></div></div>
       <div class="f8-step is-ai reveal"><span class="f8-num">03</span><div class="f8-body"><b>改善レポート<span class="tag">AI×人</span></b><p>具体的な改善手順をまとめた詳細レポートを無料でお渡し。</p></div></div>
       <div class="f8-step reveal"><span class="f8-num">04</span><div class="f8-body"><b>無料相談</b><p>レポートをもとに、優先順位と進め方をご相談。契約義務はありません。</p></div></div>
-      <div class="f8-step reveal"><span class="f8-num">05</span><div class="f8-body"><b>制作・改善</b><p>導線設計・デザイン・実装を人の手で。SEO・MEOも同時に対策します。</p></div></div>
-      <div class="f8-step reveal"><span class="f8-num">06</span><div class="f8-body"><b>公開</b><p>スマホ・速度・検索対策まで確認のうえ公開します。</p></div></div>
+      <div class="f8-step reveal"><span class="f8-num">05</span><div class="f8-body"><b>Web・LP制作/改善<span class="tag">千葉</span></b><p>導線設計・デザイン・実装・SEO/MEOを担当。広告と整合するLPへ。</p></div></div>
+      <div class="f8-step reveal"><span class="f8-num">06</span><div class="f8-body"><b>広告運用・計測改善<span class="tag">芝本</span></b><p>媒体運用・クリエイティブ・GA4/GTM計測を専門メンバーが改善します。</p></div></div>
       <div class="f8-step is-ai reveal"><span class="f8-num">07</span><div class="f8-body"><b>AI運用<span class="tag">AI</span></b><p>公開後はAIが定期診断。変化を検知して通知します。</p></div></div>
       <div class="f8-step is-goal reveal"><span class="f8-num">08</span><div class="f8-body"><b>月次改善</b><p>月次レポートと改善提案で、問い合わせを増やし続けます。</p></div></div>
     </div>
@@ -945,38 +1197,56 @@ body.modal-open{overflow:hidden}
   </div>
 </section>
 
-<!-- ===== Profile ===== -->
-<section id="profile" class="bg-sky">
+<!-- ===== Team ===== -->
+<section id="team">
   <div class="container">
-    <div class="sec-head reveal">
-      <span class="sec-eyebrow">Profile</span>
-      <h2 class="sec-title">「人」の部分を担当します</h2>
+    <div class="sec-head center reveal">
+      <span class="sec-eyebrow">Team</span>
+      <h2 class="sec-title">TEAM</h2>
+      <p class="sec-lead">AIとマーケティングを活用し、Web・広告・集客改善をワンストップで支援します。</p>
     </div>
-    <div class="profile-card reveal">
-      <div>
-        <div class="profile-name"><h3>千葉 倫也</h3><span>Tomoya Chiba</span></div>
-        <p class="profile-role">AI Web Growth Studio / Webデザイナー・集客導線設計</p>
-        <p class="profile-text">
-          HP制作・LP制作・SEO対策・MEO対策を中心に、<b>「作って終わり」ではなく、問い合わせにつながる導線設計</b>を重視しています。<br><br>
-          AIによる分析で課題を特定し、改善の判断と実装は人が担当。事業内容やターゲットを整理し、成果につながるWeb改善を心掛けています。<b>最短3日で初回提案可能。</b>制作後はAI運用で継続的にサポートします。
-        </p>
-        <div class="profile-points">
-          <span>AI診断×人の改善</span><span>最短3日で初回提案</span><span>SEO・MEO対応</span><span>運用サポートあり</span>
+    <div class="team-grid">
+
+      <div class="member reveal">
+        <div class="member-head">
+          <span class="member-av" style="background:linear-gradient(135deg,var(--blue),var(--cyan))" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="8.2" r="3.6"/><path d="M5 20c.8-3.8 3.6-5.8 7-5.8s6.2 2 7 5.8"/></svg>
+          </span>
+          <div>
+            <h3>千葉 倫也<small>Tomoya Chiba</small></h3>
+            <span class="member-role">AI / Web Strategy</span>
+          </div>
         </div>
-      </div>
-      <div class="profile-visual">
-        <div class="avatar" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#1B3A5F" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="8.2" r="3.6"/><path d="M5 20c.8-3.8 3.6-5.8 7-5.8s6.2 2 7 5.8"/>
-          </svg>
+        <p>Web制作だけではなく、問い合わせにつながる導線設計と、AIを活用した改善提案を得意としています。</p>
+        <div class="member-chips">
+          <span>HP制作</span><span>LP制作</span><span>SEO</span><span>MEO</span><span>AIサイト診断</span><span>UI/UX改善</span><span>導線設計</span><span>Web改善</span>
         </div>
+        <div class="member-result"><b>役割:</b> AI診断の設計と、診断結果をもとにしたサイト・LP・導線の改善実装を担当。最短3日で初回提案。</div>
       </div>
+
+      <div class="member reveal">
+        <div class="member-head">
+          <span class="member-av" style="background:linear-gradient(135deg,var(--navy),var(--blue-dark))" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="8.2" r="3.6"/><path d="M5 20c.8-3.8 3.6-5.8 7-5.8s6.2 2 7 5.8"/></svg>
+          </span>
+          <div>
+            <h3>芝本 大知<small>Daichi Shibamoto</small></h3>
+            <span class="member-role">Performance Marketing Specialist</span>
+          </div>
+        </div>
+        <p>広告運用からLP改善、計測環境構築まで、費用対効果を重視した運用改善を得意としています。</p>
+        <div class="member-chips">
+          <span>Google広告</span><span>Yahoo!広告</span><span>Meta広告</span><span>LINE広告</span><span>X広告</span><span>GA4</span><span>GTM</span><span>LP改善</span><span>広告クリエイティブ</span><span>CVR改善</span><span>ヒートマップ分析</span>
+        </div>
+        <div class="member-result"><b>担当実績:</b> 士業 CPA 52,000円→20,495円(ROAS 283%)/ 体臭検査キット CPA約40%改善・広告予算1.5倍へ拡大 / 住宅 広告費5,000万円→3,200万円で成約23棟→36棟 / 住宅 広告費1,900万円で成約25棟 / BtoB 開始1ヶ月で300万円受注</div>
+      </div>
+
     </div>
   </div>
 </section>
 
 <!-- ===== Stats ===== -->
-<section style="padding-top:72px;padding-bottom:72px">
+<section class="bg-sky" style="padding-top:72px;padding-bottom:72px">
   <div class="container">
     <div class="sec-head center reveal">
       <span class="sec-eyebrow">Trust</span>
@@ -984,17 +1254,17 @@ body.modal-open{overflow:hidden}
     </div>
     <div class="grid grid-stats">
       <div class="stat-card reveal"><span class="stat-label">AI診断</span><span class="stat-num"><span class="u" data-count="30">0</span><small>秒</small></span><span class="stat-sub">URL入力だけで即スコア化</span></div>
-      <div class="stat-card reveal"><span class="stat-label">診断項目</span><span class="stat-num"><span class="u" data-count="9">0</span><small>項目</small></span><span class="stat-sub">UI/UX/SEO/MEO/CTAなど</span></div>
+      <div class="stat-card reveal"><span class="stat-label">診断項目</span><span class="stat-num"><span class="u" data-count="11">0</span><small>項目</small></span><span class="stat-sub">広告/SEO/MEO/CVRなど</span></div>
       <div class="stat-card reveal"><span class="stat-label">初回提案</span><span class="stat-num">最短<span class="u" data-count="3">0</span><small>日</small></span><span class="stat-sub">ご相談からスピード対応</span></div>
       <div class="stat-card reveal"><span class="stat-label">スマホ対応</span><span class="stat-num"><span class="u" data-count="100">0</span><small>%</small></span><span class="stat-sub">全制作物レスポンシブ</span></div>
-      <div class="stat-card reveal"><span class="stat-label">対応範囲</span><span class="stat-num">LP・HP<small>両対応</small></span><span class="stat-sub">1枚のLPから企業サイトまで</span></div>
+      <div class="stat-card reveal"><span class="stat-label">広告媒体</span><span class="stat-num"><span class="u" data-count="5">0</span><small>媒体</small></span><span class="stat-sub">Google/Yahoo/Meta/LINE/X</span></div>
       <div class="stat-card reveal"><span class="stat-label">公開後</span><span class="stat-num">AI運用<small>継続</small></span><span class="stat-sub">定期診断と月次改善</span></div>
     </div>
   </div>
 </section>
 
 <!-- ===== Works ===== -->
-<section id="works" class="bg-sky">
+<section id="works">
   <div class="container">
     <div class="sec-head reveal">
       <span class="sec-eyebrow">Case Study</span>
@@ -1110,7 +1380,7 @@ body.modal-open{overflow:hidden}
 </section>
 
 <!-- ===== 比較表 ===== -->
-<section id="compare">
+<section id="compare" class="bg-sky">
   <div class="container">
     <div class="sec-head center reveal">
       <span class="sec-eyebrow">Compare</span>
@@ -1124,6 +1394,7 @@ body.modal-open{overflow:hidden}
           <tr><th>AIサイト診断</th><td><span class="mark-no">✕</span></td><td class="col-me"><span class="mark-ok"></span></td></tr>
           <tr><th>問い合わせ導線設計</th><td><span class="mark-no">✕</span></td><td class="col-me"><span class="mark-ok"></span></td></tr>
           <tr><th>SEO・MEO対策</th><td><span class="mark-no">✕ SEOなし</span></td><td class="col-me"><span class="mark-ok"></span></td></tr>
+          <tr><th>広告運用・計測改善(GA4/GTM)</th><td><span class="mark-no">✕</span></td><td class="col-me"><span class="mark-ok"></span></td></tr>
           <tr><th>競合分析</th><td><span class="mark-no">✕</span></td><td class="col-me"><span class="mark-ok"></span></td></tr>
           <tr><th>スマホ最適化</th><td><span class="mark-tri">△</span></td><td class="col-me"><span class="mark-ok"></span></td></tr>
           <tr><th>公開後のAI監視・改善提案</th><td><span class="mark-no">✕ 公開して終了</span></td><td class="col-me"><span class="mark-ok"></span></td></tr>
@@ -1136,7 +1407,7 @@ body.modal-open{overflow:hidden}
 </section>
 
 <!-- ===== Price ===== -->
-<section id="price" class="bg-sky">
+<section id="price">
   <div class="container">
     <div class="sec-head reveal">
       <span class="sec-eyebrow">Price</span>
@@ -1186,7 +1457,7 @@ body.modal-open{overflow:hidden}
 </section>
 
 <!-- ===== FAQ ===== -->
-<section id="faq">
+<section id="faq" class="bg-sky">
   <div class="container">
     <div class="sec-head center reveal">
       <span class="sec-eyebrow">FAQ</span>
@@ -1196,6 +1467,7 @@ body.modal-open{overflow:hidden}
       <details class="reveal"><summary><span class="q">Q</span>AI診断は本当に無料ですか？<span class="chev"></span></summary><div class="faq-a">はい、無料です。ページ上の30秒診断はその場でお使いいただけ、詳細レポートも無料でお送りします。診断後の契約義務はありません。</div></details>
       <details class="reveal"><summary><span class="q">Q</span>AIだけで改善まで完結するのですか？<span class="chev"></span></summary><div class="faq-a">いいえ。分析・提案はAIが高速に行いますが、改善の判断・設計・実装は人(千葉)が担当します。「AIが分析し、人が改善する」体制で、精度とスピードを両立しています。</div></details>
       <details class="reveal"><summary><span class="q">Q</span>実績が少なくても依頼できますか？<span class="chev"></span></summary><div class="faq-a">もちろんです。「これからWeb集客を始めたい」事業者様こそお力になれます。まずAI診断で現状を可視化し、優先順位をつけて小さく始められます。</div></details>
+      <details class="reveal"><summary><span class="q">Q</span>広告運用だけの依頼も可能ですか？<span class="chev"></span></summary><div class="faq-a">可能です。Google・Yahoo・Meta・LINE・X広告のアカウント診断のみ、運用改善のみのご依頼も承ります。広告はLP・計測(GA4/GTM)とあわせて改善すると効果が出やすいため、診断時に最適な範囲をご提案します。</div></details>
       <details class="reveal"><summary><span class="q">Q</span>MEO対策とは何ですか？<span class="chev"></span></summary><div class="faq-a">Googleマップで「地域名＋業種」と検索したときに上位表示させるための対策です。店舗ビジネスでは来店に直結しやすく、費用対効果の高い施策です。AIでプロフィールの充足度や口コミ状況を分析し、運用まで支援します。</div></details>
       <details class="reveal"><summary><span class="q">Q</span>原稿や写真がなくても依頼できますか？<span class="chev"></span></summary><div class="faq-a">問題ありません。ヒアリングとAIによるコピー生成支援をもとに、事業の強みが伝わる文章をこちらで作成します。</div></details>
       <details class="reveal"><summary><span class="q">Q</span>既存サイトの改善だけでも可能ですか？<span class="chev"></span></summary><div class="faq-a">可能です。AI診断でスコアの低い項目を特定し、導線・CTA・スマホ表示などピンポイントの改善から始められます。</div></details>
@@ -1228,7 +1500,7 @@ body.modal-open{overflow:hidden}
   <div class="footer-grid">
     <div class="footer-brand">
       <span class="logo"><span class="mark">AI</span>AI WEB GROWTH STUDIO</span>
-      <p>千葉倫也｜AIが分析し、人が改善する。<br>HP制作・LP制作・SEO・MEO・AI運用まで、問い合わせにつながるWeb導線を設計します。</p>
+      <p>AIが分析し、広告・Web・LPを改善する。<br>広告運用・LP制作・SEO・MEO・GA4/GTM計測・AI運用まで、問い合わせを増やす仕組みをワンストップで設計するマーケティングチームです。</p>
       <div class="footer-sns" aria-label="SNS">
         <a href="#" aria-label="X (Twitter)"><svg viewBox="0 0 24 24"><path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3l-4.9-6.4L6.4 22H3.2l7.3-8.3L1 2h6.5l4.4 5.9L18.9 2zm-1.1 18h1.7L7.1 3.9H5.3L17.8 20z"/></svg></a>
         <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.9.2 2.3.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1.1.4 2.3.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.9-.4 2.3-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1.1.4-2.3.4-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.9-.2-2.3-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1.1-.4-2.3C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.2-1.9.4-2.3.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1.1-.4 2.3-.4C8.4 2.2 8.8 2.2 12 2.2z"/></svg></a>
@@ -1239,7 +1511,8 @@ body.modal-open{overflow:hidden}
       <h4>MENU</h4>
       <ul>
         <li><a href="#shindan">30秒AI診断</a></li>
-        <li><a href="#ai">AIでできること</a></li>
+        <li><a href="#ad">AI広告診断</a></li>
+        <li><a href="#results">実績</a></li>
         <li><a href="#works">制作事例</a></li>
         <li><a href="#price">料金プラン</a></li>
         <li><a href="#faq">よくある質問</a></li>
@@ -1248,7 +1521,7 @@ body.modal-open{overflow:hidden}
     <div class="footer-col">
       <h4>CONTACT</h4>
       <ul>
-        <li><a href="#profile">プロフィール</a></li>
+        <li><a href="#team">TEAM</a></li>
         <li><a href="#contact">お問い合わせ</a></li>
         <li><a href="#top">ページトップへ</a></li>
       </ul>
@@ -1281,6 +1554,7 @@ body.modal-open{overflow:hidden}
   <div class="chat-chips" id="chat-chips">
     <button class="chip" data-q="seo">SEOを改善したい</button>
     <button class="chip" data-q="meo">Googleマップ集客したい</button>
+    <button class="chip" data-q="ad">広告を改善したい</button>
     <button class="chip" data-q="lp">LPを改善したい</button>
     <button class="chip" data-q="cv">問い合わせを増やしたい</button>
     <button class="chip" data-q="hp">HPを作りたい</button>
@@ -1434,7 +1708,7 @@ function showResult(url,ind,goal){
   progEl.classList.remove('is-active');
   resEl.classList.add('is-active');
   const seed=hashStr(url+ind);
-  const base={'UI':85,'UX':78,'SEO':90,'MEO':55,'スマホ':92,'CTA':65,'表示速度':88,'Googleマップ':60};
+  const base={'Web':84,'SEO':90,'MEO':55,'広告':62,'LP':70,'CVR':58,'GA4':50,'GTM':52,'表示速度':88,'CTA':65,'スマホ':92};
   const keys=Object.keys(base);
   const scores={};keys.forEach((k,i)=>scores[k]=vary(base[k],seed,i));
   const total=Math.round(keys.reduce((a,k)=>a+scores[k],0)/keys.length);
@@ -1456,9 +1730,10 @@ function showResult(url,ind,goal){
   // 提案(目的に応じて優先度調整)
   const props=[
     {n:'CTA改善',s:5,p:'high'},
-    {n:'口コミ追加',s:5,p:'high'},
+    {n:'広告・LP導線の改善',s:5,p:'high'},
+    {n:'GA4/GTM計測環境の整備',s:4,p:'mid'},
     {n:'ファーストビュー改善',s:4,p:'mid'},
-    {n:'FAQ追加',s:4,p:'mid'},
+    {n:'口コミ追加',s:4,p:'mid'},
     {n:'Googleマップ導線',s:4,p:goal.includes('マップ')?'high':'low'},
   ];
   if(goal.includes('マップ')){props.sort((a,b)=>(b.p==='high')-(a.p==='high'))}
@@ -1490,6 +1765,7 @@ document.getElementById('chat-x').addEventListener('click',()=>panel.classList.r
 const ANSWERS={
   seo:{q:'SEOを改善したい',a:'SEOは「構造」と「キーワード」の両輪が大切です。当スタジオではAIが見出し構造・内部リンク・キーワードを解析し、改善箇所を特定します。まずは30秒AI診断で現状のSEOスコアを確認してみてください。',cta:'30秒AI診断を試す',href:'#shindan'},
   meo:{q:'Googleマップ集客したい',a:'Googleマップ集客(MEO)は、ビジネスプロフィールの充実度・口コミ・写真がカギです。AIでマップの状態を分析し、口コミ返信や投稿の運用まで支援できます。店舗ビジネスなら費用対効果の高い施策です。',cta:'MEOの相談をする(無料)',href:'#contact'},
+  ad:{q:'広告を改善したい',a:'広告の成果は「配信構造×クリエイティブ×LP×計測」の掛け算で決まります。当チームの広告専門メンバーがGoogle・Yahoo・Meta・LINE・X広告を診断し、CPA改善まで伴走します。まずはAI広告診断で想定改善率をご確認ください。',cta:'AI広告診断を試す',href:'#ad'},
   lp:{q:'LPを改善したい',a:'LPの成果はCTAの位置・ファーストビュー・不安解消コンテンツでほぼ決まります。AI診断でCTAスコアと離脱ポイントを可視化し、改善案をレポートでお渡しします。',cta:'LPをAI診断する',href:'#shindan'},
   cv:{q:'問い合わせを増やしたい',a:'問い合わせが少ない原因の多くは「導線」にあります。アクセスはあるのに問い合わせがない場合、CTA配置と信頼コンテンツの改善で変わるケースが多いです。まず現状をスコアで把握しましょう。',cta:'30秒AI診断を試す',href:'#shindan'},
   hp:{q:'HPを作りたい',a:'HP制作は150,000円〜承っています。AI診断・競合分析つきで、公開後の運用までサポートします。まずは無料相談で目的とご予算をお聞かせください。最短3日で初回提案が可能です。',cta:'無料で相談する',href:'#contact'},
@@ -1522,6 +1798,64 @@ function closeModal(){backdrop.classList.remove('is-open');document.body.classLi
 document.querySelectorAll('[data-modal]').forEach(b=>b.addEventListener('click',()=>openModal(b.dataset.modal)));
 backdrop.addEventListener('click',(e)=>{if(e.target===backdrop)closeModal()});
 document.addEventListener('keydown',(e)=>{if(e.key==='Escape'&&backdrop.classList.contains('is-open'))closeModal()});
+
+/* ===== AI広告診断 ===== */
+const AD_STEPS=["広告アカウント解析中…","配信構造 解析中…","クリエイティブ解析中…","LP整合性 解析中…","計測環境(GA4/GTM)解析中…","競合入札 解析中…"];
+const adForm=document.getElementById('ad-form');
+const adProg=document.getElementById('ad-progress');
+const adRes=document.getElementById('ad-result');
+document.getElementById('btn-ad').addEventListener('click',()=>{
+  const media=document.getElementById('ad-media').value;
+  const ind=document.getElementById('ad-industry').value;
+  const goal=document.getElementById('ad-goal').value;
+  const budget=Math.max(1,parseFloat(document.getElementById('ad-budget').value)||50);
+  const cpa=Math.max(100,parseFloat(document.getElementById('ad-cpa').value)||40000);
+  let cv=parseFloat(document.getElementById('ad-cv').value);
+  if(!cv||cv<=0)cv=Math.max(1,Math.floor(budget*10000/cpa));
+  adForm.style.display='none';adProg.classList.add('is-active');
+  document.getElementById('ad-target').textContent='対象: '+media+' / '+ind;
+  const pf=document.getElementById('ad-pfill'),st=document.getElementById('ad-step');
+  let i=0;st.textContent=AD_STEPS[0];pf.style.width='10%';
+  const iv=setInterval(()=>{
+    i++;
+    if(i<AD_STEPS.length){st.textContent=AD_STEPS[i];pf.style.width=Math.round((i+1)/AD_STEPS.length*100)+'%'}
+    else{clearInterval(iv);setTimeout(()=>showAdResult(media,ind,goal,budget,cpa,cv),450)}
+  },560);
+});
+function fmt(n){return n.toLocaleString('ja-JP')}
+function showAdResult(media,ind,goal,budget,cpa,cv){
+  adProg.classList.remove('is-active');adRes.classList.add('is-active');
+  const seed=hashStr(media+ind+goal);
+  const rate=18+((seed>>>2)%18); // 18〜35%
+  const newCpa=Math.round(cpa*(1-rate/100));
+  const newCv=Math.floor(budget*10000/newCpa);
+  document.getElementById('ad-cpa-from').textContent=fmt(cpa)+'円';
+  document.getElementById('ad-cpa-to').innerHTML=fmt(newCpa)+'<em>円</em>';
+  document.getElementById('ad-cv-from').textContent=fmt(cv)+'件';
+  document.getElementById('ad-cv-to').innerHTML=fmt(newCv)+'<em>件</em>';
+  document.getElementById('ad-rate').innerHTML='▲'+rate+'<em>%</em>';
+  document.getElementById('ad-comment').innerHTML=
+    `<b>AIの所見:</b> ${media}の一般的な改善余地から試算すると、CPAは<b>約${rate}%</b>の改善余地が見込めます。同じ月${fmt(budget)}万円の広告費で、CV数は<b>月${fmt(cv)}件 → 約${fmt(newCv)}件</b>に増える計算です。${goal.includes('始め')?'これから出稿する場合は、計測環境の整備から着手するのが最短ルートです。':'特に「配信構造」と「LPとの整合性」の見直しが、最短で効くポイントです。'}`;
+  const props=[
+    {n:'配信構造・キャンペーン設計の見直し',s:5,p:'high'},
+    {n:'広告クリエイティブの刷新・検証',s:5,p:'high'},
+    {n:'LPの訴求・CTA改善(広告との整合)',s:4,p:'mid'},
+    {n:'GA4/GTM計測環境の整備',s:4,p:goal.includes('始め')?'high':'mid'},
+    {n:'除外設定・入札・配信面の調整',s:3,p:'low'},
+  ];
+  const pl=document.getElementById('ad-props');pl.innerHTML='';
+  const pm={high:['高','prio-high'],mid:['中','prio-mid'],low:['低','prio-low']};
+  props.sort((a,b)=>({high:0,mid:1,low:2}[a.p]-{high:0,mid:1,low:2}[b.p]));
+  props.forEach(p=>{
+    const stars='★'.repeat(p.s)+'<span class="off">'+'★'.repeat(5-p.s)+'</span>';
+    pl.insertAdjacentHTML('beforeend',`<div class="prop"><span class="stars">${stars}</span><b>${p.n}</b><span class="prio ${pm[p.p][1]}">優先度 ${pm[p.p][0]}</span></div>`);
+  });
+  adRes.scrollIntoView({behavior:reduceMotion?'auto':'smooth',block:'center'});
+}
+document.getElementById('btn-ad-retry').addEventListener('click',()=>{
+  adRes.classList.remove('is-active');adForm.style.display='flex';
+  adForm.scrollIntoView({behavior:reduceMotion?'auto':'smooth',block:'center'});
+});
 </script>
 
 </body>
