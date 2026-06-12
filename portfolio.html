@@ -1,0 +1,1528 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Web Growth Studio | 30秒AIサイト診断・HP/LP改善・SEO/MEO | AIが分析し、人が改善する。</title>
+<meta name="description" content="URLを入力するだけで、HP・LP・GoogleマップをAIが30秒で診断。AI×人のWeb集客コンサルティングで、問い合わせ・予約・採用の成果につなげます。診断・相談は無料。">
+<meta property="og:title" content="AIが分析し、人が改善する。| AI Web Growth Studio">
+<meta property="og:description" content="30秒AIサイト診断で、あなたのHP・LP・Googleマップの改善ポイントが分かります。診断・相談は無料。">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0F1B33;
+  --navy:#1B3A5F;
+  --blue:#2F6FED;
+  --blue-dark:#1E4FB8;
+  --cyan:#3FB6F0;
+  --sky:#EEF4FB;
+  --sky-deep:#DCE8F7;
+  --gray:#5B6B7E;
+  --gray-light:#9AA7B5;
+  --line:#E3EAF2;
+  --white:#FFFFFF;
+  --accent:#F2742C;
+  --accent-dark:#DD5F18;
+  --good:#22A06B;
+  --warn:#E5A50A;
+  --bad:#E0563C;
+  --radius:16px;
+  --shadow:0 4px 18px rgba(15,27,51,.06);
+  --shadow-hover:0 12px 30px rgba(15,27,51,.12);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{
+  font-family:'Noto Sans JP',sans-serif;color:var(--ink);background:var(--white);
+  line-height:1.85;font-size:15.5px;-webkit-font-smoothing:antialiased;
+}
+img{max-width:100%}
+a{text-decoration:none;color:inherit}
+h1,h2,h3{font-family:'Zen Kaku Gothic New','Noto Sans JP',sans-serif;line-height:1.45}
+.en{font-family:'Outfit','Noto Sans JP',sans-serif}
+.container{width:100%;max-width:1080px;margin:0 auto;padding:0 20px}
+section{padding:80px 0}
+@media(min-width:768px){section{padding:112px 0}}
+.bg-sky{background:var(--sky)}
+
+/* ---------- header ---------- */
+.header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.header-inner{max-width:1080px;margin:0 auto;padding:0 20px;height:60px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:'Outfit','Zen Kaku Gothic New',sans-serif;font-weight:700;font-size:15px;letter-spacing:.02em;display:flex;align-items:center;gap:9px}
+.logo .mark{
+  width:28px;height:28px;border-radius:9px;flex:0 0 auto;
+  background:linear-gradient(135deg,var(--cyan),var(--blue) 55%,var(--navy));
+  display:inline-flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:700;
+}
+.gnav{display:none;gap:22px;font-size:13px;font-weight:500;color:var(--gray)}
+.gnav a:hover{color:var(--blue)}
+@media(min-width:980px){.gnav{display:flex}}
+.header-cta{display:inline-flex;align-items:center;background:var(--accent);color:#fff;font-weight:700;font-size:13px;padding:9px 18px;border-radius:999px;transition:.2s;box-shadow:0 3px 10px rgba(242,116,44,.35)}
+.header-cta:hover{background:var(--accent-dark);transform:translateY(-1px)}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:700;border-radius:999px;transition:.2s;cursor:pointer;font-size:15px;padding:15px 30px;line-height:1;border:none;font-family:'Noto Sans JP',sans-serif}
+.btn-primary{background:var(--accent);color:#fff;box-shadow:0 6px 18px rgba(242,116,44,.38)}
+.btn-primary:hover{background:var(--accent-dark);transform:translateY(-2px)}
+.btn-secondary{background:#fff;color:var(--navy);border:1.5px solid var(--sky-deep)}
+.btn-secondary:hover{border-color:var(--blue);color:var(--blue)}
+.btn-ghost{background:transparent;color:var(--blue);border:1.5px solid var(--blue)}
+.btn-ghost:hover{background:var(--blue);color:#fff}
+.btn-blue{background:linear-gradient(135deg,var(--blue),var(--blue-dark));color:#fff;box-shadow:0 6px 18px rgba(47,111,237,.35)}
+.btn-blue:hover{transform:translateY(-2px)}
+
+/* ---------- hero ---------- */
+.hero{
+  padding:104px 0 0;overflow:hidden;position:relative;
+  background:
+    radial-gradient(800px 380px at 90% -8%,rgba(63,182,240,.16) 0%,transparent 60%),
+    radial-gradient(700px 400px at -10% 30%,rgba(47,111,237,.08) 0%,transparent 60%),
+    linear-gradient(180deg,var(--sky) 0%,#fff 100%);
+}
+.hero::before{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background-image:linear-gradient(rgba(47,111,237,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(47,111,237,.05) 1px,transparent 1px);
+  background-size:44px 44px;
+  mask-image:radial-gradient(700px 460px at 70% 0%,#000 0%,transparent 75%);
+  -webkit-mask-image:radial-gradient(700px 460px at 70% 0%,#000 0%,transparent 75%);
+}
+.hero-grid{display:grid;gap:44px;align-items:center;position:relative}
+@media(min-width:920px){.hero{padding:150px 0 0}.hero-grid{grid-template-columns:1.1fr .9fr;gap:48px}}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.1em;color:var(--blue);background:#fff;border:1px solid var(--sky-deep);border-radius:999px;padding:6px 14px;margin-bottom:20px}
+.hero-eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 0 3px rgba(63,182,240,.2)}
+.hero h1{font-size:clamp(28px,6.4vw,46px);font-weight:900;letter-spacing:.01em;line-height:1.45;margin-bottom:18px}
+.hero h1 .grad{background:linear-gradient(100deg,var(--blue),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-sub{color:var(--gray);font-size:clamp(14px,3.6vw,16px);margin-bottom:26px;max-width:31em}
+.hero-btns{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:26px}
+.hero-badges{display:flex;flex-wrap:wrap;gap:8px}
+.hb{display:inline-flex;align-items:center;gap:7px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:7px 12px;font-size:12px;font-weight:700;color:var(--navy);box-shadow:0 2px 6px rgba(15,27,51,.04)}
+.hb .num{font-family:'Outfit',sans-serif;font-size:15px;font-weight:700;color:var(--accent);line-height:1}
+.scroll-cue{display:flex;flex-direction:column;align-items:center;gap:6px;padding:36px 0 20px;color:var(--gray-light);position:relative}
+.scroll-cue .en{font-size:10.5px;letter-spacing:.3em;font-weight:600}
+.scroll-cue .arrow{width:18px;height:18px;border-right:2px solid var(--blue);border-bottom:2px solid var(--blue);transform:rotate(45deg);animation:cue 1.6s ease-in-out infinite}
+@keyframes cue{0%,100%{transform:rotate(45deg) translate(0,0);opacity:.4}50%{transform:rotate(45deg) translate(5px,5px);opacity:1}}
+
+/* hero mini score visual */
+.hero-visual{
+  background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:24px;
+}
+.hv-head{display:flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:.14em;color:var(--gray-light);margin-bottom:18px;font-family:'Outfit','Noto Sans JP',sans-serif}
+.hv-head::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--cyan);animation:pulse 1.8s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(63,182,240,.4)}50%{box-shadow:0 0 0 6px rgba(63,182,240,0)}}
+.hv-grid{display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:center}
+.hv-bars{display:flex;flex-direction:column;gap:10px}
+.hv-bar{display:grid;grid-template-columns:52px 1fr 30px;gap:10px;align-items:center;font-size:11px;font-weight:700;color:var(--gray)}
+.hv-bar .track{height:7px;border-radius:4px;background:var(--sky);overflow:hidden}
+.hv-bar .fill{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--blue),var(--cyan));width:0;transition:width 1.2s cubic-bezier(.2,.7,.3,1)}
+.hv-bar .val{font-family:'Outfit',sans-serif;color:var(--navy);text-align:right}
+
+/* score ring (shared) */
+.ring{position:relative;width:120px;height:120px}
+.ring svg{transform:rotate(-90deg)}
+.ring .bg{fill:none;stroke:var(--sky);stroke-width:10}
+.ring .fg{fill:none;stroke:url(#ringGrad);stroke-width:10;stroke-linecap:round;stroke-dasharray:314;stroke-dashoffset:314;transition:stroke-dashoffset 1.4s cubic-bezier(.2,.7,.3,1)}
+.ring .label{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.1}
+.ring .label b{font-family:'Outfit',sans-serif;font-size:34px;font-weight:700;color:var(--navy)}
+.ring .label small{font-size:10px;font-weight:700;color:var(--gray-light);letter-spacing:.1em}
+
+/* ---------- trust bar ---------- */
+.trust-bar{background:var(--navy);color:#fff}
+.trust-inner{max-width:1080px;margin:0 auto;padding:16px 20px;display:grid;grid-template-columns:1fr 1fr;gap:10px 18px}
+@media(min-width:860px){.trust-inner{grid-template-columns:repeat(4,auto);justify-content:space-between;padding:18px 20px}}
+.trust-item{display:flex;align-items:center;gap:9px;font-size:12.5px;font-weight:700}
+.trust-item .tic{flex:0 0 20px;width:20px;height:20px;border-radius:50%;background:rgba(255,255,255,.14);display:flex;align-items:center;justify-content:center}
+.trust-item .tic::before{content:"";width:8px;height:4.5px;border-left:2px solid #7FD1A8;border-bottom:2px solid #7FD1A8;transform:rotate(-45deg);margin-top:-2px}
+
+/* ---------- section heads ---------- */
+.sec-head{margin-bottom:46px}
+.sec-head.center{text-align:center}
+.sec-head.center .sec-lead{margin-left:auto;margin-right:auto}
+.sec-eyebrow{font-family:'Outfit',sans-serif;font-size:12px;font-weight:600;letter-spacing:.22em;color:var(--blue);text-transform:uppercase;display:block;margin-bottom:8px}
+.sec-title{font-size:clamp(22px,5vw,32px);font-weight:900;letter-spacing:.01em}
+.sec-lead{color:var(--gray);margin-top:14px;max-width:40em;font-size:14.5px}
+.sec-cta{margin-top:48px;display:flex;flex-wrap:wrap;gap:12px;justify-content:center;align-items:center}
+.sec-cta .note{width:100%;text-align:center;font-size:13px;color:var(--gray);margin-bottom:2px}
+.grid{display:grid;gap:16px}
+
+/* ========== AI Web Score app ========== */
+.ai-app{
+  max-width:760px;margin:0 auto;background:#fff;border:1px solid var(--line);
+  border-radius:24px;box-shadow:var(--shadow);overflow:hidden;
+}
+.ai-app-head{
+  background:linear-gradient(135deg,var(--navy) 0%,#16315A 50%,var(--blue-dark) 130%);
+  color:#fff;padding:26px 26px 22px;position:relative;overflow:hidden;
+}
+.ai-app-head::after{
+  content:"";position:absolute;top:-60px;right:-40px;width:200px;height:200px;border-radius:50%;
+  background:radial-gradient(circle,rgba(63,182,240,.4),transparent 70%);
+}
+.ai-app-head .en{font-size:11px;letter-spacing:.22em;color:#9DBCF5;font-weight:600;display:block;margin-bottom:6px}
+.ai-app-head h3{font-size:21px;font-weight:900}
+.ai-app-head p{font-size:12.5px;color:#C5D4EC;margin-top:6px}
+.ai-app-body{padding:26px 22px 30px}
+@media(min-width:680px){.ai-app-body{padding:32px 36px 38px}}
+.ai-form{display:flex;flex-direction:column;gap:16px}
+.field label{display:block;font-size:12.5px;font-weight:700;margin-bottom:7px;color:var(--navy)}
+.field input[type=url],.field input[type=text],.field select{
+  width:100%;padding:13px 15px;border:1.5px solid var(--line);border-radius:12px;
+  font-size:15px;font-family:inherit;color:var(--ink);background:#fff;transition:.2s;appearance:none;
+}
+.field select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235B6B7E' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+.field input:focus,.field select:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(47,111,237,.12)}
+.field-row{display:grid;gap:16px}
+@media(min-width:600px){.field-row{grid-template-columns:1fr 1fr}}
+.ai-form .btn{width:100%;padding:17px;font-size:16px}
+.ai-disclaimer{font-size:11px;color:var(--gray-light);text-align:center;line-height:1.7}
+
+/* progress */
+.ai-progress{display:none;flex-direction:column;align-items:center;gap:18px;padding:18px 0 8px;text-align:center}
+.ai-progress.is-active{display:flex}
+.radar{width:84px;height:84px;border-radius:50%;position:relative;background:radial-gradient(circle,rgba(63,182,240,.1),transparent 70%);border:1px solid var(--sky-deep)}
+.radar::before{content:"";position:absolute;inset:14px;border-radius:50%;border:1px dashed var(--sky-deep)}
+.radar::after{
+  content:"";position:absolute;inset:0;border-radius:50%;
+  background:conic-gradient(from 0deg,rgba(63,182,240,.5),transparent 70deg);
+  animation:sweep 1.4s linear infinite;
+}
+@keyframes sweep{to{transform:rotate(360deg)}}
+.ai-step{font-size:14px;font-weight:700;color:var(--navy);min-height:1.6em}
+.pbar{width:100%;max-width:380px;height:8px;border-radius:5px;background:var(--sky);overflow:hidden}
+.pbar .pfill{height:100%;width:0;border-radius:5px;background:linear-gradient(90deg,var(--blue),var(--cyan));transition:width .45s ease}
+.ai-progress small{font-size:11px;color:var(--gray-light)}
+
+/* result */
+.ai-result{display:none;flex-direction:column;gap:26px}
+.ai-result.is-active{display:flex}
+.res-top{display:grid;gap:24px;align-items:center;justify-items:center}
+@media(min-width:640px){.res-top{grid-template-columns:auto 1fr;justify-items:start}}
+.res-meta{font-size:12px;color:var(--gray);width:100%}
+.res-meta b{display:block;font-size:15px;color:var(--ink);word-break:break-all}
+.res-meta .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.res-meta .chips span{font-size:11px;font-weight:700;background:var(--sky);color:var(--navy);border-radius:6px;padding:3px 10px}
+.res-comment{margin-top:12px;background:var(--sky);border-radius:12px;padding:12px 14px;font-size:13px;color:var(--navy);line-height:1.7}
+.score-grid{display:grid;grid-template-columns:1fr;gap:10px}
+@media(min-width:600px){.score-grid{grid-template-columns:1fr 1fr;gap:10px 22px}}
+.sg-item{display:grid;grid-template-columns:92px 1fr 34px;gap:10px;align-items:center;font-size:12.5px;font-weight:700;color:var(--gray)}
+.sg-item .track{height:9px;border-radius:5px;background:var(--sky);overflow:hidden}
+.sg-item .fill{height:100%;border-radius:5px;width:0;transition:width 1s cubic-bezier(.2,.7,.3,1)}
+.sg-item .val{font-family:'Outfit',sans-serif;font-size:14px;color:var(--navy);text-align:right}
+.f-good{background:linear-gradient(90deg,#2F6FED,#3FB6F0)}
+.f-warn{background:linear-gradient(90deg,#E5A50A,#F2C14E)}
+.f-bad{background:linear-gradient(90deg,#E0563C,#F08A6B)}
+
+.res-block h4{font-size:14px;font-weight:900;display:flex;align-items:center;gap:9px;margin-bottom:14px}
+.res-block h4::before{content:"";width:16px;height:3px;border-radius:2px;background:var(--blue)}
+.prop-list{display:flex;flex-direction:column;gap:9px}
+.prop{
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:#fff;
+}
+.prop .stars{color:#F2B01E;font-size:13px;letter-spacing:2px;white-space:nowrap}
+.prop .stars .off{color:var(--sky-deep)}
+.prop b{font-size:13.5px;flex:1;min-width:10em}
+.prio{font-size:11px;font-weight:700;border-radius:6px;padding:3px 12px;white-space:nowrap}
+.prio-high{background:#FDEAE4;color:var(--bad)}
+.prio-mid{background:#FCF3DC;color:#A87708}
+.prio-low{background:#E7F4EC;color:var(--good)}
+
+.res-report{
+  border:1.5px dashed var(--sky-deep);border-radius:14px;padding:18px;display:flex;align-items:center;gap:14px;background:var(--sky);
+}
+.res-report .pdf{
+  flex:0 0 46px;width:46px;height:56px;background:#fff;border-radius:6px;border:1px solid var(--line);position:relative;
+  box-shadow:0 3px 8px rgba(15,27,51,.08);
+}
+.res-report .pdf::before{content:"PDF";position:absolute;bottom:6px;left:50%;transform:translateX(-50%);font-family:'Outfit',sans-serif;font-size:9px;font-weight:700;color:var(--bad)}
+.res-report .pdf::after{content:"";position:absolute;top:8px;left:8px;right:8px;height:22px;background:repeating-linear-gradient(to bottom,var(--sky) 0 3px,transparent 3px 7px)}
+.res-report div b{font-size:13.5px;display:block}
+.res-report div small{font-size:11.5px;color:var(--gray)}
+.res-actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.res-actions .btn{font-size:13.5px;padding:13px 22px}
+.btn-line{background:#06C755;color:#fff;box-shadow:0 5px 14px rgba(6,199,85,.3)}
+.btn-line:hover{transform:translateY(-2px)}
+.res-retry{text-align:center}
+.res-retry button{background:none;border:none;color:var(--gray-light);font-size:12px;cursor:pointer;text-decoration:underline;font-family:inherit}
+
+/* ========== AI feature cards ========== */
+.grid-ai{grid-template-columns:1fr 1fr}
+@media(min-width:768px){.grid-ai{grid-template-columns:repeat(4,1fr);gap:18px}}
+.ai-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px 16px;box-shadow:var(--shadow);transition:.25s}
+.ai-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover);border-color:var(--sky-deep)}
+.ai-ic{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,rgba(47,111,237,.1),rgba(63,182,240,.14));display:flex;align-items:center;justify-content:center;margin-bottom:13px}
+.ai-ic svg{width:21px;height:21px;stroke:var(--blue);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.ai-card h3{font-size:14.5px;font-weight:700;margin-bottom:5px}
+.ai-card p{font-size:12px;color:var(--gray);line-height:1.7}
+
+/* ========== report sample ========== */
+.report-demo{
+  max-width:680px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:20px;
+  box-shadow:var(--shadow);overflow:hidden;font-size:13.5px;
+}
+.rd-bar{background:var(--sky);padding:11px 18px;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--line)}
+.rd-bar i{width:9px;height:9px;border-radius:50%;background:#C7D2DE}
+.rd-bar span{margin-left:8px;font-size:11.5px;font-weight:700;color:var(--gray);font-family:'Outfit','Noto Sans JP',sans-serif;letter-spacing:.06em}
+.rd-body{padding:24px 22px 28px}
+@media(min-width:680px){.rd-body{padding:30px 36px 34px}}
+.rd-title{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:18px}
+.rd-title h3{font-size:17px;font-weight:900}
+.rd-title .date{font-size:11px;color:var(--gray-light);font-family:'Outfit',sans-serif}
+.rd-total{
+  display:flex;align-items:center;gap:18px;background:var(--sky);border-radius:14px;padding:16px 18px;margin-bottom:20px;
+}
+.rd-total .big{font-family:'Outfit',sans-serif;font-size:42px;font-weight:700;color:var(--navy);line-height:1}
+.rd-total .big small{font-size:15px}
+.rd-total p{font-size:12px;color:var(--gray)}
+.rd-sep{border:none;border-top:1.5px dashed var(--sky-deep);margin:20px 0}
+.rd-list li{display:flex;justify-content:space-between;gap:10px;font-size:13px;padding:7px 0;border-bottom:1px solid var(--sky);list-style:none}
+.rd-list li:last-child{border-bottom:none}
+.rd-list b{color:var(--navy)}
+.rd-foot{display:flex;justify-content:center;margin-top:22px}
+
+/* ========== competitor ========== */
+.vs-wrap{max-width:760px;margin:0 auto}
+.vs-inputs{display:grid;gap:12px;margin-bottom:26px}
+@media(min-width:640px){.vs-inputs{grid-template-columns:1fr auto 1fr;align-items:end}}
+.vs-vs{font-family:'Outfit',sans-serif;font-weight:700;color:var(--gray-light);text-align:center;font-size:14px;padding-bottom:13px}
+.vs-card{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:24px 20px}
+.vs-row{display:grid;grid-template-columns:44px 1fr 96px 1fr 44px;gap:8px;align-items:center;padding:9px 0;border-bottom:1px solid var(--sky)}
+.vs-row:last-child{border-bottom:none}
+.vs-row .lbl{grid-column:3;text-align:center;font-size:11.5px;font-weight:700;color:var(--gray)}
+.vs-row .nA,.vs-row .nB{font-family:'Outfit',sans-serif;font-weight:700;font-size:14px;text-align:center}
+.vs-row .bA,.vs-row .bB{height:8px;border-radius:4px;background:var(--sky);overflow:hidden;position:relative}
+.vs-row .bA i,.vs-row .bB i{position:absolute;top:0;bottom:0;border-radius:4px;width:0;transition:width 1s ease}
+.vs-row .bA i{right:0;background:linear-gradient(270deg,var(--blue),var(--cyan))}
+.vs-row .bB i{left:0;background:#C9D4E2}
+.vs-head{display:flex;justify-content:space-between;font-size:12px;font-weight:700;margin-bottom:12px}
+.vs-head .me{color:var(--blue)}
+.vs-head .them{color:var(--gray-light)}
+.vs-note{margin-top:16px;font-size:12px;color:var(--gray);background:var(--sky);border-radius:10px;padding:11px 14px;line-height:1.7}
+
+/* ========== 導線改善 ========== */
+.douse-grid{display:grid;gap:30px;align-items:center;max-width:900px;margin:0 auto}
+@media(min-width:820px){.douse-grid{grid-template-columns:340px 1fr;gap:48px}}
+.wire{
+  background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);
+  padding:14px;display:flex;flex-direction:column;gap:8px;position:relative;max-width:340px;margin:0 auto;width:100%;
+}
+.wire .w-blk{border-radius:8px;background:var(--sky);position:relative}
+.wire .w-hero{height:70px;background:linear-gradient(135deg,var(--sky-deep),var(--sky))}
+.wire .w-txt{height:14px;width:70%}
+.wire .w-txt2{height:14px;width:50%}
+.wire .w-card{height:42px}
+.wire .pin{
+  position:absolute;right:-10px;display:flex;align-items:center;gap:6px;
+  background:var(--navy);color:#fff;font-size:10.5px;font-weight:700;
+  padding:4px 10px;border-radius:999px;white-space:nowrap;box-shadow:0 4px 10px rgba(15,27,51,.25);z-index:2;
+  transform:translateX(100%);
+}
+.wire .pin::before{content:"AI";font-family:'Outfit',sans-serif;font-size:9px;background:var(--cyan);border-radius:4px;padding:1px 5px;color:var(--navy)}
+@media(max-width:560px){.wire .pin{transform:none;right:6px}}
+.douse-list{display:flex;flex-direction:column;gap:14px}
+.douse-list .d-item{display:flex;gap:13px;align-items:flex-start}
+.d-item .d-ic{flex:0 0 34px;width:34px;height:34px;border-radius:10px;background:var(--sky);display:flex;align-items:center;justify-content:center;font-family:'Outfit',sans-serif;font-weight:700;font-size:13px;color:var(--blue)}
+.d-item b{display:block;font-size:14.5px}
+.d-item p{font-size:12.5px;color:var(--gray)}
+
+/* ========== AI運用 ========== */
+.ops-grid{display:grid;gap:30px;align-items:center;max-width:920px;margin:0 auto}
+@media(min-width:820px){.ops-grid{grid-template-columns:1fr 380px;gap:48px}}
+.ops-points{display:flex;flex-direction:column;gap:16px}
+.ops-points .d-item .d-ic{background:linear-gradient(135deg,rgba(47,111,237,.1),rgba(63,182,240,.16))}
+.dash{
+  background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);overflow:hidden;max-width:380px;margin:0 auto;width:100%;
+}
+.dash-head{background:var(--navy);color:#fff;padding:13px 18px;display:flex;justify-content:space-between;align-items:center}
+.dash-head b{font-size:12.5px}
+.dash-head span{font-size:10px;font-family:'Outfit',sans-serif;letter-spacing:.1em;color:#9DBCF5}
+.dash-body{padding:18px;display:flex;flex-direction:column;gap:14px}
+.dash-row{display:flex;justify-content:space-between;align-items:center;font-size:12.5px;font-weight:700}
+.dash-row small{display:block;font-weight:500;color:var(--gray-light);font-size:10.5px}
+.dash-val{font-family:'Outfit',sans-serif;font-size:16px;color:var(--navy)}
+.dash-val.up::after{content:"▲";color:var(--good);font-size:10px;margin-left:4px}
+.dash-alert{
+  background:#FFF6EF;border:1px solid #FBE0CC;border-radius:10px;padding:10px 12px;font-size:11.5px;color:#B5500F;font-weight:500;line-height:1.6;
+}
+.dash-alert b{display:flex;align-items:center;gap:6px;color:var(--accent);font-size:11px;margin-bottom:2px}
+.dash-alert b::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent);animation:pulse 1.8s infinite}
+
+/* ========== funnel8 ========== */
+.funnel8{display:grid;grid-template-columns:1fr;gap:0;max-width:560px;margin:0 auto}
+.f8-step{display:grid;grid-template-columns:44px 1fr;gap:16px;position:relative;padding-bottom:26px}
+.f8-step::before{content:"";position:absolute;left:21px;top:48px;bottom:2px;width:2px;background:repeating-linear-gradient(to bottom,var(--sky-deep) 0 6px,transparent 6px 12px)}
+.f8-step:last-child{padding-bottom:0}
+.f8-step:last-child::before{display:none}
+.f8-num{width:44px;height:44px;border-radius:13px;background:#fff;border:1.5px solid var(--sky-deep);display:flex;align-items:center;justify-content:center;font-family:'Outfit',sans-serif;font-weight:700;font-size:14px;color:var(--blue);position:relative;z-index:1}
+.f8-step.is-ai .f8-num{background:linear-gradient(135deg,var(--blue),var(--cyan));border:none;color:#fff}
+.f8-step.is-goal .f8-num{background:var(--accent);border:none;color:#fff;box-shadow:0 5px 14px rgba(242,116,44,.35)}
+.f8-body b{display:block;font-size:15px;font-weight:700}
+.f8-body b .tag{font-size:9.5px;font-family:'Outfit',sans-serif;letter-spacing:.08em;background:var(--sky);color:var(--blue);border-radius:5px;padding:2px 7px;margin-left:8px;vertical-align:2px}
+.f8-body p{font-size:12.5px;color:var(--gray)}
+
+/* ---------- profile ---------- */
+.profile-card{display:grid;gap:30px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);padding:34px 26px}
+@media(min-width:820px){.profile-card{grid-template-columns:1fr 260px;padding:50px 56px;gap:48px}}
+.profile-name{display:flex;align-items:baseline;gap:14px;margin-bottom:6px;flex-wrap:wrap}
+.profile-name h3{font-size:24px;font-weight:900}
+.profile-name span{font-size:12px;color:var(--gray-light)}
+.profile-role{font-size:13px;font-weight:700;color:var(--blue);margin-bottom:16px}
+.profile-text{font-size:14.5px;color:var(--gray)}
+.profile-text b{color:var(--ink)}
+.profile-points{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.profile-points span{font-size:12px;font-weight:700;color:var(--navy);background:var(--sky);border-radius:999px;padding:5px 13px}
+.profile-visual{display:flex;justify-content:center}
+.avatar{width:190px;height:190px;border-radius:32px;position:relative;background:linear-gradient(150deg,var(--sky) 0%,var(--sky-deep) 100%);display:flex;align-items:center;justify-content:center}
+.avatar::after{content:"AI × HUMAN";position:absolute;bottom:-12px;left:50%;transform:translateX(-50%);background:var(--navy);color:#fff;font-family:'Outfit',sans-serif;font-size:10px;font-weight:600;letter-spacing:.18em;padding:5px 14px;border-radius:999px;white-space:nowrap}
+.avatar svg{width:100px;height:100px}
+
+/* ---------- stats ---------- */
+.grid-stats{grid-template-columns:1fr 1fr}
+@media(min-width:768px){.grid-stats{grid-template-columns:repeat(3,1fr);gap:18px}}
+.stat-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:26px 16px;text-align:center;display:flex;flex-direction:column;gap:4px;transition:.25s}
+.stat-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover)}
+.stat-label{font-size:12px;font-weight:700;color:var(--gray)}
+.stat-num{font-family:'Outfit','Zen Kaku Gothic New',sans-serif;font-size:clamp(28px,6.6vw,38px);font-weight:700;color:var(--navy);line-height:1.15}
+.stat-num small{font-size:15px;font-weight:700;color:var(--navy)}
+.stat-num .u{color:var(--accent)}
+.stat-sub{font-size:11.5px;color:var(--gray-light)}
+
+/* ---------- works ---------- */
+.grid-works{grid-template-columns:1fr}
+@media(min-width:680px){.grid-works{grid-template-columns:1fr 1fr;gap:20px}}
+@media(min-width:1000px){.grid-works{grid-template-columns:1fr 1fr 1fr}}
+.work-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:.25s;display:flex;flex-direction:column}
+.work-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-hover)}
+.work-thumb{position:relative;height:150px;padding:20px 20px 0;display:flex;align-items:flex-end;justify-content:center;overflow:hidden}
+.work-thumb .browser{width:88%;background:#fff;border-radius:10px 10px 0 0;box-shadow:0 -4px 24px rgba(15,27,51,.14);overflow:hidden}
+.browser-bar{height:18px;background:#F2F5F9;display:flex;align-items:center;gap:4px;padding:0 8px}
+.browser-bar i{width:5px;height:5px;border-radius:50%;background:#C7D2DE}
+.browser-body{padding:12px 12px 0}
+.bb-line{height:7px;border-radius:3px;margin-bottom:7px}
+.badge-sample{position:absolute;top:12px;left:12px;background:rgba(15,27,51,.78);color:#fff;font-size:10.5px;font-weight:700;padding:4px 10px;border-radius:6px;letter-spacing:.06em;backdrop-filter:blur(2px)}
+.work-body{padding:18px 18px 20px;display:flex;flex-direction:column;gap:10px;flex:1}
+.work-genre{font-family:'Outfit','Noto Sans JP',sans-serif;font-size:11px;font-weight:600;letter-spacing:.14em;color:var(--blue)}
+.work-body h3{font-size:15.5px;font-weight:700;line-height:1.5;margin-top:-4px}
+.work-summary{font-size:12.5px;color:var(--gray);line-height:1.7}
+.work-btns{margin-top:auto;display:flex;gap:8px}
+.work-btns .wb{
+  flex:1;display:inline-flex;align-items:center;justify-content:center;gap:5px;
+  font-size:12px;font-weight:700;padding:10px 6px;border-radius:9px;cursor:pointer;transition:.2s;
+  border:1.5px solid var(--sky-deep);background:#fff;color:var(--navy);font-family:inherit;
+}
+.work-btns .wb:hover{border-color:var(--blue);color:var(--blue)}
+.work-btns .wb.demo{background:var(--navy);border-color:var(--navy);color:#fff}
+.work-btns .wb.demo:hover{background:var(--blue-dark);border-color:var(--blue-dark);color:#fff}
+.works-note{margin-top:24px;font-size:12.5px;color:var(--gray-light);text-align:center}
+
+/* ---------- modal ---------- */
+.modal-backdrop{position:fixed;inset:0;z-index:200;background:rgba(15,27,51,.55);display:none;align-items:flex-end;justify-content:center;backdrop-filter:blur(3px)}
+@media(min-width:680px){.modal-backdrop{align-items:center;padding:30px 20px}}
+.modal-backdrop.is-open{display:flex}
+.modal{background:#fff;width:100%;max-width:640px;max-height:88vh;overflow-y:auto;border-radius:22px 22px 0 0;box-shadow:0 20px 60px rgba(15,27,51,.3);animation:modalUp .3s ease}
+@media(min-width:680px){.modal{border-radius:22px;max-height:84vh}}
+@keyframes modalUp{from{transform:translateY(30px);opacity:0}to{transform:none;opacity:1}}
+.modal-head{position:sticky;top:0;background:#fff;z-index:2;display:flex;align-items:flex-start;justify-content:space-between;gap:14px;padding:22px 22px 14px;border-bottom:1px solid var(--line)}
+.modal-head .work-genre{display:block;margin-bottom:4px}
+.modal-head h3{font-size:18px;font-weight:900;line-height:1.5}
+.modal-close{flex:0 0 36px;width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:#fff;cursor:pointer;position:relative;transition:.2s}
+.modal-close:hover{background:var(--sky)}
+.modal-close::before,.modal-close::after{content:"";position:absolute;top:50%;left:50%;width:14px;height:2px;background:var(--gray)}
+.modal-close::before{transform:translate(-50%,-50%) rotate(45deg)}
+.modal-close::after{transform:translate(-50%,-50%) rotate(-45deg)}
+.modal-body{padding:20px 22px 26px;display:flex;flex-direction:column;gap:18px}
+.m-sample{align-self:flex-start;background:var(--ink);color:#fff;font-size:11px;font-weight:700;padding:4px 12px;border-radius:6px}
+.m-block h4{font-size:12.5px;font-weight:700;color:var(--navy);display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.m-block h4::before{content:"";width:14px;height:3px;border-radius:2px;background:var(--blue)}
+.m-block ul{list-style:none;display:flex;flex-direction:column;gap:5px}
+.m-block li{font-size:13.5px;color:var(--gray);padding-left:20px;position:relative;line-height:1.7}
+.m-block li::before{content:"";position:absolute;left:2px;top:10px;width:10px;height:5px;border-left:2px solid var(--blue);border-bottom:2px solid var(--blue);transform:rotate(-45deg)}
+.m-block.is-result{background:#FFF6EF;border:1px solid #FBE0CC;border-radius:12px;padding:14px 16px}
+.m-block.is-result h4::before{background:var(--accent)}
+.m-block.is-result li::before{border-color:var(--accent)}
+.m-tags{display:flex;flex-wrap:wrap;gap:6px}
+.m-tags span{font-size:11.5px;font-weight:700;color:var(--navy);background:var(--sky);border-radius:6px;padding:4px 10px}
+.modal-cta{border-top:1px solid var(--line);padding-top:18px;text-align:center;display:flex;flex-direction:column;gap:10px;align-items:center}
+.modal-cta .row{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.modal-cta p{font-size:13px;color:var(--gray)}
+
+/* ---------- price ---------- */
+.grid-price-top{grid-template-columns:1fr;margin-bottom:18px}
+@media(min-width:680px){.grid-price-top{grid-template-columns:1fr 1fr;gap:20px}}
+.grid-price-sub{grid-template-columns:1fr}
+@media(min-width:680px){.grid-price-sub{grid-template-columns:1fr 1fr;gap:18px}}
+@media(min-width:1000px){.grid-price-sub{grid-template-columns:repeat(4,1fr)}}
+.price-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:10px;transition:.25s}
+.price-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover)}
+.price-card h3{font-size:15.5px;font-weight:700}
+.price-num{font-family:'Outfit','Noto Sans JP',sans-serif;font-size:30px;font-weight:700;color:var(--navy);line-height:1.2}
+.price-num small{font-size:13px;font-weight:500;color:var(--gray)}
+.price-card ul{list-style:none;display:flex;flex-direction:column;gap:6px;font-size:13px;color:var(--gray)}
+.price-card li{padding-left:20px;position:relative}
+.price-card li::before{content:"";position:absolute;left:0;top:9px;width:11px;height:6px;border-left:2px solid var(--blue);border-bottom:2px solid var(--blue);transform:rotate(-45deg)}
+.price-card.is-top{border:2px solid var(--blue);position:relative;padding:34px 28px;border-radius:20px}
+.price-card.is-top .price-num{font-size:40px}
+.price-card.is-top .rank{position:absolute;top:-14px;left:22px;color:#fff;font-size:12px;font-weight:700;padding:4px 16px;border-radius:999px;background:var(--accent);box-shadow:0 4px 10px rgba(242,116,44,.35)}
+.price-card.is-top.rank2{border-color:var(--sky-deep)}
+.price-card.is-top.rank2 .rank{background:var(--navy);box-shadow:0 4px 10px rgba(27,58,95,.3)}
+.price-card .price-tag{font-size:12px;font-weight:700;color:var(--blue);margin-top:-4px}
+.price-card .btn{margin-top:10px;font-size:13.5px;padding:12px 22px;align-self:flex-start}
+.price-note{margin-top:22px;text-align:center;font-size:12.5px;color:var(--gray-light)}
+
+/* ---------- compare ---------- */
+.compare-wrap{max-width:760px;margin:0 auto;overflow-x:auto}
+table.compare{width:100%;border-collapse:separate;border-spacing:0;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow);font-size:13.5px;min-width:480px}
+.compare th,.compare td{padding:14px 12px;text-align:center;border-bottom:1px solid var(--line)}
+.compare tr:last-child th,.compare tr:last-child td{border-bottom:none}
+.compare thead th{font-size:13px;font-weight:700;background:var(--sky);color:var(--navy)}
+.compare thead th.col-me{background:var(--navy);color:#fff;font-size:14px}
+.compare tbody th{font-weight:700;text-align:left;padding-left:18px;background:#FBFCFE;font-size:13px}
+.compare td.col-me{background:#F4F8FF;font-weight:700}
+.mark-ok{display:inline-flex;width:26px;height:26px;border-radius:50%;border:2.5px solid var(--accent);vertical-align:middle}
+.mark-no{color:var(--gray-light);font-weight:700;font-size:15px}
+.mark-tri{color:var(--gray-light);font-weight:700;font-size:13px}
+.compare-note{margin-top:16px;text-align:center;font-size:12px;color:var(--gray-light)}
+
+/* ---------- faq ---------- */
+.faq{max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);overflow:hidden}
+.faq summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:14px;padding:18px 20px;font-weight:700;font-size:14.5px}
+.faq summary::-webkit-details-marker{display:none}
+.faq .q{flex:0 0 28px;height:28px;border-radius:9px;background:var(--sky);color:var(--blue);font-family:'Outfit',sans-serif;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center}
+.faq .chev{margin-left:auto;flex:0 0 auto;width:10px;height:10px;border-right:2px solid var(--gray-light);border-bottom:2px solid var(--gray-light);transform:rotate(45deg);transition:.25s}
+.faq details[open] .chev{transform:rotate(225deg)}
+.faq-a{padding:0 20px 20px 62px;font-size:13.5px;color:var(--gray)}
+
+/* ---------- cta ---------- */
+.cta-sec{background:linear-gradient(135deg,var(--navy) 0%,#16315A 55%,var(--blue-dark) 130%);color:#fff;text-align:center}
+.cta-sec .sec-eyebrow{color:#9DBCF5}
+.cta-sec h2{font-size:clamp(22px,5.4vw,32px);font-weight:900;margin-bottom:16px}
+.cta-sec p{color:#C5D4EC;font-size:14.5px;max-width:34em;margin:0 auto 32px}
+.cta-btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.cta-sec .btn-primary{font-size:16px;padding:18px 44px}
+.cta-sec .btn-secondary{background:transparent;color:#fff;border-color:rgba(255,255,255,.4)}
+.cta-sec .btn-secondary:hover{border-color:#fff;color:#fff}
+.cta-sub{margin-top:16px;font-size:12px;color:#8FA8CC}
+
+/* ---------- footer ---------- */
+footer{background:var(--ink);color:#8FA0B5;padding:52px 0 110px;font-size:13px}
+@media(min-width:768px){footer{padding:60px 0 36px}}
+.footer-grid{max-width:1080px;margin:0 auto;padding:0 20px;display:grid;gap:34px}
+@media(min-width:820px){.footer-grid{grid-template-columns:1.2fr 1fr 1fr;gap:40px}}
+.footer-brand .logo{color:#fff;font-size:15px;margin-bottom:14px}
+.footer-brand p{font-size:12.5px;line-height:1.9}
+.footer-sns{display:flex;gap:10px;margin-top:18px}
+.footer-sns a{width:36px;height:36px;border-radius:10px;border:1px solid rgba(255,255,255,.18);display:flex;align-items:center;justify-content:center;transition:.2s}
+.footer-sns a:hover{background:rgba(255,255,255,.1)}
+.footer-sns svg{width:16px;height:16px;fill:#C2CEDD}
+.footer-col h4{color:#fff;font-size:12px;font-weight:700;letter-spacing:.16em;margin-bottom:16px;font-family:'Outfit','Noto Sans JP',sans-serif}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.footer-col a{font-size:13px;transition:.2s}
+.footer-col a:hover{color:#fff}
+.footer-bottom{max-width:1080px;margin:40px auto 0;padding:20px 20px 0;border-top:1px solid rgba(255,255,255,.1);font-size:11.5px;text-align:center;color:#5F7088}
+
+/* ---------- page top / mobile cta ---------- */
+.pagetop{position:fixed;right:16px;bottom:152px;z-index:98;width:44px;height:44px;border-radius:50%;border:none;cursor:pointer;background:var(--navy);box-shadow:0 6px 16px rgba(15,27,51,.3);opacity:0;pointer-events:none;transform:translateY(8px);transition:.3s}
+@media(min-width:768px){.pagetop{bottom:92px;right:24px}}
+.pagetop.is-show{opacity:1;pointer-events:auto;transform:none}
+.pagetop::before{content:"";position:absolute;top:55%;left:50%;width:11px;height:11px;border-top:2.5px solid #fff;border-left:2.5px solid #fff;transform:translate(-50%,-50%) rotate(45deg)}
+.mobile-cta{position:fixed;left:0;right:0;bottom:0;z-index:99;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-top:1px solid var(--line);display:flex;gap:10px}
+.mobile-cta .btn{flex:1;padding:13px 8px;font-size:13.5px}
+@media(min-width:768px){.mobile-cta{display:none}}
+
+/* ---------- AI chat ---------- */
+.chat-fab{
+  position:fixed;right:16px;bottom:88px;z-index:120;width:58px;height:58px;border-radius:50%;border:none;cursor:pointer;
+  background:linear-gradient(135deg,var(--blue),var(--cyan));box-shadow:0 8px 22px rgba(47,111,237,.4);
+  display:flex;align-items:center;justify-content:center;transition:.25s;
+}
+@media(min-width:768px){.chat-fab{bottom:24px;right:24px}}
+.chat-fab:hover{transform:scale(1.06)}
+.chat-fab svg{width:26px;height:26px;stroke:#fff;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.chat-fab .dot{position:absolute;top:4px;right:4px;width:12px;height:12px;border-radius:50%;background:var(--accent);border:2px solid #fff}
+.chat-panel{
+  position:fixed;z-index:130;right:12px;left:12px;bottom:84px;max-height:min(560px,calc(100vh - 120px));
+  background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:0 24px 60px rgba(15,27,51,.28);
+  display:none;flex-direction:column;overflow:hidden;
+}
+@media(min-width:560px){.chat-panel{left:auto;right:24px;width:370px;bottom:96px}}
+.chat-panel.is-open{display:flex}
+.chat-head{background:linear-gradient(135deg,var(--navy),var(--blue-dark));color:#fff;padding:15px 18px;display:flex;align-items:center;gap:11px}
+.chat-head .ca{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.14);display:flex;align-items:center;justify-content:center;font-family:'Outfit',sans-serif;font-weight:700;font-size:12px}
+.chat-head b{font-size:13.5px;display:block;line-height:1.3}
+.chat-head small{font-size:10.5px;color:#9DBCF5;display:flex;align-items:center;gap:5px}
+.chat-head small::before{content:"";width:6px;height:6px;border-radius:50%;background:#7FD1A8}
+.chat-head .chat-x{margin-left:auto;background:none;border:none;color:#9DBCF5;font-size:20px;cursor:pointer;line-height:1;padding:4px}
+.chat-msgs{flex:1;overflow-y:auto;padding:16px 14px;display:flex;flex-direction:column;gap:10px;background:var(--sky)}
+.msg{max-width:85%;padding:10px 14px;border-radius:14px;font-size:13px;line-height:1.7}
+.msg.bot{background:#fff;border:1px solid var(--line);border-bottom-left-radius:4px;align-self:flex-start;color:var(--ink)}
+.msg.user{background:var(--blue);color:#fff;border-bottom-right-radius:4px;align-self:flex-end}
+.msg.bot .msg-cta{display:inline-flex;margin-top:8px;font-size:12px;font-weight:700;color:var(--blue);gap:5px;align-items:center}
+.msg.bot .msg-cta::after{content:"→"}
+.typing{display:inline-flex;gap:4px;align-items:center;padding:4px 2px}
+.typing i{width:6px;height:6px;border-radius:50%;background:var(--gray-light);animation:ty 1s infinite}
+.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+@keyframes ty{0%,100%{opacity:.3;transform:translateY(0)}50%{opacity:1;transform:translateY(-3px)}}
+.chat-chips{padding:10px 12px;display:flex;flex-wrap:wrap;gap:7px;border-top:1px solid var(--line);background:#fff}
+.chip{font-size:11.5px;font-weight:700;color:var(--blue);background:var(--sky);border:1px solid var(--sky-deep);border-radius:999px;padding:7px 13px;cursor:pointer;transition:.2s;font-family:inherit}
+.chip:hover{background:var(--blue);color:#fff}
+.chat-note{font-size:10px;color:var(--gray-light);text-align:center;padding:0 12px 10px;background:#fff}
+
+/* ---------- reveal ---------- */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.reveal.is-in{opacity:1;transform:none}
+body.modal-open{overflow:hidden}
+
+/* ---------- print(診断レポート) ---------- */
+@media print{
+  body *{visibility:hidden}
+  #ai-result,#ai-result *{visibility:visible}
+  #ai-result{position:absolute;top:0;left:0;width:100%}
+  .res-actions,.res-retry{display:none!important}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+  .scroll-cue .arrow,.radar::after,.chat-fab .dot{animation:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== Header ===== -->
+<header class="header">
+  <div class="header-inner">
+    <a class="logo" href="#top"><span class="mark">AI</span>AI WEB GROWTH STUDIO</a>
+    <nav class="gnav" aria-label="グローバルナビゲーション">
+      <a href="#shindan">30秒AI診断</a>
+      <a href="#ai">AIでできること</a>
+      <a href="#works">制作事例</a>
+      <a href="#price">料金</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="header-cta" href="#contact">無料相談</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ===== Hero ===== -->
+<div class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="hero-eyebrow">AI Web Growth Platform</span>
+      <h1><span class="grad">AIが分析し、</span><br>人が改善する。</h1>
+      <p class="hero-sub">URLを入力するだけで、HP・LP・Googleマップの課題をAIが30秒で診断。その結果をもとに、人の手で「問い合わせが増えるWeb」へ改善まで伴走します。</p>
+      <div class="hero-btns">
+        <a class="btn btn-blue" href="#shindan">30秒AI診断を試す</a>
+        <a class="btn btn-secondary" href="#contact">無料で相談する</a>
+      </div>
+      <div class="hero-badges">
+        <span class="hb"><span class="num">30</span>秒でAI診断</span>
+        <span class="hb"><span class="num">9</span>項目スコア化</span>
+        <span class="hb">SEO・MEO対応</span>
+        <span class="hb">改善・運用まで</span>
+      </div>
+    </div>
+    <div class="hero-visual reveal" aria-hidden="true">
+      <div class="hv-head">AI WEB SCORE — LIVE PREVIEW</div>
+      <div class="hv-grid">
+        <div class="ring">
+          <svg width="120" height="120" viewBox="0 0 120 120">
+            <defs><linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2F6FED"/><stop offset="1" stop-color="#3FB6F0"/></linearGradient></defs>
+            <circle class="bg" cx="60" cy="60" r="50"/>
+            <circle class="fg" id="hero-ring" cx="60" cy="60" r="50"/>
+          </svg>
+          <div class="label"><b id="hero-ring-num">0</b><small>SCORE</small></div>
+        </div>
+        <div class="hv-bars">
+          <div class="hv-bar"><span>SEO</span><span class="track"><span class="fill" data-w="90"></span></span><span class="val">90</span></div>
+          <div class="hv-bar"><span>UI</span><span class="track"><span class="fill" data-w="85"></span></span><span class="val">85</span></div>
+          <div class="hv-bar"><span>スマホ</span><span class="track"><span class="fill" data-w="92"></span></span><span class="val">92</span></div>
+          <div class="hv-bar"><span>CTA</span><span class="track"><span class="fill" data-w="65"></span></span><span class="val">65</span></div>
+          <div class="hv-bar"><span>MEO</span><span class="track"><span class="fill" data-w="55"></span></span><span class="val">55</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-cue" aria-hidden="true"><span class="en">SCROLL</span><span class="arrow"></span></div>
+</div>
+
+<!-- ===== 信頼バー ===== -->
+<div class="trust-bar">
+  <div class="trust-inner">
+    <div class="trust-item"><span class="tic"></span>AI診断 × 人の改善</div>
+    <div class="trust-item"><span class="tic"></span>問い合わせ導線設計</div>
+    <div class="trust-item"><span class="tic"></span>SEO・MEO対応</div>
+    <div class="trust-item"><span class="tic"></span>公開後のAI運用まで</div>
+  </div>
+</div>
+
+<!-- ===== 30秒AI診断 ===== -->
+<section id="shindan">
+  <div class="container">
+    <div class="sec-head center reveal">
+      <span class="sec-eyebrow">AI Web Score</span>
+      <h2 class="sec-title">30秒AIサイト診断</h2>
+      <p class="sec-lead">URLを入力するだけで、現在のHPやLP、Googleマップの状態をAIが分析。9項目のスコアと改善提案をその場で表示します。</p>
+    </div>
+
+    <div class="ai-app reveal">
+      <div class="ai-app-head">
+        <span class="en">AI WEB SCORE — FREE</span>
+        <h3>あなたのサイト、何点ですか？</h3>
+        <p>診断は無料・登録不要。結果はそのままお使いいただけます。</p>
+      </div>
+      <div class="ai-app-body">
+
+        <!-- 入力フォーム -->
+        <div class="ai-form" id="ai-form">
+          <div class="field">
+            <label for="f-url">サイトURL</label>
+            <input type="url" id="f-url" placeholder="https://example.com" autocomplete="url">
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="f-industry">業種</label>
+              <select id="f-industry">
+                <option>工務店・建築</option>
+                <option>美容サロン</option>
+                <option>不動産</option>
+                <option>飲食店</option>
+                <option>士業</option>
+                <option>医療・整体</option>
+                <option>その他</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="f-goal">目的</label>
+              <select id="f-goal">
+                <option>問い合わせ</option>
+                <option>予約</option>
+                <option>採用</option>
+                <option>Googleマップ集客</option>
+                <option>その他</option>
+              </select>
+            </div>
+          </div>
+          <button class="btn btn-blue" id="btn-diagnose" type="button">AIで診断する</button>
+          <p class="ai-disclaimer">※本ツールはデモ版の簡易AIスコアリングです。正式な詳細診断(無料)は、お申し込み後に人＋AIで実施しレポートをお送りします。</p>
+        </div>
+
+        <!-- 解析中 -->
+        <div class="ai-progress" id="ai-progress" aria-live="polite">
+          <div class="radar" aria-hidden="true"></div>
+          <div class="ai-step" id="ai-step">分析中…</div>
+          <div class="pbar"><div class="pfill" id="pfill"></div></div>
+          <small id="ai-target-url"></small>
+        </div>
+
+        <!-- 結果 -->
+        <div class="ai-result" id="ai-result" aria-live="polite">
+          <div class="res-top">
+            <div class="ring">
+              <svg width="120" height="120" viewBox="0 0 120 120">
+                <circle class="bg" cx="60" cy="60" r="50"/>
+                <circle class="fg" id="res-ring" cx="60" cy="60" r="50"/>
+              </svg>
+              <div class="label"><b id="res-total">0</b><small>/ 100</small></div>
+            </div>
+            <div class="res-meta">
+              <span>AI Web Score — 総合</span>
+              <b id="res-url"></b>
+              <div class="chips"><span id="res-industry"></span><span id="res-goal"></span></div>
+              <div class="res-comment" id="res-comment"></div>
+            </div>
+          </div>
+
+          <div class="res-block">
+            <h4>項目別スコア</h4>
+            <div class="score-grid" id="score-grid"></div>
+          </div>
+
+          <div class="res-block">
+            <h4>AI改善提案(優先度順)</h4>
+            <div class="prop-list" id="prop-list"></div>
+          </div>
+
+          <div class="res-report">
+            <div class="pdf" aria-hidden="true"></div>
+            <div>
+              <b>無料改善レポート</b>
+              <small>この結果に「具体的にどう直すか」を加えた詳細版レポートを無料でお送りできます。</small>
+            </div>
+          </div>
+
+          <div class="res-actions">
+            <button class="btn btn-secondary" type="button" onclick="window.print()">診断結果を保存</button>
+            <a class="btn btn-line" href="#contact">LINEで受け取る</a>
+            <a class="btn btn-primary" href="#contact">無料相談する</a>
+          </div>
+          <div class="res-retry"><button type="button" id="btn-retry">別のURLで診断し直す</button></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== AIでできること ===== -->
+<section id="ai" class="bg-sky">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-eyebrow">AI Solutions</span>
+      <h2 class="sec-title">AIでできること</h2>
+      <p class="sec-lead">診断から改善・運用まで、AIを活用して「勘」ではなくデータで集客課題に向き合います。分析はAI、最終判断と改善は人。両方の強みを組み合わせます。</p>
+    </div>
+    <div class="grid grid-ai">
+      <div class="ai-card reveal"><div class="ai-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l2.5 2.5"/></svg></div><h3>AIサイト診断</h3><p>UI・UX・CTA・速度など9項目をスコア化し、課題を見える化。</p></div>
+      <div class="ai-card reveal"><div class="ai-ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div><h3>AI SEO診断</h3><p>キーワード・見出し構造・内部リンクをAIが解析し改善案を提示。</p></div>
+      <div class="ai-card reveal"><div class="ai-ic"><svg viewBox="0 0 24 24"><path d="M12 21s-7-5.5-7-11a7 7 0 0114 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div><h3>AI MEO診断</h3><p>Googleビジネスプロフィールの充足度・口コミ状況を分析。</p></div>
+      <div class="ai-card reveal"><div class="ai-ic"><svg viewBox="0 0 24 24"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg></div><h3>AI LP診断</h3><p>構成・コピー・CTA配置を分析し、CVR改善のヒントを抽出。</p></div>
+      <div class="ai-card reveal"><div class="ai-ic"><svg viewBox="0 0 24 24"><path d="M8 3v18M16 3v18M3 8h18M3 16h18"/></svg></div><h3>AI競合分析</h3><p>競合サイトとの比較で、勝てるポイント・負けている点を特定。</p></div>
+      <div class="ai-card reveal"><div class="ai-ic"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></div><h3>AI集客分析</h3><p>流入経路と行動データから、伸びしろの大きい施策を提案。</p></div>
+      <div class="ai-card reveal"><div class="ai-ic"><svg viewBox="0 0 24 24"><path d="M14.5 4l5.5 5.5L9.5 20H4v-5.5L14.5 4z"/></svg></div><h3>AI改善提案</h3><p>キャッチコピー・FAQ・口コミ返信文の生成まで、改善をAIが支援。</p></div>
+      <div class="ai-card reveal"><div class="ai-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M19 12a7 7 0 01-.4 2.3l2 1.6-2 3.4-2.4-.9a7 7 0 01-2 1.2L13.8 22h-3.6l-.4-2.4a7 7 0 01-2-1.2l-2.4.9-2-3.4 2-1.6A7 7 0 015 12c0-.8.1-1.6.4-2.3l-2-1.6 2-3.4 2.4.9a7 7 0 012-1.2L10.2 2h3.6l.4 2.4a7 7 0 012 1.2l2.4-.9 2 3.4-2 1.6c.3.7.4 1.5.4 2.3z"/></svg></div><h3>AI運用サポート</h3><p>公開後もAIが定期診断。変化を検知し、月次で改善を回します。</p></div>
+    </div>
+    <div class="sec-cta reveal">
+      <p class="note">ブログ提案・口コミ返信・広告改善・SNS投稿などのAI機能も順次拡張中です。</p>
+      <a class="btn btn-blue" href="#shindan">まずは30秒AI診断を試す</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== AIレポートサンプル ===== -->
+<section id="report">
+  <div class="container">
+    <div class="sec-head center reveal">
+      <span class="sec-eyebrow">Sample Report</span>
+      <h2 class="sec-title">AI診断レポートのサンプル</h2>
+      <p class="sec-lead">診断をお申し込みいただくと、このようなレポートを無料でお渡しします(以下は架空サイトのデモ表示です)。</p>
+    </div>
+    <div class="report-demo reveal">
+      <div class="rd-bar"><i></i><i></i><i></i><span>AI_DIAGNOSIS_REPORT.PDF — DEMO</span></div>
+      <div class="rd-body">
+        <div class="rd-title">
+          <h3>AI診断結果レポート</h3>
+          <span class="date">対象: sample-demo.example.com</span>
+        </div>
+        <div class="rd-total">
+          <span class="big">78<small>点</small></span>
+          <p>総合スコア。基礎は良好ですが、MEOとCTAに大きな伸びしろがあります。優先度の高い3項目の改善で、問い合わせ増加が見込めます。</p>
+        </div>
+        <div class="score-grid">
+          <div class="sg-item"><span>SEO</span><span class="track"><span class="fill f-good" data-w="82"></span></span><span class="val">82</span></div>
+          <div class="sg-item"><span>MEO</span><span class="track"><span class="fill f-bad" data-w="50"></span></span><span class="val">50</span></div>
+          <div class="sg-item"><span>UI</span><span class="track"><span class="fill f-good" data-w="80"></span></span><span class="val">80</span></div>
+          <div class="sg-item"><span>UX</span><span class="track"><span class="fill f-warn" data-w="72"></span></span><span class="val">72</span></div>
+          <div class="sg-item"><span>CTA</span><span class="track"><span class="fill f-warn" data-w="60"></span></span><span class="val">60</span></div>
+          <div class="sg-item"><span>表示速度</span><span class="track"><span class="fill f-good" data-w="92"></span></span><span class="val">92</span></div>
+        </div>
+        <hr class="rd-sep">
+        <ul class="rd-list">
+          <li><b>改善案</b><span>5項目(CTA・口コミ・FV・FAQ・マップ導線)</span></li>
+          <li><b>推奨改善(優先度高)</b><span>3項目を具体的な手順つきで提示</span></li>
+          <li><b>競合比較</b><span>同地域・同業種2サイトとのスコア比較</span></li>
+        </ul>
+        <hr class="rd-sep">
+        <div class="rd-foot"><a class="btn btn-secondary" href="#contact" style="font-size:13.5px;padding:13px 26px">この形式のレポートを無料で受け取る</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== AI競合分析 ===== -->
+<section id="vs" class="bg-sky">
+  <div class="container">
+    <div class="sec-head center reveal">
+      <span class="sec-eyebrow">AI Competitor Analysis</span>
+      <h2 class="sec-title">AI競合分析</h2>
+      <p class="sec-lead">自社サイトと競合サイトのURLを入れるだけで、7項目を比較。「どこで勝ち、どこで負けているか」が一目で分かります(以下はデモ表示です)。</p>
+    </div>
+    <div class="vs-wrap reveal">
+      <div class="vs-inputs">
+        <div class="field"><label>自社サイトURL</label><input type="text" value="https://your-site.example.com" readonly></div>
+        <div class="vs-vs">VS</div>
+        <div class="field"><label>競合サイトURL</label><input type="text" value="https://rival.example.com" readonly></div>
+      </div>
+      <div class="vs-card">
+        <div class="vs-head"><span class="me">あなたのサイト</span><span class="them">競合サイト</span></div>
+        <div class="vs-row"><span class="nA">82</span><span class="bA"><i data-w="82"></i></span><span class="lbl">SEO</span><span class="bB"><i data-w="74"></i></span><span class="nB">74</span></div>
+        <div class="vs-row"><span class="nA">60</span><span class="bA"><i data-w="60"></i></span><span class="lbl">CTA</span><span class="bB"><i data-w="78"></i></span><span class="nB">78</span></div>
+        <div class="vs-row"><span class="nA">72</span><span class="bA"><i data-w="72"></i></span><span class="lbl">UX</span><span class="bB"><i data-w="70"></i></span><span class="nB">70</span></div>
+        <div class="vs-row"><span class="nA">92</span><span class="bA"><i data-w="92"></i></span><span class="lbl">表示速度</span><span class="bB"><i data-w="66"></i></span><span class="nB">66</span></div>
+        <div class="vs-row"><span class="nA">90</span><span class="bA"><i data-w="90"></i></span><span class="lbl">スマホ</span><span class="bB"><i data-w="84"></i></span><span class="nB">84</span></div>
+        <div class="vs-row"><span class="nA">48</span><span class="bA"><i data-w="48"></i></span><span class="lbl">口コミ</span><span class="bB"><i data-w="80"></i></span><span class="nB">80</span></div>
+        <div class="vs-row"><span class="nA">55</span><span class="bA"><i data-w="55"></i></span><span class="lbl">Googleマップ</span><span class="bB"><i data-w="82"></i></span><span class="nB">82</span></div>
+        <div class="vs-note"><b>AIの所見:</b> 技術面(速度・スマホ・SEO)では競合をリードしていますが、<b>口コミとGoogleマップで大きく負けています。</b>MEO強化とCTA改善が、最短で成果につながる打ち手です。</div>
+      </div>
+      <div class="sec-cta">
+        <a class="btn btn-blue" href="#contact">自社で競合分析を依頼する(無料)</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== AI導線改善 ===== -->
+<section id="douse">
+  <div class="container">
+    <div class="sec-head center reveal">
+      <span class="sec-eyebrow">AI UX Suggestions</span>
+      <h2 class="sec-title">AI導線改善</h2>
+      <p class="sec-lead">サイト全体をAIが分析し、「どこに・何を置けば問い合わせが増えるか」をページ上に直接提案します。</p>
+    </div>
+    <div class="douse-grid reveal">
+      <div class="wire" aria-hidden="true">
+        <div class="w-blk w-hero"><span class="pin" style="top:18px">ここにCTA</span></div>
+        <div class="w-blk w-txt"></div>
+        <div class="w-blk w-txt2"></div>
+        <div class="w-blk w-card"><span class="pin" style="top:8px">ここに施工事例</span></div>
+        <div class="w-blk w-card"></div>
+        <div class="w-blk w-txt"><span class="pin" style="top:-2px">ここに口コミ</span></div>
+        <div class="w-blk w-card"><span class="pin" style="top:8px">ここにFAQ</span></div>
+        <div class="w-blk w-txt2"></div>
+      </div>
+      <div class="douse-list">
+        <div class="d-item"><span class="d-ic">01</span><div><b>CTAの位置と文言を提案</b><p>「無料相談」「資料請求」など、迷わせないボタンの位置・色・文言をAIが具体的に指摘します。</p></div></div>
+        <div class="d-item"><span class="d-ic">02</span><div><b>信頼コンテンツの配置を提案</b><p>口コミ・施工事例・FAQなど、不安を解消する要素を「どの順番で見せるか」まで設計します。</p></div></div>
+        <div class="d-item"><span class="d-ic">03</span><div><b>人がそのまま実装</b><p>提案で終わらせず、優先度の高い改善から実際のサイトに反映。効果を見ながら次の一手へ。</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== AI運用 ===== -->
+<section id="ops" class="bg-sky">
+  <div class="container">
+    <div class="sec-head center reveal">
+      <span class="sec-eyebrow">AI Operations</span>
+      <h2 class="sec-title">公開後はAIが見守り、人が改善</h2>
+      <p class="sec-lead">サイトは公開してからが本番。AIが定期診断でサイト状況を監視し、変化があれば通知。月次レポートと改善提案で、成果を伸ばし続けます。</p>
+    </div>
+    <div class="ops-grid reveal">
+      <div class="ops-points">
+        <div class="d-item"><span class="d-ic">⟳</span><div><b>定期AI診断</b><p>スコアの推移を毎月自動チェック。下がった項目をすぐに検知します。</p></div></div>
+        <div class="d-item"><span class="d-ic">!</span><div><b>変化を通知</b><p>順位低下・速度悪化・口コミ評価の変化などをお知らせ。気づかないうちの機会損失を防ぎます。</p></div></div>
+        <div class="d-item"><span class="d-ic">📄</span><div><b>月次レポート＋改善提案</b><p>「今月やるべき改善」を毎月1枚に整理してお届け。実装までお任せいただけます。</p></div></div>
+      </div>
+      <div class="dash" aria-hidden="true">
+        <div class="dash-head"><b>月次AIレポート</b><span>MONTHLY</span></div>
+        <div class="dash-body">
+          <div class="dash-row"><span>AI Web Score<small>前月比 +6</small></span><span class="dash-val up">84</span></div>
+          <div class="dash-row"><span>検索表示回数<small>前月比 +18%</small></span><span class="dash-val up">12,400</span></div>
+          <div class="dash-row"><span>マップ経路検索<small>前月比 +9%</small></span><span class="dash-val up">342</span></div>
+          <div class="dash-alert"><b>AI通知</b>「料金ページ」の離脱率が上昇しています。料金表の見せ方の改善を推奨します。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== AI営業導線 ===== -->
+<section id="funnel">
+  <div class="container">
+    <div class="sec-head center reveal">
+      <span class="sec-eyebrow">Growth Process</span>
+      <h2 class="sec-title">診断から運用まで、成果に向かう流れ</h2>
+      <p class="sec-lead">「まず診断、それから改善」。押し売りではなく、データで納得してから進められます。</p>
+    </div>
+    <div class="funnel8">
+      <div class="f8-step is-ai reveal"><span class="f8-num">01</span><div class="f8-body"><b>AI診断<span class="tag">AI</span></b><p>30秒のAI診断で現状をスコア化。まずは無料・登録不要で。</p></div></div>
+      <div class="f8-step is-ai reveal"><span class="f8-num">02</span><div class="f8-body"><b>診断結果<span class="tag">AI</span></b><p>9項目のスコアと改善ポイントをその場で確認できます。</p></div></div>
+      <div class="f8-step is-ai reveal"><span class="f8-num">03</span><div class="f8-body"><b>改善レポート<span class="tag">AI×人</span></b><p>具体的な改善手順をまとめた詳細レポートを無料でお渡し。</p></div></div>
+      <div class="f8-step reveal"><span class="f8-num">04</span><div class="f8-body"><b>無料相談</b><p>レポートをもとに、優先順位と進め方をご相談。契約義務はありません。</p></div></div>
+      <div class="f8-step reveal"><span class="f8-num">05</span><div class="f8-body"><b>制作・改善</b><p>導線設計・デザイン・実装を人の手で。SEO・MEOも同時に対策します。</p></div></div>
+      <div class="f8-step reveal"><span class="f8-num">06</span><div class="f8-body"><b>公開</b><p>スマホ・速度・検索対策まで確認のうえ公開します。</p></div></div>
+      <div class="f8-step is-ai reveal"><span class="f8-num">07</span><div class="f8-body"><b>AI運用<span class="tag">AI</span></b><p>公開後はAIが定期診断。変化を検知して通知します。</p></div></div>
+      <div class="f8-step is-goal reveal"><span class="f8-num">08</span><div class="f8-body"><b>月次改善</b><p>月次レポートと改善提案で、問い合わせを増やし続けます。</p></div></div>
+    </div>
+    <div class="sec-cta reveal">
+      <a class="btn btn-blue" href="#shindan">STEP01 — 30秒AI診断から始める</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Profile ===== -->
+<section id="profile" class="bg-sky">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-eyebrow">Profile</span>
+      <h2 class="sec-title">「人」の部分を担当します</h2>
+    </div>
+    <div class="profile-card reveal">
+      <div>
+        <div class="profile-name"><h3>千葉 倫也</h3><span>Tomoya Chiba</span></div>
+        <p class="profile-role">AI Web Growth Studio / Webデザイナー・集客導線設計</p>
+        <p class="profile-text">
+          HP制作・LP制作・SEO対策・MEO対策を中心に、<b>「作って終わり」ではなく、問い合わせにつながる導線設計</b>を重視しています。<br><br>
+          AIによる分析で課題を特定し、改善の判断と実装は人が担当。事業内容やターゲットを整理し、成果につながるWeb改善を心掛けています。<b>最短3日で初回提案可能。</b>制作後はAI運用で継続的にサポートします。
+        </p>
+        <div class="profile-points">
+          <span>AI診断×人の改善</span><span>最短3日で初回提案</span><span>SEO・MEO対応</span><span>運用サポートあり</span>
+        </div>
+      </div>
+      <div class="profile-visual">
+        <div class="avatar" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#1B3A5F" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="8.2" r="3.6"/><path d="M5 20c.8-3.8 3.6-5.8 7-5.8s6.2 2 7 5.8"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Stats ===== -->
+<section style="padding-top:72px;padding-bottom:72px">
+  <div class="container">
+    <div class="sec-head center reveal">
+      <span class="sec-eyebrow">Trust</span>
+      <h2 class="sec-title">数字で信頼</h2>
+    </div>
+    <div class="grid grid-stats">
+      <div class="stat-card reveal"><span class="stat-label">AI診断</span><span class="stat-num"><span class="u" data-count="30">0</span><small>秒</small></span><span class="stat-sub">URL入力だけで即スコア化</span></div>
+      <div class="stat-card reveal"><span class="stat-label">診断項目</span><span class="stat-num"><span class="u" data-count="9">0</span><small>項目</small></span><span class="stat-sub">UI/UX/SEO/MEO/CTAなど</span></div>
+      <div class="stat-card reveal"><span class="stat-label">初回提案</span><span class="stat-num">最短<span class="u" data-count="3">0</span><small>日</small></span><span class="stat-sub">ご相談からスピード対応</span></div>
+      <div class="stat-card reveal"><span class="stat-label">スマホ対応</span><span class="stat-num"><span class="u" data-count="100">0</span><small>%</small></span><span class="stat-sub">全制作物レスポンシブ</span></div>
+      <div class="stat-card reveal"><span class="stat-label">対応範囲</span><span class="stat-num">LP・HP<small>両対応</small></span><span class="stat-sub">1枚のLPから企業サイトまで</span></div>
+      <div class="stat-card reveal"><span class="stat-label">公開後</span><span class="stat-num">AI運用<small>継続</small></span><span class="stat-sub">定期診断と月次改善</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Works ===== -->
+<section id="works" class="bg-sky">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-eyebrow">Case Study</span>
+      <h2 class="sec-title">制作事例(サンプル制作)</h2>
+      <p class="sec-lead">想定業種ごとの課題に、どのような設計でアプローチするかをサンプル制作としてご紹介。実際に動くデモサイトもご覧いただけます。</p>
+    </div>
+    <div class="grid grid-works">
+
+      <article class="work-card reveal">
+        <div class="work-thumb" style="background:linear-gradient(135deg,#2C4A36,#5C8A66)">
+          <span class="badge-sample">サンプル制作</span>
+          <div class="browser"><div class="browser-bar"><i></i><i></i><i></i></div><div class="browser-body"><div class="bb-line" style="width:70%;background:#2C4A36"></div><div class="bb-line" style="width:90%;background:#E4E9E4"></div><div class="bb-line" style="width:55%;background:#E4E9E4"></div><div class="bb-line" style="width:40%;background:#5C8A66"></div></div></div>
+        </div>
+        <div class="work-body">
+          <span class="work-genre">CORPORATE SITE</span>
+          <h3>工務店向けコーポレートサイト</h3>
+          <p class="work-summary">資料請求・見学会予約を増やす、地域工務店の想定リニューアル。</p>
+          <div class="work-btns">
+            <button class="wb" type="button" data-modal="m1">詳細を見る</button>
+            <a class="wb demo" href="samples/komuten/" target="_blank" rel="noopener">デモサイトを見る</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="work-card reveal">
+        <div class="work-thumb" style="background:linear-gradient(135deg,#8A4E63,#C98DA4)">
+          <span class="badge-sample">サンプル制作</span>
+          <div class="browser"><div class="browser-bar"><i></i><i></i><i></i></div><div class="browser-body"><div class="bb-line" style="width:60%;background:#8A4E63"></div><div class="bb-line" style="width:85%;background:#F0E5EA"></div><div class="bb-line" style="width:75%;background:#F0E5EA"></div><div class="bb-line" style="width:45%;background:#C98DA4"></div></div></div>
+        </div>
+        <div class="work-body">
+          <span class="work-genre">LANDING PAGE</span>
+          <h3>美容サロン向けLP</h3>
+          <p class="work-summary">LINE予約への導線を一本化し、予約率を高める想定LP。</p>
+          <div class="work-btns">
+            <button class="wb" type="button" data-modal="m2">詳細を見る</button>
+            <a class="wb demo" href="samples/beauty-salon/" target="_blank" rel="noopener">デモサイトを見る</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="work-card reveal">
+        <div class="work-thumb" style="background:linear-gradient(135deg,#1B3A5F,#3D6CB0)">
+          <span class="badge-sample">サンプル制作</span>
+          <div class="browser"><div class="browser-bar"><i></i><i></i><i></i></div><div class="browser-body"><div class="bb-line" style="width:75%;background:#1B3A5F"></div><div class="bb-line" style="width:88%;background:#E2E9F2"></div><div class="bb-line" style="width:60%;background:#E2E9F2"></div><div class="bb-line" style="width:38%;background:#3D6CB0"></div></div></div>
+        </div>
+        <div class="work-body">
+          <span class="work-genre">SERVICE SITE</span>
+          <h3>不動産会社向けサービスサイト</h3>
+          <p class="work-summary">売却相談・物件問い合わせを獲得する、信頼感重視の想定構成。</p>
+          <div class="work-btns">
+            <button class="wb" type="button" data-modal="m3">詳細を見る</button>
+            <a class="wb demo" href="samples/real-estate/" target="_blank" rel="noopener">デモサイトを見る</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="work-card reveal">
+        <div class="work-thumb" style="background:linear-gradient(135deg,#21618C,#48A9A6)">
+          <span class="badge-sample">サンプル制作</span>
+          <div class="browser"><div class="browser-bar"><i></i><i></i><i></i></div><div class="browser-body"><div class="bb-line" style="width:65%;background:#21618C"></div><div class="bb-line" style="width:90%;background:#E3EEF2"></div><div class="bb-line" style="width:70%;background:#E3EEF2"></div><div class="bb-line" style="width:42%;background:#48A9A6"></div></div></div>
+        </div>
+        <div class="work-body">
+          <span class="work-genre">RECRUIT LP</span>
+          <h3>採用LP(中小企業向け)</h3>
+          <p class="work-summary">「働くイメージ」を伝えて応募数を増やす想定採用LP。</p>
+          <div class="work-btns">
+            <button class="wb" type="button" data-modal="m4">詳細を見る</button>
+            <a class="wb demo" href="samples/recruit/" target="_blank" rel="noopener">デモサイトを見る</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="work-card reveal">
+        <div class="work-thumb" style="background:linear-gradient(135deg,#A8431F,#E0883E)">
+          <span class="badge-sample">サンプル制作</span>
+          <div class="browser"><div class="browser-bar"><i></i><i></i><i></i></div><div class="browser-body"><div class="bb-line" style="width:58%;background:#A8431F"></div><div class="bb-line" style="width:85%;background:#F5E9DE"></div><div class="bb-line" style="width:66%;background:#F5E9DE"></div><div class="bb-line" style="width:40%;background:#E0883E"></div></div></div>
+        </div>
+        <div class="work-body">
+          <span class="work-genre">MEO / GOOGLE MAP</span>
+          <h3>飲食店向けMEO対策ページ</h3>
+          <p class="work-summary">Googleマップからの来店を増やす、地域密着の想定店舗LP。</p>
+          <div class="work-btns">
+            <button class="wb" type="button" data-modal="m5">詳細を見る</button>
+            <a class="wb demo" href="samples/restaurant-meo/" target="_blank" rel="noopener">デモサイトを見る</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="work-card reveal">
+        <div class="work-thumb" style="background:linear-gradient(135deg,#2E3A4E,#6B7C99)">
+          <span class="badge-sample">サンプル制作</span>
+          <div class="browser"><div class="browser-bar"><i></i><i></i><i></i></div><div class="browser-body"><div class="bb-line" style="width:72%;background:#2E3A4E"></div><div class="bb-line" style="width:88%;background:#E7EAEF"></div><div class="bb-line" style="width:58%;background:#E7EAEF"></div><div class="bb-line" style="width:36%;background:#6B7C99"></div></div></div>
+        </div>
+        <div class="work-body">
+          <span class="work-genre">LEAD GEN LP</span>
+          <h3>士業向け問い合わせ獲得LP</h3>
+          <p class="work-summary">相談のハードルを下げ、無料相談を獲得する想定LP。</p>
+          <div class="work-btns">
+            <button class="wb" type="button" data-modal="m6">詳細を見る</button>
+            <a class="wb demo" href="samples/shigyo/" target="_blank" rel="noopener">デモサイトを見る</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+    <p class="works-note">※掲載事例・デモサイトはすべて架空のサンプル制作です。実在の企業・店舗とは関係ありません。</p>
+    <div class="sec-cta reveal">
+      <p class="note">あなたのサイトなら、どこから改善できるか。まずAIに聞いてみてください。</p>
+      <a class="btn btn-blue" href="#shindan">30秒AI診断を試す</a>
+      <a class="btn btn-primary" href="#contact">無料で相談する</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 比較表 ===== -->
+<section id="compare">
+  <div class="container">
+    <div class="sec-head center reveal">
+      <span class="sec-eyebrow">Compare</span>
+      <h2 class="sec-title">「作って終わり」との違い</h2>
+      <p class="sec-lead">当スタジオは、AI分析と人の改善で「公開後に伸ばすこと」までを制作の範囲と考えます。</p>
+    </div>
+    <div class="compare-wrap reveal">
+      <table class="compare">
+        <thead><tr><th style="text-align:left;padding-left:18px">対応内容</th><th>よくある格安制作</th><th class="col-me">AI Web Growth Studio</th></tr></thead>
+        <tbody>
+          <tr><th>AIサイト診断</th><td><span class="mark-no">✕</span></td><td class="col-me"><span class="mark-ok"></span></td></tr>
+          <tr><th>問い合わせ導線設計</th><td><span class="mark-no">✕</span></td><td class="col-me"><span class="mark-ok"></span></td></tr>
+          <tr><th>SEO・MEO対策</th><td><span class="mark-no">✕ SEOなし</span></td><td class="col-me"><span class="mark-ok"></span></td></tr>
+          <tr><th>競合分析</th><td><span class="mark-no">✕</span></td><td class="col-me"><span class="mark-ok"></span></td></tr>
+          <tr><th>スマホ最適化</th><td><span class="mark-tri">△</span></td><td class="col-me"><span class="mark-ok"></span></td></tr>
+          <tr><th>公開後のAI監視・改善提案</th><td><span class="mark-no">✕ 公開して終了</span></td><td class="col-me"><span class="mark-ok"></span></td></tr>
+          <tr><th>月次レポート・運用相談</th><td><span class="mark-no">✕</span></td><td class="col-me"><span class="mark-ok"></span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="compare-note">※一般的な「デザイン納品のみ」の格安制作サービスとの比較イメージです。</p>
+  </div>
+</section>
+
+<!-- ===== Price ===== -->
+<section id="price" class="bg-sky">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-eyebrow">Price</span>
+      <h2 class="sec-title">料金プラン</h2>
+      <p class="sec-lead">AI診断・改善レポートは無料。制作・改善は目的と予算に合わせて、必要なものだけご提案します。</p>
+    </div>
+    <div class="grid grid-price-top">
+      <div class="price-card is-top reveal">
+        <span class="rank">人気 No.1</span>
+        <h3>LP制作</h3>
+        <span class="price-tag">AI診断つき / 広告・SNS集客を始めたい方に</span>
+        <div class="price-num">80,000<small>円〜</small></div>
+        <ul>
+          <li>AI診断・競合分析つき</li>
+          <li>構成・コピー設計込み</li>
+          <li>スマホ最適化・導線設計</li>
+          <li>公開後の改善提案つき</li>
+        </ul>
+        <a class="btn btn-primary" href="#contact">このプランで相談する</a>
+      </div>
+      <div class="price-card is-top rank2 reveal">
+        <span class="rank">人気 No.2</span>
+        <h3>HP制作</h3>
+        <span class="price-tag">AI診断つき / 会社・店舗の信頼づくりに</span>
+        <div class="price-num">150,000<small>円〜</small></div>
+        <ul>
+          <li>AI診断・競合分析つき</li>
+          <li>5ページ前後の構成</li>
+          <li>SEOを意識した内部構造</li>
+          <li>公開後の運用相談OK</li>
+        </ul>
+        <a class="btn btn-secondary" href="#contact">このプランで相談する</a>
+      </div>
+    </div>
+    <div class="grid grid-price-sub">
+      <div class="price-card reveal"><h3>SEO内部対策</h3><div class="price-num">50,000<small>円〜</small></div><ul><li>AI解析＋キーワード設計</li><li>見出し・構造最適化</li><li>改善レポート付き</li></ul></div>
+      <div class="price-card reveal"><h3>MEO対策</h3><div class="price-num">30,000<small>円〜</small></div><ul><li>プロフィール最適化</li><li>口コミ運用の仕組み</li><li>AI返信文サポート</li></ul></div>
+      <div class="price-card reveal"><h3>AI運用サポート</h3><div class="price-num">月額 20,000<small>円〜</small></div><ul><li>定期AI診断・監視</li><li>月次レポート</li><li>改善の実装まで対応</li></ul></div>
+      <div class="price-card reveal" style="justify-content:center;background:linear-gradient(135deg,#1B3A5F,#2F6FED);border:none;color:#fff">
+        <h3 style="color:#fff">迷ったらまず診断を</h3>
+        <p style="font-size:12.5px;color:#D4E2F7">30秒AI診断と無料相談で、必要な施策だけをご提案します。</p>
+        <a class="btn btn-primary" href="#shindan" style="font-size:13.5px;padding:12px 24px">無料でAI診断する</a>
+      </div>
+    </div>
+    <p class="price-note">※料金は内容・ボリュームにより変動します。お見積りは無料です。</p>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section id="faq">
+  <div class="container">
+    <div class="sec-head center reveal">
+      <span class="sec-eyebrow">FAQ</span>
+      <h2 class="sec-title">よくある質問</h2>
+    </div>
+    <div class="faq">
+      <details class="reveal"><summary><span class="q">Q</span>AI診断は本当に無料ですか？<span class="chev"></span></summary><div class="faq-a">はい、無料です。ページ上の30秒診断はその場でお使いいただけ、詳細レポートも無料でお送りします。診断後の契約義務はありません。</div></details>
+      <details class="reveal"><summary><span class="q">Q</span>AIだけで改善まで完結するのですか？<span class="chev"></span></summary><div class="faq-a">いいえ。分析・提案はAIが高速に行いますが、改善の判断・設計・実装は人(千葉)が担当します。「AIが分析し、人が改善する」体制で、精度とスピードを両立しています。</div></details>
+      <details class="reveal"><summary><span class="q">Q</span>実績が少なくても依頼できますか？<span class="chev"></span></summary><div class="faq-a">もちろんです。「これからWeb集客を始めたい」事業者様こそお力になれます。まずAI診断で現状を可視化し、優先順位をつけて小さく始められます。</div></details>
+      <details class="reveal"><summary><span class="q">Q</span>MEO対策とは何ですか？<span class="chev"></span></summary><div class="faq-a">Googleマップで「地域名＋業種」と検索したときに上位表示させるための対策です。店舗ビジネスでは来店に直結しやすく、費用対効果の高い施策です。AIでプロフィールの充足度や口コミ状況を分析し、運用まで支援します。</div></details>
+      <details class="reveal"><summary><span class="q">Q</span>原稿や写真がなくても依頼できますか？<span class="chev"></span></summary><div class="faq-a">問題ありません。ヒアリングとAIによるコピー生成支援をもとに、事業の強みが伝わる文章をこちらで作成します。</div></details>
+      <details class="reveal"><summary><span class="q">Q</span>既存サイトの改善だけでも可能ですか？<span class="chev"></span></summary><div class="faq-a">可能です。AI診断でスコアの低い項目を特定し、導線・CTA・スマホ表示などピンポイントの改善から始められます。</div></details>
+    </div>
+    <div class="sec-cta reveal">
+      <a class="btn btn-blue" href="#shindan">30秒AI診断を試す</a>
+      <a class="btn btn-primary" href="#contact">無料で相談する</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section id="contact" class="cta-sec">
+  <div class="container reveal">
+    <span class="sec-eyebrow">Contact</span>
+    <h2>まずはAI診断から、お気軽に。</h2>
+    <p>30秒AI診断・詳細レポート・ご相談まですべて無料です。「何から始めればいいか分からない」段階でも、データをもとに一緒に整理しましょう。</p>
+    <div class="cta-btns">
+      <a class="btn btn-primary" href="#">無料相談する</a>
+      <a class="btn btn-secondary" href="#shindan">30秒AI診断を試す</a>
+    </div>
+    <p class="cta-sub">※しつこい営業は一切いたしません。診断のみ・相談のみでも歓迎です。</p>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== Footer ===== -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <span class="logo"><span class="mark">AI</span>AI WEB GROWTH STUDIO</span>
+      <p>千葉倫也｜AIが分析し、人が改善する。<br>HP制作・LP制作・SEO・MEO・AI運用まで、問い合わせにつながるWeb導線を設計します。</p>
+      <div class="footer-sns" aria-label="SNS">
+        <a href="#" aria-label="X (Twitter)"><svg viewBox="0 0 24 24"><path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3l-4.9-6.4L6.4 22H3.2l7.3-8.3L1 2h6.5l4.4 5.9L18.9 2zm-1.1 18h1.7L7.1 3.9H5.3L17.8 20z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.9.2 2.3.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1.1.4 2.3.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.9-.4 2.3-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1.1.4-2.3.4-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.9-.2-2.3-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1.1-.4-2.3C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.2-1.9.4-2.3.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1.1-.4 2.3-.4C8.4 2.2 8.8 2.2 12 2.2z"/></svg></a>
+        <a href="#" aria-label="LINE"><svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 5.7 2 10.2c0 4 3.5 7.4 8.3 8.1.3.1.8.2.9.5.1.3 0 .7 0 1l-.1.9c0 .3-.2 1 .9.6 1.1-.5 6-3.5 8.2-6 1.5-1.7 2.2-3.4 2.2-5.1C22.4 5.7 17.5 2 12 2z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>MENU</h4>
+      <ul>
+        <li><a href="#shindan">30秒AI診断</a></li>
+        <li><a href="#ai">AIでできること</a></li>
+        <li><a href="#works">制作事例</a></li>
+        <li><a href="#price">料金プラン</a></li>
+        <li><a href="#faq">よくある質問</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>CONTACT</h4>
+      <ul>
+        <li><a href="#profile">プロフィール</a></li>
+        <li><a href="#contact">お問い合わせ</a></li>
+        <li><a href="#top">ページトップへ</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">&copy; 2026 AI Web Growth Studio. All rights reserved.</div>
+</footer>
+
+<button class="pagetop" id="pagetop" aria-label="ページトップへ戻る"></button>
+
+<div class="mobile-cta">
+  <a class="btn btn-secondary" href="#shindan">30秒AI診断</a>
+  <a class="btn btn-primary" href="#contact">無料相談する</a>
+</div>
+
+<!-- ===== AI chat ===== -->
+<button class="chat-fab" id="chat-fab" aria-label="AI Webアドバイザーを開く">
+  <svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 01-8 8H5l-2 2V12a9 9 0 0118 0z"/><path d="M8.5 11.5h.01M12 11.5h.01M15.5 11.5h.01"/></svg>
+  <span class="dot"></span>
+</button>
+<div class="chat-panel" id="chat-panel" role="dialog" aria-label="AI Webアドバイザー">
+  <div class="chat-head">
+    <span class="ca">AI</span>
+    <div><b>AI Webアドバイザー</b><small>オンライン — すぐに回答します</small></div>
+    <button class="chat-x" id="chat-x" aria-label="閉じる">×</button>
+  </div>
+  <div class="chat-msgs" id="chat-msgs">
+    <div class="msg bot">こんにちは！AI Webアドバイザーです。Web集客のお悩みをお聞かせください。下の質問から選んでもOKです。</div>
+  </div>
+  <div class="chat-chips" id="chat-chips">
+    <button class="chip" data-q="seo">SEOを改善したい</button>
+    <button class="chip" data-q="meo">Googleマップ集客したい</button>
+    <button class="chip" data-q="lp">LPを改善したい</button>
+    <button class="chip" data-q="cv">問い合わせを増やしたい</button>
+    <button class="chip" data-q="hp">HPを作りたい</button>
+    <button class="chip" data-q="shindan">無料診断したい</button>
+  </div>
+  <p class="chat-note">※デモ版チャットです。詳細なご相談は無料相談フォームへ。</p>
+</div>
+
+<!-- ===== Modals ===== -->
+<div class="modal-backdrop" id="modal-backdrop">
+  <div class="modal" role="dialog" aria-modal="true" id="modal-box">
+
+    <template id="m1">
+      <div class="modal-head"><div><span class="work-genre">CORPORATE SITE</span><h3>工務店向けコーポレートサイト</h3></div><button class="modal-close" aria-label="閉じる"></button></div>
+      <div class="modal-body">
+        <span class="m-sample">サンプル制作(架空案件)</span>
+        <div class="m-block"><h4>想定した課題</h4><ul><li>デザインが古く、会社の実力が伝わっていない</li><li>資料請求・見学会予約が少ない</li><li>スマホで見にくく、途中で離脱されてしまう</li></ul></div>
+        <div class="m-block"><h4>改善アプローチ</h4><ul><li>施工事例を軸にした構成へ刷新</li><li>スマホ最適化と資料請求CTAの導線整理</li><li>「地域名×注文住宅」を狙ったSEO内部改善</li></ul></div>
+        <div class="m-block"><h4>制作範囲</h4><div class="m-tags"><span>デザイン</span><span>コーディング</span><span>SEO内部対策</span><span>レスポンシブ</span></div></div>
+        <div class="m-block is-result"><h4>成果イメージ</h4><ul><li>資料請求・見学会予約数の増加</li><li>滞在時間アップ、離脱率の改善</li></ul></div>
+        <div class="modal-cta">
+          <div class="row"><a class="btn btn-blue" href="samples/komuten/" target="_blank" rel="noopener">このデモサイトを見る</a><a class="btn btn-primary" href="#shindan">無料診断を依頼する</a></div>
+        </div>
+      </div>
+    </template>
+
+    <template id="m2">
+      <div class="modal-head"><div><span class="work-genre">LANDING PAGE</span><h3>美容サロン向けLP</h3></div><button class="modal-close" aria-label="閉じる"></button></div>
+      <div class="modal-body">
+        <span class="m-sample">サンプル制作(架空案件)</span>
+        <div class="m-block"><h4>想定した課題</h4><ul><li>広告からの流入はあるのに予約につながらない</li><li>予約方法が分かりにくく、途中離脱が多い</li></ul></div>
+        <div class="m-block"><h4>改善アプローチ</h4><ul><li>LINE予約への導線を一本化</li><li>画面下に予約ボタンを固定表示</li><li>口コミ・Before/Afterで初回の不安を解消</li></ul></div>
+        <div class="m-block"><h4>制作範囲</h4><div class="m-tags"><span>LP構成</span><span>コピー</span><span>デザイン</span><span>LINE導線設計</span></div></div>
+        <div class="m-block is-result"><h4>成果イメージ</h4><ul><li>広告クリックから予約完了までの離脱削減</li><li>予約率(CVR)の向上</li></ul></div>
+        <div class="modal-cta"><div class="row"><a class="btn btn-blue" href="samples/beauty-salon/" target="_blank" rel="noopener">このデモサイトを見る</a><a class="btn btn-primary" href="#shindan">無料診断を依頼する</a></div></div>
+      </div>
+    </template>
+
+    <template id="m3">
+      <div class="modal-head"><div><span class="work-genre">SERVICE SITE</span><h3>不動産会社向けサービスサイト</h3></div><button class="modal-close" aria-label="閉じる"></button></div>
+      <div class="modal-body">
+        <span class="m-sample">サンプル制作(架空案件)</span>
+        <div class="m-block"><h4>想定した課題</h4><ul><li>大手と比較され、信頼感で負けてしまう</li><li>サービスが複雑で強みが伝わっていない</li></ul></div>
+        <div class="m-block"><h4>改善アプローチ</h4><ul><li>サービスを「悩み別」に再整理</li><li>取引事例・口コミ・スタッフ紹介で信頼を補強</li><li>無料査定への導線を一本化</li></ul></div>
+        <div class="m-block"><h4>制作範囲</h4><div class="m-tags"><span>情報設計</span><span>デザイン</span><span>コーディング</span><span>フォーム導線改善</span></div></div>
+        <div class="m-block is-result"><h4>成果イメージ</h4><ul><li>無料査定・売却相談の増加</li><li>「この会社なら任せられる」信頼感の醸成</li></ul></div>
+        <div class="modal-cta"><div class="row"><a class="btn btn-blue" href="samples/real-estate/" target="_blank" rel="noopener">このデモサイトを見る</a><a class="btn btn-primary" href="#shindan">無料診断を依頼する</a></div></div>
+      </div>
+    </template>
+
+    <template id="m4">
+      <div class="modal-head"><div><span class="work-genre">RECRUIT LP</span><h3>採用LP(中小企業向け)</h3></div><button class="modal-close" aria-label="閉じる"></button></div>
+      <div class="modal-body">
+        <span class="m-sample">サンプル制作(架空案件)</span>
+        <div class="m-block"><h4>想定した課題</h4><ul><li>求人媒体に出しても応募が集まらない</li><li>会社の雰囲気・働くイメージが伝わらない</li></ul></div>
+        <div class="m-block"><h4>改善アプローチ</h4><ul><li>社員インタビューと1日の流れで「働くイメージ」を可視化</li><li>福利厚生・数字データを分かりやすく整理</li><li>エントリーまでの導線を簡潔に</li></ul></div>
+        <div class="m-block"><h4>制作範囲</h4><div class="m-tags"><span>取材設計</span><span>コピー</span><span>デザイン</span><span>コーディング</span></div></div>
+        <div class="m-block is-result"><h4>成果イメージ</h4><ul><li>エントリー率の向上</li><li>ミスマッチの少ない応募の増加</li></ul></div>
+        <div class="modal-cta"><div class="row"><a class="btn btn-blue" href="samples/recruit/" target="_blank" rel="noopener">このデモサイトを見る</a><a class="btn btn-primary" href="#shindan">無料診断を依頼する</a></div></div>
+      </div>
+    </template>
+
+    <template id="m5">
+      <div class="modal-head"><div><span class="work-genre">MEO / GOOGLE MAP</span><h3>飲食店向けMEO対策ページ</h3></div><button class="modal-close" aria-label="閉じる"></button></div>
+      <div class="modal-body">
+        <span class="m-sample">サンプル制作(架空案件)</span>
+        <div class="m-block"><h4>想定した課題</h4><ul><li>「地域名×ランチ」で検索してもマップに出ない</li><li>Googleマップからの来店・予約が少ない</li></ul></div>
+        <div class="m-block"><h4>改善アプローチ</h4><ul><li>店舗情報・営業時間・写真をMEO向けに整備</li><li>口コミの依頼・返信運用を仕組み化</li><li>GoogleマップCTAをページ全体に配置</li></ul></div>
+        <div class="m-block"><h4>制作範囲</h4><div class="m-tags"><span>MEO内部対策</span><span>店舗LP制作</span><span>口コミ運用設計</span></div></div>
+        <div class="m-block is-result"><h4>成果イメージ</h4><ul><li>マップ検索順位の改善</li><li>経路検索・電話予約数の増加</li></ul></div>
+        <div class="modal-cta"><div class="row"><a class="btn btn-blue" href="samples/restaurant-meo/" target="_blank" rel="noopener">このデモサイトを見る</a><a class="btn btn-primary" href="#shindan">無料診断を依頼する</a></div></div>
+      </div>
+    </template>
+
+    <template id="m6">
+      <div class="modal-head"><div><span class="work-genre">LEAD GEN LP</span><h3>士業向け問い合わせ獲得LP</h3></div><button class="modal-close" aria-label="閉じる"></button></div>
+      <div class="modal-body">
+        <span class="m-sample">サンプル制作(架空案件)</span>
+        <div class="m-block"><h4>想定した課題</h4><ul><li>専門用語が多く、相談のハードルが高く見える</li><li>相談件数が伸び悩んでいる</li></ul></div>
+        <div class="m-block"><h4>改善アプローチ</h4><ul><li>「よくある悩み」起点の構成で自分ごと化</li><li>実績・FAQで費用と流れの不安を解消</li><li>無料相談への導線を全セクションに配置</li></ul></div>
+        <div class="m-block"><h4>制作範囲</h4><div class="m-tags"><span>LP構成</span><span>コピー</span><span>デザイン</span><span>SEO内部対策</span></div></div>
+        <div class="m-block is-result"><h4>成果イメージ</h4><ul><li>初回無料相談の送信数増加</li><li>問い合わせ率(CVR)の向上</li></ul></div>
+        <div class="modal-cta"><div class="row"><a class="btn btn-blue" href="samples/shigyo/" target="_blank" rel="noopener">このデモサイトを見る</a><a class="btn btn-primary" href="#shindan">無料診断を依頼する</a></div></div>
+      </div>
+    </template>
+
+  </div>
+</div>
+
+<script>
+/* ===== 共通: フェードイン ===== */
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const io = new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-in');io.unobserve(e.target);}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+/* ===== 数字カウント ===== */
+const cio = new IntersectionObserver((es)=>{es.forEach(e=>{
+  if(!e.isIntersecting) return;
+  const el=e.target,t=+el.dataset.count;cio.unobserve(el);
+  if(reduceMotion){el.textContent=t;return}
+  const d=900,t0=performance.now();
+  const tick=(now)=>{const p=Math.min((now-t0)/d,1);el.textContent=Math.round(t*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(tick)};
+  requestAnimationFrame(tick);
+})},{threshold:.6});
+document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
+
+/* ===== バー/リングのアニメ(共通) ===== */
+function ringTo(el,score){el.style.strokeDashoffset=314-(314*score/100)}
+const bio = new IntersectionObserver((es)=>{es.forEach(e=>{
+  if(!e.isIntersecting) return;bio.unobserve(e.target);
+  e.target.querySelectorAll('.fill,[data-w]').forEach(f=>{const w=f.dataset.w;if(w)f.style.width=w+'%'});
+  const hr=e.target.querySelector('#hero-ring');
+  if(hr){ringTo(hr,87);animNum(document.getElementById('hero-ring-num'),87)}
+})},{threshold:.4});
+document.querySelectorAll('.hero-visual,.report-demo,.vs-card').forEach(el=>bio.observe(el));
+function animNum(el,t){if(reduceMotion){el.textContent=t;return}const d=1200,t0=performance.now();const k=(n)=>{const p=Math.min((n-t0)/d,1);el.textContent=Math.round(t*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(k)};requestAnimationFrame(k)}
+
+/* ===== ページトップ ===== */
+const pagetop=document.getElementById('pagetop');
+window.addEventListener('scroll',()=>{pagetop.classList.toggle('is-show',window.scrollY>600)},{passive:true});
+pagetop.addEventListener('click',()=>window.scrollTo({top:0,behavior:reduceMotion?'auto':'smooth'}));
+
+/* ===== AI Web Score 診断 ===== */
+const STEPS=["AI解析中…","SEO解析中…","UI解析中…","UX解析中…","CTA解析中…","MEO解析中…","競合分析中…"];
+const formEl=document.getElementById('ai-form');
+const progEl=document.getElementById('ai-progress');
+const resEl=document.getElementById('ai-result');
+
+function hashStr(s){let h=0;for(let i=0;i<s.length;i++){h=(h*31+s.charCodeAt(i))>>>0}return h}
+function vary(base,seed,i,range=6){const r=((seed>>(i*3))%(range*2+1))-range;return Math.max(35,Math.min(98,base+r))}
+
+document.getElementById('btn-diagnose').addEventListener('click',()=>{
+  const url=document.getElementById('f-url').value.trim()||'https://example.com';
+  const ind=document.getElementById('f-industry').value;
+  const goal=document.getElementById('f-goal').value;
+  formEl.style.display='none';
+  progEl.classList.add('is-active');
+  document.getElementById('ai-target-url').textContent='対象: '+url;
+  const pfill=document.getElementById('pfill');
+  const stepEl=document.getElementById('ai-step');
+  let i=0;
+  stepEl.textContent=STEPS[0];pfill.style.width='8%';
+  const iv=setInterval(()=>{
+    i++;
+    if(i<STEPS.length){stepEl.textContent=STEPS[i];pfill.style.width=Math.round((i+1)/STEPS.length*100)+'%'}
+    else{clearInterval(iv);setTimeout(()=>showResult(url,ind,goal),450)}
+  },560);
+});
+
+function showResult(url,ind,goal){
+  progEl.classList.remove('is-active');
+  resEl.classList.add('is-active');
+  const seed=hashStr(url+ind);
+  const base={'UI':85,'UX':78,'SEO':90,'MEO':55,'スマホ':92,'CTA':65,'表示速度':88,'Googleマップ':60};
+  const keys=Object.keys(base);
+  const scores={};keys.forEach((k,i)=>scores[k]=vary(base[k],seed,i));
+  const total=Math.round(keys.reduce((a,k)=>a+scores[k],0)/keys.length);
+  document.getElementById('res-url').textContent=url;
+  document.getElementById('res-industry').textContent=ind;
+  document.getElementById('res-goal').textContent='目的: '+goal;
+  // 弱点コメント
+  const sorted=keys.slice().sort((a,b)=>scores[a]-scores[b]);
+  document.getElementById('res-comment').innerHTML=
+    `基礎スコアは良好です。一方で<b>「${sorted[0]}」(${scores[sorted[0]]}点)</b>と<b>「${sorted[1]}」(${scores[sorted[1]]}点)</b>に大きな伸びしろがあります。この2点の改善が、${goal}の増加につながる最短ルートです。`;
+  // grid
+  const grid=document.getElementById('score-grid');grid.innerHTML='';
+  keys.forEach(k=>{
+    const v=scores[k];
+    const cls=v>=80?'f-good':v>=65?'f-warn':'f-bad';
+    grid.insertAdjacentHTML('beforeend',
+      `<div class="sg-item"><span>${k}</span><span class="track"><span class="fill ${cls}" data-w="${v}"></span></span><span class="val">${v}</span></div>`);
+  });
+  // 提案(目的に応じて優先度調整)
+  const props=[
+    {n:'CTA改善',s:5,p:'high'},
+    {n:'口コミ追加',s:5,p:'high'},
+    {n:'ファーストビュー改善',s:4,p:'mid'},
+    {n:'FAQ追加',s:4,p:'mid'},
+    {n:'Googleマップ導線',s:4,p:goal.includes('マップ')?'high':'low'},
+  ];
+  if(goal.includes('マップ')){props.sort((a,b)=>(b.p==='high')-(a.p==='high'))}
+  const pl=document.getElementById('prop-list');pl.innerHTML='';
+  const pmap={high:['高','prio-high'],mid:['中','prio-mid'],low:['低','prio-low']};
+  props.forEach(p=>{
+    const stars='★'.repeat(p.s)+'<span class="off">'+'★'.repeat(5-p.s)+'</span>';
+    pl.insertAdjacentHTML('beforeend',
+      `<div class="prop"><span class="stars">${stars}</span><b>${p.n}</b><span class="prio ${pmap[p.p][1]}">優先度 ${pmap[p.p][0]}</span></div>`);
+  });
+  // アニメ
+  requestAnimationFrame(()=>{requestAnimationFrame(()=>{
+    grid.querySelectorAll('.fill').forEach(f=>f.style.width=f.dataset.w+'%');
+    ringTo(document.getElementById('res-ring'),total);
+    animNum(document.getElementById('res-total'),total);
+  })});
+  resEl.scrollIntoView({behavior:reduceMotion?'auto':'smooth',block:'center'});
+}
+document.getElementById('btn-retry').addEventListener('click',()=>{
+  resEl.classList.remove('is-active');formEl.style.display='flex';
+  document.getElementById('res-ring').style.strokeDashoffset=314;
+  formEl.scrollIntoView({behavior:reduceMotion?'auto':'smooth',block:'center'});
+});
+
+/* ===== AIチャット ===== */
+const fab=document.getElementById('chat-fab'),panel=document.getElementById('chat-panel'),msgs=document.getElementById('chat-msgs');
+fab.addEventListener('click',()=>panel.classList.toggle('is-open'));
+document.getElementById('chat-x').addEventListener('click',()=>panel.classList.remove('is-open'));
+const ANSWERS={
+  seo:{q:'SEOを改善したい',a:'SEOは「構造」と「キーワード」の両輪が大切です。当スタジオではAIが見出し構造・内部リンク・キーワードを解析し、改善箇所を特定します。まずは30秒AI診断で現状のSEOスコアを確認してみてください。',cta:'30秒AI診断を試す',href:'#shindan'},
+  meo:{q:'Googleマップ集客したい',a:'Googleマップ集客(MEO)は、ビジネスプロフィールの充実度・口コミ・写真がカギです。AIでマップの状態を分析し、口コミ返信や投稿の運用まで支援できます。店舗ビジネスなら費用対効果の高い施策です。',cta:'MEOの相談をする(無料)',href:'#contact'},
+  lp:{q:'LPを改善したい',a:'LPの成果はCTAの位置・ファーストビュー・不安解消コンテンツでほぼ決まります。AI診断でCTAスコアと離脱ポイントを可視化し、改善案をレポートでお渡しします。',cta:'LPをAI診断する',href:'#shindan'},
+  cv:{q:'問い合わせを増やしたい',a:'問い合わせが少ない原因の多くは「導線」にあります。アクセスはあるのに問い合わせがない場合、CTA配置と信頼コンテンツの改善で変わるケースが多いです。まず現状をスコアで把握しましょう。',cta:'30秒AI診断を試す',href:'#shindan'},
+  hp:{q:'HPを作りたい',a:'HP制作は150,000円〜承っています。AI診断・競合分析つきで、公開後の運用までサポートします。まずは無料相談で目的とご予算をお聞かせください。最短3日で初回提案が可能です。',cta:'無料で相談する',href:'#contact'},
+  shindan:{q:'無料診断したい',a:'ありがとうございます！このページの「30秒AI診断」をすぐにお試しいただけます。URLを入力するだけで、9項目のスコアと改善提案が表示されます。',cta:'診断フォームへ移動',href:'#shindan'},
+};
+document.getElementById('chat-chips').addEventListener('click',(e)=>{
+  const chip=e.target.closest('.chip');if(!chip)return;
+  const d=ANSWERS[chip.dataset.q];if(!d)return;
+  msgs.insertAdjacentHTML('beforeend',`<div class="msg user">${d.q}</div>`);
+  const ty=document.createElement('div');ty.className='msg bot';ty.innerHTML='<span class="typing"><i></i><i></i><i></i></span>';
+  msgs.appendChild(ty);msgs.scrollTop=msgs.scrollHeight;
+  setTimeout(()=>{
+    ty.innerHTML=`${d.a}<br><a class="msg-cta" href="${d.href}">${d.cta}</a>`;
+    msgs.scrollTop=msgs.scrollHeight;
+  },900);
+});
+
+/* ===== モーダル ===== */
+const backdrop=document.getElementById('modal-backdrop'),box=document.getElementById('modal-box');
+let lastFocus=null;
+function openModal(id){
+  const tpl=document.getElementById(id);if(!tpl)return;
+  box.innerHTML='';box.appendChild(tpl.content.cloneNode(true));
+  backdrop.classList.add('is-open');document.body.classList.add('modal-open');
+  lastFocus=document.activeElement;
+  const c=box.querySelector('.modal-close');c&&c.focus();c&&c.addEventListener('click',closeModal);
+  box.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',closeModal));
+}
+function closeModal(){backdrop.classList.remove('is-open');document.body.classList.remove('modal-open');lastFocus&&lastFocus.focus()}
+document.querySelectorAll('[data-modal]').forEach(b=>b.addEventListener('click',()=>openModal(b.dataset.modal)));
+backdrop.addEventListener('click',(e)=>{if(e.target===backdrop)closeModal()});
+document.addEventListener('keydown',(e)=>{if(e.key==='Escape'&&backdrop.classList.contains('is-open'))closeModal()});
+</script>
+
+</body>
+</html>
