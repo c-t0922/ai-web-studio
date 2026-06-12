@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>あおい総合法務事務所(架空デモ) | 法律・相続・税務のお悩みを、初回無料でご相談。</title>
+<meta name="description" content="【架空サンプルサイト】士業向け問い合わせ獲得LPのデモ。相続・遺言・債務整理・税務のお悩みを初回無料相談で。対応領域・相談の流れ・FAQを掲載。">
+<meta property="og:title" content="あおい総合法務事務所(架空デモ) | 初回無料相談">
+<meta property="og:description" content="ポートフォリオ掲載用の架空サンプルサイトです。">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#1E2A44;--navy-2:#2C3D63;--gold:#B89B5E;--gold-l:#D8C290;
+  --paper:#F6F4EF;--ink:#222A38;--gray:#5F6877;--line:#E3E0D6;--r:14px;--sh:0 4px 16px rgba(30,42,68,.08);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{font-family:'Noto Sans JP',sans-serif;color:var(--ink);background:#fff;line-height:1.95;font-size:15.5px;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+h1,h2,h3{font-family:'Zen Kaku Gothic New',sans-serif;line-height:1.55}
+.container{max-width:1000px;margin:0 auto;padding:0 20px}
+section{padding:72px 0}
+@media(min-width:768px){section{padding:100px 0}}
+.demo-bar{position:fixed;top:0;left:0;right:0;z-index:110;background:var(--ink);color:#fff;font-size:11px;text-align:center;padding:6px 12px}
+.demo-bar a{text-decoration:underline;color:var(--gold-l)}
+.header{position:fixed;top:28px;left:0;right:0;z-index:100;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.header-inner{max-width:1000px;margin:0 auto;padding:0 20px;height:60px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:900;font-family:'Zen Kaku Gothic New',sans-serif;font-size:16px;display:flex;align-items:center;gap:9px;color:var(--navy)}
+.logo .mk{width:28px;height:28px;border-radius:6px;background:var(--navy);color:var(--gold-l);display:flex;align-items:center;justify-content:center;font-size:13px}
+.gnav{display:none;gap:22px;font-size:13px;font-weight:500;color:var(--gray)}
+@media(min-width:920px){.gnav{display:flex}}
+.gnav a:hover{color:var(--navy)}
+.h-cta{background:var(--gold);color:#fff;font-weight:700;font-size:13px;padding:9px 18px;border-radius:999px;box-shadow:0 3px 10px rgba(184,155,94,.35)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:700;border-radius:999px;font-size:15px;padding:15px 32px;line-height:1;transition:.2s;border:none;cursor:pointer;font-family:inherit}
+.btn-p{background:var(--gold);color:#fff;box-shadow:0 6px 16px rgba(184,155,94,.36)}
+.btn-p:hover{transform:translateY(-2px);background:#A4884C}
+.btn-s{background:#fff;color:var(--navy);border:1.5px solid var(--navy)}
+.btn-s:hover{background:var(--navy);color:#fff}
+.hero{padding:150px 0 80px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 70%,#3A4F7E 130%);color:#fff;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;right:-80px;top:-80px;width:340px;height:340px;border-radius:50%;border:1px solid rgba(216,194,144,.25)}
+.hero::after{content:"";position:absolute;right:-30px;top:-30px;width:240px;height:240px;border-radius:50%;border:1px solid rgba(216,194,144,.18)}
+.hero-inner{position:relative;z-index:1;max-width:680px}
+.eyebrow{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.16em;color:var(--gold-l);border:1px solid rgba(216,194,144,.45);border-radius:999px;padding:6px 16px;margin-bottom:18px}
+.hero h1{font-size:clamp(25px,5.8vw,38px);font-weight:900;margin-bottom:16px}
+.hero h1 em{font-style:normal;color:var(--gold-l)}
+.hero p{color:#C4CCDC;margin-bottom:26px;font-size:14.5px;max-width:32em}
+.hero-btns{display:flex;flex-wrap:wrap;gap:12px}
+.hero-pts{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.hp{font-size:11.5px;font-weight:700;color:#E8E2D2;border:1px solid rgba(255,255,255,.22);border-radius:8px;padding:6px 12px}
+.sec-head{text-align:center;margin-bottom:44px}
+.sec-en{font-family:'Outfit',sans-serif;font-size:11px;letter-spacing:.26em;color:var(--gold);font-weight:600;display:block;margin-bottom:8px}
+.sec-title{font-size:clamp(22px,5vw,30px);font-weight:900}
+.sec-lead{color:var(--gray);margin-top:12px;font-size:14px;max-width:36em;margin-left:auto;margin-right:auto}
+.bg-paper{background:var(--paper)}
+.grid{display:grid;gap:14px}
+.g3{grid-template-columns:1fr}
+@media(min-width:680px){.g3{grid-template-columns:repeat(3,1fr);gap:18px}}
+.nayami{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:20px 22px;box-shadow:var(--sh);display:flex;gap:13px;align-items:flex-start;font-size:14px;font-weight:500;color:var(--gray)}
+.nayami::before{content:"";flex:0 0 22px;width:22px;height:22px;border-radius:50%;background:var(--paper);box-shadow:inset 0 0 0 1.5px var(--gold);margin-top:3px}
+.nayami b{color:var(--ink)}
+.nayami-list{max-width:680px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+.nayami-msg{text-align:center;margin-top:30px;font-size:15px;font-weight:700}
+.nayami-msg em{font-style:normal;color:var(--navy);background:linear-gradient(transparent 70%,rgba(216,194,144,.45) 70%)}
+.reason{display:grid;gap:16px;max-width:860px;margin:0 auto}
+@media(min-width:680px){.reason{grid-template-columns:repeat(3,1fr);gap:18px}}
+.rs{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px 20px;box-shadow:var(--sh);text-align:center}
+.rs .num{font-family:'Outfit',sans-serif;font-size:13px;font-weight:600;color:var(--gold);letter-spacing:.2em;display:block;margin-bottom:8px}
+.rs h3{font-size:15.5px;font-weight:700;margin-bottom:6px}
+.rs p{font-size:12.5px;color:var(--gray);line-height:1.8}
+.field-g{grid-template-columns:1fr 1fr}
+@media(min-width:820px){.field-g{grid-template-columns:repeat(4,1fr);gap:16px}}
+.fd{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:22px 16px;box-shadow:var(--sh);text-align:center}
+.fd .ic{width:46px;height:46px;border-radius:12px;background:var(--paper);margin:0 auto 10px;display:flex;align-items:center;justify-content:center}
+.fd .ic svg{width:23px;height:23px;stroke:var(--navy);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.fd h3{font-size:14.5px;font-weight:700;margin-bottom:4px}
+.fd p{font-size:12px;color:var(--gray);line-height:1.7}
+.flow{max-width:620px;margin:0 auto}
+.f-step{display:grid;grid-template-columns:44px 1fr;gap:16px;position:relative;padding-bottom:24px}
+.f-step::before{content:"";position:absolute;left:21px;top:48px;bottom:2px;width:2px;background:repeating-linear-gradient(to bottom,var(--line) 0 6px,transparent 6px 12px)}
+.f-step:last-child{padding-bottom:0}
+.f-step:last-child::before{display:none}
+.f-num{width:44px;height:44px;border-radius:12px;background:#fff;border:1.5px solid var(--line);display:flex;align-items:center;justify-content:center;font-family:'Outfit',sans-serif;font-weight:600;color:var(--navy);position:relative;z-index:1}
+.f-step:last-child .f-num{background:var(--gold);border:none;color:#fff}
+.f-body b{font-size:15px}
+.f-body b .free{font-size:10px;color:#fff;background:var(--gold);border-radius:5px;padding:2px 8px;margin-left:8px;vertical-align:2px}
+.f-body p{font-size:12.5px;color:var(--gray)}
+.voice{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:22px;box-shadow:var(--sh)}
+.voice .vh{display:flex;align-items:center;gap:11px;margin-bottom:10px}
+.voice .av{width:38px;height:38px;border-radius:50%;background:var(--navy);color:var(--gold-l);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px}
+.voice b{font-size:12.5px;display:block;line-height:1.4}
+.voice small{font-size:10.5px;color:var(--gold);font-weight:700}
+.voice p{font-size:12.5px;color:var(--gray)}
+.faq{max-width:680px;margin:0 auto;display:flex;flex-direction:column;gap:10px}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:var(--sh)}
+.faq summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:12px;padding:16px 18px;font-weight:700;font-size:14px}
+.faq summary::-webkit-details-marker{display:none}
+.faq .q{flex:0 0 26px;height:26px;border-radius:8px;background:var(--paper);color:var(--navy);font-family:'Outfit',sans-serif;font-weight:600;font-size:12px;display:flex;align-items:center;justify-content:center}
+.faq-a{padding:0 18px 16px 56px;font-size:13px;color:var(--gray)}
+.cta{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;text-align:center;position:relative;overflow:hidden}
+.cta::before{content:"";position:absolute;left:-60px;bottom:-60px;width:260px;height:260px;border-radius:50%;border:1px solid rgba(216,194,144,.22)}
+.cta h2{font-size:clamp(22px,5vw,30px);font-weight:900;margin-bottom:14px}
+.cta p{color:#C4CCDC;font-size:14px;max-width:32em;margin:0 auto 28px}
+.cta-btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;position:relative;z-index:1}
+.cta .btn-s{background:transparent;color:#fff;border-color:rgba(255,255,255,.5)}
+.cta small{color:#9AA6BD;font-size:11.5px;margin-top:14px;display:block}
+footer{background:var(--ink);color:#98A1B0;padding:36px 0 90px;font-size:12px;text-align:center}
+@media(min-width:768px){footer{padding:36px 0}}
+footer .fx{color:var(--gold-l);font-size:11.5px;display:block;margin:10px auto 4px;max-width:34em;line-height:1.8}
+footer a{color:#fff;text-decoration:underline}
+.m-cta{position:fixed;left:0;right:0;bottom:0;z-index:99;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-top:1px solid var(--line)}
+.m-cta .btn{width:100%;padding:14px;font-size:14.5px}
+@media(min-width:768px){.m-cta{display:none}}
+.reveal{opacity:0;transform:translateY(16px);transition:.6s ease}
+.reveal.is-in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+
+<div class="demo-bar">※このページはポートフォリオ用の架空サンプルサイトです ｜ <a href="../../index.html">制作者ポートフォリオへ戻る</a></div>
+
+<header class="header">
+  <div class="header-inner">
+    <a class="logo" href="#"><span class="mk">葵</span>あおい総合法務事務所</a>
+    <nav class="gnav"><a href="#nayami">よくある悩み</a><a href="#reason">選ばれる理由</a><a href="#field">対応領域</a><a href="#flow">相談の流れ</a><a href="#faq">FAQ</a></nav>
+    <a class="h-cta" href="#contact">無料相談</a>
+  </div>
+</header>
+
+<main>
+<div class="hero">
+  <div class="container hero-inner">
+    <span class="eyebrow">初回相談無料 ｜ 土日対応 ｜ オンライン相談可(デモ)</span>
+    <h1>法律・相続・税務のお悩みを、<br><em>初回無料</em>でご相談。</h1>
+    <p>「誰に相談すればいいのか分からない」——その段階からで大丈夫です。弁護士・司法書士・税理士が連携する総合事務所(架空)が、あなたの状況を整理し、最適な解決策をご提案します。</p>
+    <div class="hero-btns">
+      <a class="btn btn-p" href="#contact">無料相談する</a>
+      <a class="btn btn-s" href="#field" style="background:transparent;color:#fff;border-color:rgba(255,255,255,.5)">対応領域を見る</a>
+    </div>
+    <div class="hero-pts">
+      <span class="hp">相談実績 1,200件超(デモ)</span>
+      <span class="hp">秘密厳守</span>
+      <span class="hp">明朗な費用提示</span>
+    </div>
+  </div>
+</div>
+
+<section id="nayami">
+  <div class="container">
+    <div class="sec-head reveal"><span class="sec-en">CONCERN</span><h2 class="sec-title">こんなお悩みはありませんか？</h2></div>
+    <div class="nayami-list">
+      <div class="nayami reveal"><span><b>親の相続</b>について、何から手をつければいいか分からない</span></div>
+      <div class="nayami reveal"><span><b>遺言書</b>を作りたいが、書き方や効力に不安がある</span></div>
+      <div class="nayami reveal"><span><b>借金の返済</b>が苦しく、誰にも相談できずにいる</span></div>
+      <div class="nayami reveal"><span><b>不動産の名義変更</b>や登記の手続きが複雑で進まない</span></div>
+      <div class="nayami reveal"><span><b>税金の申告</b>が正しくできているか不安がある</span></div>
+    </div>
+    <p class="nayami-msg reveal">ひとつでも当てはまったら、<em>まず初回無料相談</em>でお話をお聞かせください。</p>
+  </div>
+</section>
+
+<section id="reason" class="bg-paper">
+  <div class="container">
+    <div class="sec-head reveal"><span class="sec-en">REASON</span><h2 class="sec-title">選ばれる3つの理由</h2></div>
+    <div class="reason">
+      <div class="rs reveal"><span class="num">REASON 01</span><h3>専門家がワンストップ連携</h3><p>弁護士・司法書士・税理士が在籍。窓口ひとつで、複数の専門領域にまたがる問題も解決まで進められます。</p></div>
+      <div class="rs reveal"><span class="num">REASON 02</span><h3>費用は事前に明確提示</h3><p>初回相談で費用の見通しをご提示。ご納得いただいてから着手し、追加費用は必ず事前にご相談します。</p></div>
+      <div class="rs reveal"><span class="num">REASON 03</span><h3>専門用語を使わない説明</h3><p>「分かりやすさ」も専門性のうち。状況・選択肢・リスクを、図を使って丁寧にご説明します。</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="field">
+  <div class="container">
+    <div class="sec-head reveal"><span class="sec-en">SERVICE</span><h2 class="sec-title">対応領域</h2></div>
+    <div class="grid field-g">
+      <div class="fd reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg></div><h3>相続・遺言</h3><p>遺産分割・相続登記・遺言書作成・相続放棄など</p></div>
+      <div class="fd reveal"><div class="ic"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div><h3>登記・契約書</h3><p>不動産登記・会社設立・各種契約書の作成チェック</p></div>
+      <div class="fd reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3v18M5 8h14"/><path d="M5 8l-2 5h6l-2-5zM19 8l-2 5h6l-2-5z"/></svg></div><h3>債務整理</h3><p>任意整理・個人再生・自己破産・過払い金請求</p></div>
+      <div class="fd reveal"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 12h6M12 9v6"/></svg></div><h3>税務相談</h3><p>相続税・贈与税の申告、事業の税務顧問など</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="flow" class="bg-paper">
+  <div class="container">
+    <div class="sec-head reveal"><span class="sec-en">FLOW</span><h2 class="sec-title">ご相談の流れ</h2></div>
+    <div class="flow">
+      <div class="f-step reveal"><span class="f-num">01</span><div class="f-body"><b>お問い合わせ<span class="free">無料</span></b><p>フォームまたはお電話で。簡単な状況をお聞かせください。</p></div></div>
+      <div class="f-step reveal"><span class="f-num">02</span><div class="f-body"><b>初回相談(60分)<span class="free">無料</span></b><p>状況を整理し、選択肢とおおよその費用感をご説明します。</p></div></div>
+      <div class="f-step reveal"><span class="f-num">03</span><div class="f-body"><b>お見積り・ご契約</b><p>費用と進め方にご納得いただいてから、正式にご依頼ください。</p></div></div>
+      <div class="f-step reveal"><span class="f-num">04</span><div class="f-body"><b>解決まで伴走</b><p>進捗は随時ご報告。解決後のアフターフォローも行います。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="voice">
+  <div class="container">
+    <div class="sec-head reveal"><span class="sec-en">VOICE</span><h2 class="sec-title">ご相談者様の声</h2><p class="sec-lead">※デモ用の架空のコメントです。</p></div>
+    <div class="grid g3">
+      <div class="voice reveal"><div class="vh"><span class="av">A</span><div><b>50代・男性</b><small>相続のご相談</small></div></div><p>「父の相続で兄弟間の話がまとまらず相談。中立的に整理してもらい、円満に分割協議を終えられました。」</p></div>
+      <div class="voice reveal"><div class="vh"><span class="av">B</span><div><b>40代・女性</b><small>債務整理のご相談</small></div></div><p>「勇気を出して相談して本当に良かった。費用も最初に明示してもらえて、安心して任せられました。」</p></div>
+      <div class="voice reveal"><div class="vh"><span class="av">C</span><div><b>60代・女性</b><small>遺言書作成</small></div></div><p>「難しい言葉を一切使わず説明してくれたのが印象的。家族に残す遺言書を納得して作成できました。」</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="bg-paper">
+  <div class="container">
+    <div class="sec-head reveal"><span class="sec-en">FAQ</span><h2 class="sec-title">よくある質問</h2></div>
+    <div class="faq">
+      <details class="reveal"><summary><span class="q">Q</span>本当に相談だけでも無料ですか？</summary><div class="faq-a">はい、初回60分は無料です。相談のみで解決すればそれで構いませんし、無理に契約をお勧めすることはありません。</div></details>
+      <details class="reveal"><summary><span class="q">Q</span>何を相談すればいいか自分でも分かりません。</summary><div class="faq-a">問題ありません。状況をお聞きしながらこちらで論点を整理します。「モヤモヤしている」段階でのご相談こそ歓迎です。</div></details>
+      <details class="reveal"><summary><span class="q">Q</span>平日は仕事で行けません。</summary><div class="faq-a">土日・夜間の相談枠と、オンライン相談をご用意しています。ご都合に合わせてお選びください。</div></details>
+      <details class="reveal"><summary><span class="q">Q</span>費用が高額にならないか不安です。</summary><div class="faq-a">着手前に必ずお見積りを提示し、ご納得いただいてから進めます。途中で追加費用が発生する場合も、必ず事前にご相談します。</div></details>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="cta">
+  <div class="container reveal">
+    <span class="sec-en" style="color:var(--gold-l)">CONTACT</span>
+    <h2>ひとりで悩まず、まず無料相談を。</h2>
+    <p>お話を伺うだけでも、状況はきっと整理されます。秘密は厳守します。どうぞ安心してご連絡ください。</p>
+    <div class="cta-btns">
+      <a class="btn btn-p" href="#">無料相談を予約する</a>
+      <a class="btn btn-s" href="#">電話で相談する(平日9-18時)</a>
+    </div>
+    <small>※架空デモのため、リンクは動作しません。</small>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <b style="color:#fff">あおい総合法務事務所(架空)</b>
+    <span class="fx">このページはポートフォリオ掲載用の架空サンプル制作です。実在の企業・店舗・団体とは関係ありません。</span>
+    制作: <a href="../../index.html">AI Web Growth Studio</a>
+  </div>
+</footer>
+
+<div class="m-cta"><a class="btn btn-p" href="#contact">初回無料相談を予約する</a></div>
+
+<script>
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-in');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
